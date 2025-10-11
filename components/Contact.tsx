@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { useTranslations } from '../hooks/useTranslations';
-import { db } from '../firebase';
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 
 interface ContactProps {
   showToast: (message: string, type: 'success' | 'error') => void;
@@ -12,7 +10,7 @@ const Contact: React.FC<ContactProps> = ({ showToast }) => {
   const contactText = t('contact');
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [errors, setErrors] = useState({ name: false, email: false, message: false });
-  const [loading, setLoading] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const validateEmail = (email: string) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -24,7 +22,7 @@ const Contact: React.FC<ContactProps> = ({ showToast }) => {
     setErrors(prev => ({ ...prev, [name]: false }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const newErrors = {
       name: formData.name.trim() === '',
@@ -39,23 +37,25 @@ const Contact: React.FC<ContactProps> = ({ showToast }) => {
       return;
     }
 
-    setLoading(true);
+    setIsSubmitting(true);
 
-    try {
-      await addDoc(collection(db, "contactSubmissions"), {
-        name: formData.name.trim(),
-        email: formData.email.trim(),
-        message: formData.message.trim(),
-        timestamp: serverTimestamp(),
-      });
-      showToast(contactText.formSuccess, 'success');
-      setFormData({ name: '', email: '', message: '' });
-    } catch (error) {
-      console.error("Error adding document to Firestore: ", error);
-      showToast('An unexpected error occurred.', 'error');
-    } finally {
-      setLoading(false);
-    }
+    // Simulate a network request for better UX
+    setTimeout(() => {
+      try {
+        // Save the submission to local storage as a mock backend
+        const submissions = JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
+        submissions.push({ ...formData, timestamp: new Date().toISOString() });
+        localStorage.setItem('contactSubmissions', JSON.stringify(submissions));
+        
+        showToast(contactText.formSuccess, 'success');
+        setFormData({ name: '', email: '', message: '' });
+      } catch (error) {
+        console.error("Failed to save submission:", error);
+        showToast("An unexpected error occurred.", 'error');
+      } finally {
+        setIsSubmitting(false);
+      }
+    }, 500);
   };
 
   return (
@@ -73,6 +73,7 @@ const Contact: React.FC<ContactProps> = ({ showToast }) => {
                 onChange={handleChange}
                 placeholder={contactText.namePlaceholder}
                 className={`w-full bg-transparent text-white p-2 border-b-2 ${errors.name ? 'border-red-500' : 'border-gray-600'} focus:border-[var(--primary)] focus:outline-none transition-colors`}
+                aria-invalid={errors.name}
               />
               <input
                 type="email"
@@ -81,6 +82,7 @@ const Contact: React.FC<ContactProps> = ({ showToast }) => {
                 onChange={handleChange}
                 placeholder={contactText.emailPlaceholder}
                 className={`w-full bg-transparent text-white p-2 border-b-2 ${errors.email ? 'border-red-500' : 'border-gray-600'} focus:border-[var(--primary)] focus:outline-none transition-colors`}
+                aria-invalid={errors.email}
               />
             </div>
             <textarea
@@ -90,13 +92,15 @@ const Contact: React.FC<ContactProps> = ({ showToast }) => {
               placeholder={contactText.messagePlaceholder}
               rows={4}
               className={`w-full bg-transparent text-white p-2 border-b-2 ${errors.message ? 'border-red-500' : 'border-gray-600'} focus:border-[var(--primary)] focus:outline-none transition-colors resize-none`}
+              aria-invalid={errors.message}
             ></textarea>
             <button
               type="submit"
-              disabled={loading}
-              className="w-full bg-[var(--primary)] hover:bg-orange-700 text-white font-bold py-4 px-6 rounded-lg transition-all transform hover:scale-105 disabled:bg-orange-900 disabled:cursor-not-allowed"
+              disabled={isSubmitting}
+              className="w-full bg-[var(--primary)] hover:bg-orange-700 text-white font-bold py-4 px-6 rounded-lg transition-all transform hover:scale-105 disabled:bg-orange-900 disabled:cursor-not-allowed disabled:scale-100"
+              aria-busy={isSubmitting}
             >
-              {loading ? contactText.sendingButton : contactText.submitButton}
+              {isSubmitting ? 'Sending...' : contactText.submitButton}
             </button>
           </form>
         </div>
