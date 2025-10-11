@@ -1,4 +1,3 @@
-
 export type Language = 'en' | 'fr' | 'de' | 'ar';
 
 export interface Service {
@@ -33,6 +32,7 @@ export interface Translations {
     emailPlaceholder: string;
     messagePlaceholder: string;
     submitButton: string;
+    sendingButton: string;
     formSuccess: string;
     formError: string;
   };

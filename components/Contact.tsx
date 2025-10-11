@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslations } from '../hooks/useTranslations';
+import { db } from '../firebase';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 
 interface ContactProps {
   showToast: (message: string, type: 'success' | 'error') => void;
@@ -10,6 +12,7 @@ const Contact: React.FC<ContactProps> = ({ showToast }) => {
   const contactText = t('contact');
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [errors, setErrors] = useState({ name: false, email: false, message: false });
+  const [loading, setLoading] = useState(false);
 
   const validateEmail = (email: string) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -21,7 +24,7 @@ const Contact: React.FC<ContactProps> = ({ showToast }) => {
     setErrors(prev => ({ ...prev, [name]: false }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const newErrors = {
       name: formData.name.trim() === '',
@@ -36,15 +39,22 @@ const Contact: React.FC<ContactProps> = ({ showToast }) => {
       return;
     }
 
+    setLoading(true);
+
     try {
-      const submissions = JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
-      submissions.push({ ...formData, timestamp: new Date().toISOString() });
-      localStorage.setItem('contactSubmissions', JSON.stringify(submissions));
+      await addDoc(collection(db, "contactSubmissions"), {
+        name: formData.name.trim(),
+        email: formData.email.trim(),
+        message: formData.message.trim(),
+        timestamp: serverTimestamp(),
+      });
       showToast(contactText.formSuccess, 'success');
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
-      console.error("Failed to save to localStorage:", error);
+      console.error("Error adding document to Firestore: ", error);
       showToast('An unexpected error occurred.', 'error');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -83,9 +93,10 @@ const Contact: React.FC<ContactProps> = ({ showToast }) => {
             ></textarea>
             <button
               type="submit"
-              className="w-full bg-[var(--primary)] hover:bg-orange-700 text-white font-bold py-4 px-6 rounded-lg transition-all transform hover:scale-105"
+              disabled={loading}
+              className="w-full bg-[var(--primary)] hover:bg-orange-700 text-white font-bold py-4 px-6 rounded-lg transition-all transform hover:scale-105 disabled:bg-orange-900 disabled:cursor-not-allowed"
             >
-              {contactText.submitButton}
+              {loading ? contactText.sendingButton : contactText.submitButton}
             </button>
           </form>
         </div>

@@ -7,8 +7,6 @@ const getInitialLanguage = (): Language => {
   return (savedLang as Language) || 'en';
 };
 
-// Fix: Added an explicit return type to ensure `direction` is inferred as 'ltr' | 'rtl' instead of string.
-// This resolves the type error in App.tsx when passing the direction prop to the Toast component.
 export const useTranslations = (): {
   language: Language;
   setLanguage: (lang: Language) => void;
@@ -23,9 +21,6 @@ export const useTranslations = (): {
     document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
   }, [language]);
 
-  // Fix: Made the `t` function generic to correctly infer return types based on the key.
-  // This resolves TypeScript errors where properties were not found on the union type
-  // returned by the non-generic version.
   const t = useCallback(
     function <K extends keyof Translations>(key: K): Translations[K] {
       return translations[language][key];

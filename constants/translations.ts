@@ -1,4 +1,3 @@
-
 import { Language, Translations } from '../types';
 
 export const translations: Record<Language, Translations> = {
@@ -29,6 +28,7 @@ export const translations: Record<Language, Translations> = {
       emailPlaceholder: "Your Email",
       messagePlaceholder: "Your Message",
       submitButton: "Send Message",
+      sendingButton: "Sending...",
       formSuccess: "Message sent! We'll be in touch soon.",
       formError: "Please fill out all fields correctly.",
     },
@@ -64,6 +64,7 @@ export const translations: Record<Language, Translations> = {
       emailPlaceholder: "Votre Email",
       messagePlaceholder: "Votre Message",
       submitButton: "Envoyer le Message",
+      sendingButton: "Envoi en cours...",
       formSuccess: "Message envoyé ! Nous vous contacterons bientôt.",
       formError: "Veuillez remplir tous les champs correctement.",
     },
@@ -99,6 +100,7 @@ export const translations: Record<Language, Translations> = {
       emailPlaceholder: "Ihre E-Mail",
       messagePlaceholder: "Ihre Nachricht",
       submitButton: "Nachricht senden",
+      sendingButton: "Senden...",
       formSuccess: "Nachricht gesendet! Wir melden uns bald bei Ihnen.",
       formError: "Bitte füllen Sie alle Felder korrekt aus.",
     },
@@ -134,6 +136,7 @@ export const translations: Record<Language, Translations> = {
       emailPlaceholder: "بريدك الإلكتروني",
       messagePlaceholder: "رسالتك",
       submitButton: "إرسال الرسالة",
+      sendingButton: "جارٍ الإرسال...",
       formSuccess: "تم إرسال الرسالة! سنتواصل معك قريبًا.",
       formError: "يرجى ملء جميع الحقول بشكل صحيح.",
     },
