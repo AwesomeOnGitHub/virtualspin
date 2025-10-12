@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-ar" />
+    <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VirtualSpin Replica</title>
@@ -37,6 +37,13 @@
       .animated-section.is-visible {
         opacity: 1;
         transform: translateY(0);
+      }
+      .page-wrapper {
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+      }
+      .page-wrapper.is-visible {
+        opacity: 1;
       }
     </style>
   <script type="importmap">

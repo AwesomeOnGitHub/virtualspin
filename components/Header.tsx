@@ -1,14 +1,14 @@
+
 import React, { useState, useEffect } from 'react';
 import { useTranslations } from '../hooks/useTranslations';
 import { Language } from '../types';
 import { Globe, Menu, X } from 'lucide-react';
 
 interface HeaderProps {
-  onServicesClick: () => void;
   onContactClick: () => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ onServicesClick, onContactClick }) => {
+const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
   const { language, setLanguage, t, direction } = useTranslations();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
@@ -34,9 +34,16 @@ const Header: React.FC<HeaderProps> = ({ onServicesClick, onContactClick }) => {
 
   const languages: { code: Language; name: string; flag: string }[] = [
     { code: 'en', name: 'English', flag: '🇺🇸' },
+    { code: 'es', name: 'Español', flag: '🇪🇸' },
     { code: 'fr', name: 'Français', flag: '🇫🇷' },
     { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
+    { code: 'it', name: 'Italiano', flag: '🇮🇹' },
+    { code: 'nl', name: 'Nederlands', flag: '🇳🇱' },
+    { code: 'da', name: 'Dansk', flag: '🇩🇰' },
+    { code: 'hu', name: 'Magyar', flag: '🇭🇺' },
+    { code: 'tr', name: 'Türkçe', flag: '🇹🇷' },
     { code: 'ar', name: 'العربية', flag: '🇸🇦' },
+    { code: 'hi', name: 'हिन्दी', flag: '🇮🇳' },
   ];
 
   const handleLanguageChange = (lang: Language) => {
@@ -49,16 +56,25 @@ const Header: React.FC<HeaderProps> = ({ onServicesClick, onContactClick }) => {
     setIsMenuOpen(false);
     setIsLangMenuOpen(false);
   };
+  
+  const navLinks = [
+      { href: '#/tour', label: navText.tour },
+      { href: '#/drone', label: navText.drone },
+      { href: '#/website', label: navText.website },
+      { href: '#/photography', label: navText.photography },
+  ];
 
   return (
     <>
       <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled || isMenuOpen ? 'bg-black/80 backdrop-blur-lg' : 'bg-transparent'}`}>
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="text-2xl font-bold text-white z-50">
+          <a href="#/" className="text-2xl font-bold text-white z-50">
             Virtual<span className="text-[var(--primary)]">Spin</span>
-          </div>
-          <nav className="hidden md:flex items-center space-x-8 rtl:space-x-reverse">
-            <button onClick={onServicesClick} className="text-gray-300 hover:text-[var(--primary)] transition-colors">{navText.services}</button>
+          </a>
+          <nav className="hidden md:flex items-center space-x-6 rtl:space-x-reverse">
+            {navLinks.map(link => (
+              <a key={link.href} href={link.href} className="text-gray-300 hover:text-[var(--primary)] transition-colors">{link.label}</a>
+            ))}
             <button onClick={onContactClick} className="text-gray-300 hover:text-[var(--primary)] transition-colors">{navText.contact}</button>
             <div className="relative">
               <button onClick={() => setIsLangMenuOpen(!isLangMenuOpen)} className="flex items-center text-gray-300 hover:text-[var(--primary)] transition-colors">
@@ -66,7 +82,7 @@ const Header: React.FC<HeaderProps> = ({ onServicesClick, onContactClick }) => {
                 {language.toUpperCase()}
               </button>
               {isLangMenuOpen && (
-                <div className="absolute top-full mt-2 right-0 rtl:right-auto rtl:left-0 bg-[var(--card)] rounded-md shadow-lg p-2 w-36">
+                <div className="absolute top-full mt-2 right-0 rtl:right-auto rtl:left-0 bg-[var(--card)] rounded-md shadow-lg p-2 w-40 max-h-72 overflow-y-auto">
                   {languages.map(lang => (
                     <button key={lang.code} onClick={() => handleLanguageChange(lang.code)} className="w-full text-left rtl:text-right px-3 py-2 text-sm rounded-md hover:bg-[var(--primary)] flex items-center">
                       <span className="me-2">{lang.flag}</span>
@@ -90,12 +106,14 @@ const Header: React.FC<HeaderProps> = ({ onServicesClick, onContactClick }) => {
       
       {/* Mobile Menu Overlay */}
       <div className={`fixed inset-0 bg-black z-40 transition-transform duration-500 ease-in-out md:hidden ${isMenuOpen ? 'translate-x-0' : direction === 'rtl' ? '-translate-x-full' : 'translate-x-full'}`}>
-        <nav className="flex flex-col items-center justify-center h-full space-y-8 text-2xl font-medium">
-          <button onClick={() => { onServicesClick(); closeAllMenus(); }} className="text-gray-300 hover:text-[var(--primary)] transition-colors">{navText.services}</button>
+        <nav className="flex flex-col items-center justify-center h-full space-y-6 text-xl font-medium">
+          {navLinks.map(link => (
+            <a key={link.href} href={link.href} onClick={closeAllMenus} className="text-gray-300 hover:text-[var(--primary)] transition-colors">{link.label}</a>
+          ))}
           <button onClick={() => { onContactClick(); closeAllMenus(); }} className="text-gray-300 hover:text-[var(--primary)] transition-colors">{navText.contact}</button>
-           <div className="text-center">
+           <div className="text-center max-h-48 overflow-y-auto border-y border-gray-700 py-2 my-2">
               {languages.map(lang => (
-              <button key={lang.code} onClick={() => handleLanguageChange(lang.code)} className="w-full px-3 py-3 text-lg rounded-md hover:bg-[var(--primary)] flex items-center justify-center">
+              <button key={lang.code} onClick={() => handleLanguageChange(lang.code)} className="w-full px-3 py-2 text-base rounded-md hover:bg-[var(--primary)] flex items-center justify-center">
                   <span className="me-3">{lang.flag}</span>
                   <span>{lang.name}</span>
               </button>

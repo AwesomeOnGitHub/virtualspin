@@ -1,34 +1,40 @@
-
 import React from 'react';
 import { Service } from '../types';
-import { CheckCircle } from 'lucide-react';
+// FIX: Added specific icon imports to replace `require` calls.
+import { ArrowRight, Camera, Navigation, Code, Image, Briefcase } from 'lucide-react';
 import { useTranslations } from '../hooks/useTranslations';
 
 interface ServiceCardProps {
   service: Service;
-  icon: React.ReactNode;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ service, icon }) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
   const { direction } = useTranslations();
+  
+  // FIX: Replaced `require` calls with direct component references from ES6 imports to resolve "Cannot find name 'require'" error.
+  const iconMap: { [key: string]: React.ElementType } = {
+    tour: Camera,
+    drone: Navigation,
+    web: Code,
+    photo: Image,
+  };
+  
+  const Icon = iconMap[service.id] || Briefcase;
+
   return (
-    <div className="group bg-[#252525]/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 text-left transition-all duration-300 hover:border-[#FF6933]/50 hover:-translate-y-2 hover:shadow-2xl hover:shadow-orange-500/10">
-      <div className="mb-6">{icon}</div>
-      <h3 className="text-2xl font-bold mb-3 text-white">{service.title}</h3>
-      <p className="text-gray-400 mb-6 h-20">{service.description}</p>
-      <ul className="space-y-3 mb-8">
-        {service.features.map((feature, index) => (
-          <li key={index} className="flex items-center">
-            <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 me-3" />
-            <span className="text-gray-300">{feature}</span>
-          </li>
-        ))}
-      </ul>
-      <div className="flex items-baseline justify-end space-x-2 rtl:space-x-reverse">
-        <span className="text-gray-500 line-through">{service.oldPrice}</span>
-        <span className="text-3xl font-bold text-[#FF6933]">{service.newPrice}</span>
+    <a href={`#/${service.id}`} className="block group">
+      <div className="bg-[var(--card)] p-8 rounded-lg text-left h-full flex flex-col border border-transparent group-hover:border-[var(--primary)] transition-colors duration-300">
+        <div className="mb-4">
+          <Icon className="w-10 h-10 text-[var(--primary)]" />
+        </div>
+        <h3 className="text-xl font-bold text-white mb-3 flex-grow">{service.title}</h3>
+        <p className="text-gray-400 mb-4">{service.description}</p>
+        <div className="mt-auto flex items-center text-[var(--primary)] font-semibold">
+          Learn More
+          <ArrowRight className={`w-4 h-4 transition-transform group-hover:translate-x-1 ${direction === 'rtl' ? 'rotate-180 -translate-x-1 group-hover:-translate-x-2 ms-2' : 'ms-2'}`} />
+        </div>
       </div>
-    </div>
+    </a>
   );
 };
 
