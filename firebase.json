@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "virtualspin-47855",
     "public": "dist",
     "ignore": [
       "firebase.json",

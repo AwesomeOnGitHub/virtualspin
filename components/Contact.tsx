@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { useTranslations } from '../hooks/useTranslations';
+// 1. Import Firebase functions
+import { db } from '../firebase'; // Adjust the path if needed
+import { collection, addDoc, serverTimestamp } from "firebase/firestore"; 
 
 interface ContactProps {
   showToast: (message: string, type: 'success' | 'error') => void;
@@ -22,7 +25,8 @@ const Contact: React.FC<ContactProps> = ({ showToast }) => {
     setErrors(prev => ({ ...prev, [name]: false }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // 2. Make handleSubmit an async function
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const newErrors = {
       name: formData.name.trim() === '',
@@ -39,23 +43,23 @@ const Contact: React.FC<ContactProps> = ({ showToast }) => {
 
     setIsSubmitting(true);
 
-    // Simulate a network request for better UX
-    setTimeout(() => {
-      try {
-        // Save the submission to local storage as a mock backend
-        const submissions = JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
-        submissions.push({ ...formData, timestamp: new Date().toISOString() });
-        localStorage.setItem('contactSubmissions', JSON.stringify(submissions));
-        
-        showToast(contactText.formSuccess, 'success');
-        setFormData({ name: '', email: '', message: '' });
-      } catch (error) {
-        console.error("Failed to save submission:", error);
-        showToast("An unexpected error occurred.", 'error');
-      } finally {
-        setIsSubmitting(false);
-      }
-    }, 500);
+    // 3. Replace the mock submission with a real one to Firestore
+    try {
+      await addDoc(collection(db, "messages"), {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+        createdAt: serverTimestamp() // Add a server-side timestamp
+      });
+      
+      showToast(contactText.formSuccess, 'success');
+      setFormData({ name: '', email: '', message: '' }); // Clear the form on success
+    } catch (error) {
+      console.error("Error adding document: ", error);
+      showToast("Failed to send message. Please try again.", 'error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -65,6 +69,7 @@ const Contact: React.FC<ContactProps> = ({ showToast }) => {
         <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">{contactText.subtitle}</p>
         <div className="max-w-2xl mx-auto bg-[var(--card)] p-8 sm:p-12 rounded-2xl border border-gray-800/50">
           <form onSubmit={handleSubmit} noValidate className="space-y-8">
+            {/* --- Your form JSX remains the same --- */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               <input
                 type="text"
