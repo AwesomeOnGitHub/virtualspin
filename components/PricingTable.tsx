@@ -1,14 +1,7 @@
 import React from 'react';
 import { Check } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
-
-interface Plan {
-  name: string;
-  price: string;
-  period: string;
-  features: string[];
-  isFeatured: boolean;
-}
+import { Plan } from '../types';
 
 interface PricingTableProps {
   title: string;
@@ -38,9 +31,14 @@ const PricingTable: React.FC<PricingTableProps> = ({ title, subtitle, plans }) =
                         </div>
                     )}
                     <h3 className="text-2xl font-semibold text-white text-center mb-2">{plan.name}</h3>
-                    <div className="text-center mb-8">
-                        <span className="text-5xl font-extrabold text-white">{plan.price}</span>
-                        {plan.period && <span className="text-gray-400">/{plan.period}</span>}
+                    <div className="text-center mb-8 h-20 flex flex-col justify-center items-center">
+                        <div className="flex items-baseline justify-center gap-2">
+                            {plan.oldPrice && (
+                                <span className="text-3xl font-bold text-gray-500 line-through">{plan.oldPrice}</span>
+                            )}
+                            <span className="text-5xl font-extrabold text-white">{plan.price}</span>
+                        </div>
+                        {plan.period && <span className="text-gray-400 mt-1">/{plan.period}</span>}
                     </div>
                     <ul className="space-y-4 mb-8 flex-grow">
                         {plan.features.map((feature, fIndex) => (

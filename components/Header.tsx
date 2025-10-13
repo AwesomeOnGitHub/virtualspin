@@ -1,8 +1,7 @@
-
 import React, { useState, useEffect } from 'react';
 import { useTranslations } from '../hooks/useTranslations';
 import { Language } from '../types';
-import { Globe, Menu, X } from 'lucide-react';
+import { Globe, Menu, X, ChevronDown } from 'lucide-react';
 
 interface HeaderProps {
   onContactClick: () => void;
@@ -12,6 +11,7 @@ const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
   const { language, setLanguage, t, direction } = useTranslations();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
+  const [isServicesMenuOpen, setIsServicesMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -34,16 +34,9 @@ const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
 
   const languages: { code: Language; name: string; flag: string }[] = [
     { code: 'en', name: 'English', flag: '🇺🇸' },
-    { code: 'es', name: 'Español', flag: '🇪🇸' },
     { code: 'fr', name: 'Français', flag: '🇫🇷' },
     { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
-    { code: 'it', name: 'Italiano', flag: '🇮🇹' },
-    { code: 'nl', name: 'Nederlands', flag: '🇳🇱' },
-    { code: 'da', name: 'Dansk', flag: '🇩🇰' },
-    { code: 'hu', name: 'Magyar', flag: '🇭🇺' },
-    { code: 'tr', name: 'Türkçe', flag: '🇹🇷' },
     { code: 'ar', name: 'العربية', flag: '🇸🇦' },
-    { code: 'hi', name: 'हिन्दी', flag: '🇮🇳' },
   ];
 
   const handleLanguageChange = (lang: Language) => {
@@ -55,13 +48,14 @@ const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
   const closeAllMenus = () => {
     setIsMenuOpen(false);
     setIsLangMenuOpen(false);
+    setIsServicesMenuOpen(false);
   };
   
   const navLinks = [
       { href: '#/tour', label: navText.tour },
       { href: '#/drone', label: navText.drone },
-      { href: '#/website', label: navText.website },
       { href: '#/photography', label: navText.photography },
+      { href: '#/website', label: navText.website },
   ];
 
   return (

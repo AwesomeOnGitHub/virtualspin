@@ -7,11 +7,11 @@ import Footer from './components/Footer';
 import Toast from './components/Toast';
 import { useTranslations } from './hooks/useTranslations';
 import AnimatedSection from './components/AnimatedSection';
+import PageWrapper from './components/PageWrapper';
 import TourPage from './pages/TourPage';
 import DronePage from './pages/DronePage';
 import WebPage from './pages/WebPage';
 import PhotographyPage from './pages/PhotographyPage';
-import PageWrapper from './components/PageWrapper';
 
 const App: React.FC = () => {
   const [toast, setToast] = useState<{ message: string; type: 'success' | 'error' } | null>(null);
@@ -19,7 +19,7 @@ const App: React.FC = () => {
   const [route, setRoute] = useState(window.location.hash || '#/');
 
   const contactRef = useRef<HTMLDivElement>(null);
-  
+
   useEffect(() => {
     const handleHashChange = () => {
       setRoute(window.location.hash || '#/');
@@ -27,9 +27,7 @@ const App: React.FC = () => {
     };
 
     window.addEventListener('hashchange', handleHashChange);
-    
-    // Set initial route
-    handleHashChange();
+    handleHashChange(); // Set initial route
 
     return () => {
       window.removeEventListener('hashchange', handleHashChange);
@@ -42,14 +40,23 @@ const App: React.FC = () => {
   }, []);
   
   const scrollToContact = () => {
-    contactRef.current?.scrollIntoView({ behavior: 'smooth' });
+    // If on a subpage, navigate home first, then scroll.
+    if (route !== '#/') {
+      window.location.hash = '#/';
+      // The scroll needs to happen after the navigation and re-render.
+      setTimeout(() => {
+        contactRef.current?.scrollIntoView({ behavior: 'smooth' });
+      }, 100); 
+    } else {
+      contactRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   const renderPage = () => {
     switch(route) {
       case '#/tour': return <TourPage />;
       case '#/drone': return <DronePage />;
-      case '#/website': return <WebPage />;
+      case '#/web': return <WebPage />;
       case '#/photography': return <PhotographyPage />;
       case '#/':
       default:
@@ -58,6 +65,11 @@ const App: React.FC = () => {
             <Hero onGetStartedClick={scrollToContact} />
             <AnimatedSection>
               <Services />
+            </AnimatedSection>
+            <AnimatedSection>
+              <div ref={contactRef}>
+                <Contact showToast={showToast} />
+              </div>
             </AnimatedSection>
           </>
         );
@@ -72,11 +84,6 @@ const App: React.FC = () => {
           {renderPage()}
         </PageWrapper>
       </main>
-      <AnimatedSection>
-        <div ref={contactRef}>
-          <Contact showToast={showToast} />
-        </div>
-      </AnimatedSection>
       <Footer />
       {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} direction={direction} />}
     </div>
