@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslations } from '../hooks/useTranslations';
 import { Language } from '../types';
-import { Globe, Menu, X, ChevronDown } from 'lucide-react';
+import { Globe, Menu, X } from 'lucide-react';
 
 interface HeaderProps {
   onContactClick: () => void;
@@ -11,7 +11,6 @@ const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
   const { language, setLanguage, t, direction } = useTranslations();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
-  const [isServicesMenuOpen, setIsServicesMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -48,28 +47,49 @@ const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
   const closeAllMenus = () => {
     setIsMenuOpen(false);
     setIsLangMenuOpen(false);
-    setIsServicesMenuOpen(false);
   };
   
-  const navLinks = [
-      { href: '#/tour', label: navText.tour },
-      { href: '#/drone', label: navText.drone },
-      { href: '#/photography', label: navText.photography },
-      { href: '#/website', label: navText.website },
+  const handleNavLinkClick = (href: string) => {
+    // This logic handles the case where the user clicks the link for the page they are already on.
+    // The `hashchange` event won't fire in this case, so we manually scroll to the top.
+    const currentPath = window.location.hash || '#/';
+
+    if (href === currentPath) {
+      window.scrollTo(0, 0);
+    }
+    
+    // The browser will handle navigation for different hrefs via the `hashchange` 
+    // event listener in App.tsx. We just need to ensure the mobile menu closes.
+    closeAllMenus();
+  };
+
+  const navItems = [
+      { id: 'tour', type: 'link', href: '#/tour', label: navText.tour },
+      { id: 'drone', type: 'link', href: '#/drone', label: navText.drone },
+      { id: 'photography', type: 'link', href: '#/photography', label: navText.photography },
+      { id: 'web', type: 'link', href: '#/web', label: navText.website },
+      { id: 'contact', type: 'button', action: onContactClick, label: navText.contact },
+      { id: 'home', type: 'link', href: '#/', label: navText.home },
   ];
 
   return (
     <>
       <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled || isMenuOpen ? 'bg-black/80 backdrop-blur-lg' : 'bg-transparent'}`}>
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <a href="#/" className="text-2xl font-bold text-white z-50">
+          <a href="#/" onClick={() => handleNavLinkClick('#/')} className="text-2xl font-bold text-white z-50">
             Virtual<span className="text-[var(--primary)]">Spin</span>
           </a>
           <nav className="hidden md:flex items-center space-x-6 rtl:space-x-reverse">
-            {navLinks.map(link => (
-              <a key={link.href} href={link.href} className="text-gray-300 hover:text-[var(--primary)] transition-colors">{link.label}</a>
-            ))}
-            <button onClick={onContactClick} className="text-gray-300 hover:text-[var(--primary)] transition-colors">{navText.contact}</button>
+            {navItems.map(item => {
+              if (item.type === 'link') {
+                return (
+                  <a key={item.id} href={item.href} onClick={() => handleNavLinkClick(item.href)} className="text-gray-300 hover:text-[var(--primary)] transition-colors">{item.label}</a>
+                );
+              }
+              return (
+                <button key={item.id} onClick={item.action} className="text-gray-300 hover:text-[var(--primary)] transition-colors">{item.label}</button>
+              );
+            })}
             <div className="relative">
               <button onClick={() => setIsLangMenuOpen(!isLangMenuOpen)} className="flex items-center text-gray-300 hover:text-[var(--primary)] transition-colors">
                 <Globe className="w-5 h-5 me-2" />
@@ -101,10 +121,16 @@ const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
       {/* Mobile Menu Overlay */}
       <div className={`fixed inset-0 bg-black z-40 transition-transform duration-500 ease-in-out md:hidden ${isMenuOpen ? 'translate-x-0' : direction === 'rtl' ? '-translate-x-full' : 'translate-x-full'}`}>
         <nav className="flex flex-col items-center justify-center h-full space-y-6 text-xl font-medium">
-          {navLinks.map(link => (
-            <a key={link.href} href={link.href} onClick={closeAllMenus} className="text-gray-300 hover:text-[var(--primary)] transition-colors">{link.label}</a>
-          ))}
-          <button onClick={() => { onContactClick(); closeAllMenus(); }} className="text-gray-300 hover:text-[var(--primary)] transition-colors">{navText.contact}</button>
+          {navItems.map(item => {
+            if (item.type === 'link') {
+              return (
+                <a key={item.id} href={item.href} onClick={() => handleNavLinkClick(item.href)} className="text-gray-300 hover:text-[var(--primary)] transition-colors">{item.label}</a>
+              );
+            }
+            return (
+              <button key={item.id} onClick={() => { item.action(); closeAllMenus(); }} className="text-gray-300 hover:text-[var(--primary)] transition-colors">{item.label}</button>
+            );
+          })}
            <div className="text-center max-h-48 overflow-y-auto border-y border-gray-700 py-2 my-2">
               {languages.map(lang => (
               <button key={lang.code} onClick={() => handleLanguageChange(lang.code)} className="w-full px-3 py-2 text-base rounded-md hover:bg-[var(--primary)] flex items-center justify-center">

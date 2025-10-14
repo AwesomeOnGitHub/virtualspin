@@ -3,6 +3,7 @@ import { Language, Translations } from '../types';
 export const translations: Record<Language, Translations> = {
   en: {
     nav: {
+      home: "Home",
       tour: "360°",
       drone: "Drone",
       website: "Website",
@@ -38,6 +39,27 @@ export const translations: Record<Language, Translations> = {
     },
     footer: {
       rights: "Everything on this site is ours.",
+    },
+    homePage: {
+      whyChooseUs: {
+        title: "Why Choose VirtualSpin?",
+        subtitle: "We blend creativity with technology to deliver unparalleled digital experiences.",
+        items: [
+          { icon: "Rocket", title: "Cutting-Edge Tech", description: "We use the latest tools and tech to create immersive and high-performance digital assets." },
+          { icon: "Eye", title: "Creative Excellence", description: "Our team of creatives is dedicated to bringing your vision to life with stunning visuals." },
+          { icon: "ShieldCheck", title: "Proven Results", description: "We are focused on delivering solutions that drive engagement and growth for your business." },
+          { icon: "LayoutTemplate", title: "Tailored Solutions", description: "Every project is unique. We provide custom solutions that fit your specific brand and goals." }
+        ]
+      },
+      portfolio: {
+        title: "Our Work in Action",
+        subtitle: "A glimpse into the stunning digital worlds we've created for our clients."
+      },
+      cta: {
+        title: "Ready to Start Your Project?",
+        subtitle: "Let's talk about how we can elevate your brand's digital presence. Get in touch for a free consultation.",
+        buttonText: "Contact Us Now"
+      }
     },
     pages: {
         tour: {
@@ -93,24 +115,25 @@ export const translations: Record<Language, Translations> = {
                 ]
             }
         },
+        // FIX: Added missing intro, gallery, and features properties to conform to PageContent type.
         website: {
             hero: { title: "Your Digital Storefront", subtitle: "Beautiful, fast, and effective websites that grow your business.", imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" },
-            intro: { title: "More Than Just a Website", paragraphs: ["We design and build custom websites that not only look great but are also built to perform. Our focus is on user experience, speed, and achieving your business goals.", "From simple landing pages to complex e-commerce platforms, we create digital experiences that your customers will love."] },
+            intro: { title: "Built For Performance", paragraphs: ["A great website is more than an online brochure; it's a powerful tool for growth. We design and build websites that are not only visually stunning but also fast, secure, and optimized to convert visitors into customers.", "Our process is collaborative. We work closely with you to understand your brand and goals, ensuring the final product is a perfect digital reflection of your business."] },
             gallery: {
-                title: "Our Web Design Portfolio", subtitle: "A glimpse into some of the websites we've proudly built.",
+                title: "Our Web Design Portfolio", subtitle: "See how we've helped businesses like yours succeed online.",
                 images: [
-                    { src: "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=1964&auto=format&fit=crop", alt: "Colorful web design layout on a screen" },
-                    { src: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=2070&auto=format&fit=crop", alt: "Designer working on a website user interface" },
-                    { src: "https://images.unsplash.com/photo-1555774698-0b77e0ab2329?q=80&w=1974&auto=format&fit=crop", alt: "Mobile responsive website design shown on a phone" }
+                    { src: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2070&auto=format&fit=crop", alt: "Code on a screen" },
+                    { src: "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=1964&auto=format&fit=crop", alt: "Web design layout" },
+                    { src: "https://images.unsplash.com/photo-1581291518857-4e26b49126ee?q=80&w=2070&auto=format&fit=crop", alt: "Designer working on a laptop" }
                 ]
             },
             features: {
-                title: "Built for the Modern Web", subtitle: "Every site we build comes packed with essential features.",
+                title: "What's Included", subtitle: "Every website we build comes with a core set of powerful features.",
                 items: [
-                    { icon: "LayoutTemplate", title: "Custom Design", description: "A unique design that reflects your brand identity and values." },
-                    { icon: "Rocket", title: "Blazing Fast Speed", description: "Optimized for performance to keep users engaged and improve SEO." },
-                    { icon: "Search", title: "SEO Ready", description: "Built with search engine best practices to help you get found online." },
-                    { icon: "ShieldCheck", title: "Secure & Reliable", description: "Robust security measures and reliable hosting to keep your site safe." }
+                    { icon: "LayoutTemplate", title: "Custom Design", description: "A unique design that reflects your brand identity and engages your audience." },
+                    { icon: "Smartphone", title: "Mobile Responsive", description: "Flawless performance on all devices, from desktops to smartphones." },
+                    { icon: "Rocket", title: "High-Speed Performance", description: "Optimized for fast loading times to improve user experience and SEO." },
+                    { icon: "Search", title: "SEO Foundation", description: "Built with search engine best practices to help you rank higher on Google." }
                 ]
             },
             pricing: {
@@ -146,9 +169,9 @@ export const translations: Record<Language, Translations> = {
                 title: "Our Photography Packages",
                 subtitle: "Choose the perfect session to capture your story. All prices are a one-time payment.",
                 plans: [
-                    { name: "Portrait Session", price: "249€", period: "", features: ["Ideal for: Individuals, couples, social media profiles, professional headshots.", "Duration: 45 minutes of shooting.", "Location: At a location of your choice in Vienna.", "10 professionally edited photos in high resolution.", "A password-protected online gallery to select your favorites and download them.", "Includes basic retouching (color correction, brightness, contrast, light blemish removal)."], isFeatured: true, oldPrice: "300€" },
-                    { name: "Lifestyle Session", price: "449€", period: "", features: ["More time for a relaxed atmosphere, perfect for capturing natural interactions and candid moments.", "Duration: 1.5 hours of shooting.", "Location: At up to two nearby locations of your choice in Vienna.", "25 professionally edited photos in high resolution.", "A password-protected online gallery for selection and download.", "Includes standard retouching (all services from the basic package plus more detailed adjustments).", "Outfit change is possible."], isFeatured: false, oldPrice: "650€" },
-                    { name: "Branding & Business", price: "900€", period: "", features: ["Ideal for: Entrepreneurs, freelancers, influencers, artists, small businesses.", "Duration: 4 hours of shooting.", "Location: At multiple locations that fit your brand (office, café, outdoor).", "40 professionally edited photos in high resolution.", "Includes commercial usage rights for your own channels.", "A password-protected online gallery for selection and download.", "Comprehensive consultation beforehand to define the style and goals of the images."], isFeatured: false }
+                    { name: "Portrait Session", price: "249€", period: "", features: ["Ideal for: Individuals, couples, social media profiles, professional headshots.", "Duration: 45 minutes of shooting.", "10 professionally edited photos in high resolution.", "Links for Website and Social Media", "Includes basic retouching (color correction, brightness, contrast, light blemish removal)."], isFeatured: true, oldPrice: "300€" },
+                    { name: "Lifestyle Session", price: "449€", period: "", features: ["More time for a relaxed atmosphere, perfect for capturing natural interactions and candid moments.", "Duration: 1.5 hours of shooting.", "25 professionally edited photos in high resolution.", "Links for Website and Social Media", "Includes standard retouching (all services from the basic package plus more detailed adjustments).", "Outfit change is possible."], isFeatured: false, oldPrice: "650€" },
+                    { name: "Branding & Business", price: "1150€", period: "", features: ["Ideal for: Entrepreneurs, freelancers, influencers, artists, small businesses.", "Duration: 4 hours of shooting.", "Location: At multiple locations that fit your brand (office, café, outdoor).", "40 professionally edited photos in high resolution.", "Includes commercial usage rights for your own channels.", "A password-protected online gallery for selection and download.", "Comprehensive consultation beforehand to define the style and goals of the images."], isFeatured: false }
                 ]
             }
         }
@@ -156,6 +179,7 @@ export const translations: Record<Language, Translations> = {
   },
   fr: {
     nav: {
+      home: "Accueil",
       tour: "360°",
       drone: "Drone",
       website: "Site Web",
@@ -191,6 +215,27 @@ export const translations: Record<Language, Translations> = {
     },
     footer: {
       rights: "Tout sur ce site est à nous.",
+    },
+    homePage: {
+      whyChooseUs: {
+        title: "Pourquoi Choisir VirtualSpin ?",
+        subtitle: "Nous allions créativité et technologie pour offrir des expériences numériques inégalées.",
+        items: [
+          { icon: "Rocket", title: "Technologie de Pointe", description: "Nous utilisons les derniers outils et technologies pour créer des actifs numériques immersifs et performants." },
+          { icon: "Eye", title: "Excellence Créative", description: "Notre équipe de créatifs se consacre à donner vie à votre vision avec des visuels époustouflants." },
+          { icon: "ShieldCheck", title: "Résultats Prouvés", description: "Nous nous concentrons sur la fourniture de solutions qui stimulent l'engagement et la croissance de votre entreprise." },
+          { icon: "LayoutTemplate", title: "Solutions sur Mesure", description: "Chaque projet est unique. Nous proposons des solutions personnalisées adaptées à votre marque et à vos objectifs." }
+        ]
+      },
+      portfolio: {
+        title: "Notre Travail en Action",
+        subtitle: "Un aperçu des mondes numériques époustouflants que nous avons créés pour nos clients."
+      },
+      cta: {
+        title: "Prêt à Démarrer Votre Projet ?",
+        subtitle: "Parlons de la manière dont nous pouvons rehausser la présence numérique de votre marque. Contactez-nous pour une consultation gratuite.",
+        buttonText: "Contactez-nous Maintenant"
+      }
     },
     pages: {
         tour: {
@@ -246,24 +291,25 @@ export const translations: Record<Language, Translations> = {
                 ]
             }
         },
+        // FIX: Added missing intro, gallery, and features properties to conform to PageContent type.
         website: {
             hero: { title: "Votre Vitrine Numérique", subtitle: "Des sites web beaux, rapides et efficaces qui développent votre entreprise.", imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" },
-            intro: { title: "Plus Qu'un Simple Site Web", paragraphs: ["Nous concevons et construisons des sites web personnalisés qui non seulement sont beaux, mais sont également conçus pour être performants. Nous nous concentrons sur l'expérience utilisateur, la vitesse et l'atteinte de vos objectifs commerciaux.", "Des pages de destination simples aux plateformes de commerce électronique complexes, nous créons des expériences numériques que vos clients adoreront."] },
+            intro: { title: "Conçu pour la Performance", paragraphs: ["Un excellent site web est plus qu'une simple brochure en ligne ; c'est un puissant outil de croissance. Nous concevons et construisons des sites web qui ne sont pas seulement magnifiques visuellement, mais aussi rapides, sécurisés et optimisés pour convertir les visiteurs en clients.", "Notre processus est collaboratif. Nous travaillons en étroite collaboration avec vous pour comprendre votre marque et vos objectifs, en veillant à ce que le produit final soit un reflet numérique parfait de votre entreprise."] },
             gallery: {
-                title: "Notre Portfolio de Conception Web", subtitle: "Un aperçu de certains des sites web que nous avons fièrement construits.",
+                title: "Notre Portfolio de Conception Web", subtitle: "Voyez comment nous avons aidé des entreprises comme la vôtre à réussir en ligne.",
                 images: [
-                    { src: "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=1964&auto=format&fit=crop", alt: "Mise en page de conception web colorée sur un écran" },
-                    { src: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=2070&auto=format&fit=crop", alt: "Designer travaillant sur une interface utilisateur de site web" },
-                    { src: "https://images.unsplash.com/photo-1555774698-0b77e0ab2329?q=80&w=1974&auto=format&fit=crop", alt: "Conception de site web réactif mobile montrée sur un téléphone" }
+                    { src: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2070&auto=format&fit=crop", alt: "Code sur un écran" },
+                    { src: "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=1964&auto=format&fit=crop", alt: "Mise en page de design web" },
+                    { src: "https://images.unsplash.com/photo-1581291518857-4e26b49126ee?q=80&w=2070&auto=format&fit=crop", alt: "Designer travaillant sur un ordinateur portable" }
                 ]
             },
             features: {
-                title: "Conçu pour le Web Moderne", subtitle: "Chaque site que nous construisons est doté de fonctionnalités essentielles.",
+                title: "Ce qui est Inclus", subtitle: "Chaque site web que nous construisons est doté d'un ensemble de fonctionnalités puissantes.",
                 items: [
-                    { icon: "LayoutTemplate", title: "Conception Personnalisée", description: "Un design unique qui reflète l'identité et les valeurs de votre marque." },
-                    { icon: "Rocket", title: "Vitesse Fulgurante", description: "Optimisé pour la performance afin de maintenir l'engagement des utilisateurs et d'améliorer le SEO." },
-                    { icon: "Search", title: "Prêt pour le SEO", description: "Conçu avec les meilleures pratiques des moteurs de recherche pour vous aider à être trouvé en ligne." },
-                    { icon: "ShieldCheck", title: "Sécurisé & Fiable", description: "Des mesures de sécurité robustes et un hébergement fiable pour garder votre site en sécurité." }
+                    { icon: "LayoutTemplate", title: "Conception Personnalisée", description: "Un design unique qui reflète l'identité de votre marque et engage votre public." },
+                    { icon: "Smartphone", title: "Adaptatif Mobile", description: "Performance impeccable sur tous les appareils, des ordinateurs de bureau aux smartphones." },
+                    { icon: "Rocket", title: "Performance Haute Vitesse", description: "Optimisé pour des temps de chargement rapides afin d'améliorer l'expérience utilisateur et le SEO." },
+                    { icon: "Search", title: "Fondation SEO", description: "Construit avec les meilleures pratiques des moteurs de recherche pour vous aider à mieux vous classer sur Google." }
                 ]
             },
             pricing: {
@@ -299,9 +345,9 @@ export const translations: Record<Language, Translations> = {
                 title: "Nos Forfaits Photographie",
                 subtitle: "Choisissez la session parfaite pour capturer votre histoire. Tous les prix sont un paiement unique.",
                 plans: [
-                    { name: "Session Portrait", price: "249€", period: "", features: ["Idéal pour : Individus, couples, profils de médias sociaux et portraits professionnels.", "Durée : 45 minutes de prise de vue.", "Lieu : Un lieu de votre choix à Vienne.", "10 photos haute résolution éditées professionnellement.", "Galerie en ligne protégée par mot de passe pour la sélection et le téléchargement.", "Inclut la retouche de base."], isFeatured: true, oldPrice: "300€" },
-                    { name: "Session Style de Vie", price: "449€", period: "", features: ["Parfait pour capturer des interactions naturelles et des moments spontanés.", "Durée : 1,5 heure de prise de vue.", "Lieu : Jusqu'à deux lieux proches à Vienne.", "25 photos haute résolution éditées professionnellement.", "Galerie en ligne protégée par mot de passe.", "Inclut une retouche standard plus détaillée.", "Changement de tenue possible."], isFeatured: false, oldPrice: "650€" },
-                    { name: "Marque & Entreprise", price: "900€", period: "", features: ["Idéal pour : Entrepreneurs, indépendants, influenceurs et petites entreprises.", "Durée : 4 heures de prise de vue.", "Lieu : Plusieurs lieux qui correspondent au style de votre marque.", "40 photos haute résolution éditées professionnellement.", "Inclut les droits d'utilisation commerciale pour vos canaux.", "Consultation complète préalable pour définir les objectifs."], isFeatured: false }
+                    { name: "Session Portrait", price: "249€", period: "", features: ["Idéal pour : Individus, couples, profils de médias sociaux et portraits professionnels.", "Durée : 45 minutes de prise de vue.", "10 photos haute résolution éditées professionnellement.", "Liens pour site web et réseaux sociaux", "Inclut la retouche de base."], isFeatured: true, oldPrice: "300€" },
+                    { name: "Session Style de Vie", price: "449€", period: "", features: ["Parfait pour capturer des interactions naturelles et des moments spontanés.", "Durée : 1,5 heure de prise de vue.", "25 photos haute résolution éditées professionnellement.", "Liens pour site web et réseaux sociaux", "Inclut une retouche standard plus détaillée.", "Changement de tenue possible."], isFeatured: false, oldPrice: "650€" },
+                    { name: "Marque & Entreprise", price: "1150€", period: "", features: ["Idéal pour : Entrepreneurs, indépendants, influenceurs et petites entreprises.", "Durée : 4 heures de prise de vue.", "Lieu : Plusieurs lieux qui correspondent au style de votre marque.", "40 photos haute résolution éditées professionnellement.", "Inclut les droits d'utilisation commerciale pour vos canaux.", "Consultation complète préalable pour définir les objectifs."], isFeatured: false }
                 ]
             }
         }
@@ -309,6 +355,7 @@ export const translations: Record<Language, Translations> = {
   },
   de: {
     nav: {
+      home: "Startseite",
       tour: "360°",
       drone: "Drohne",
       website: "Website",
@@ -344,6 +391,27 @@ export const translations: Record<Language, Translations> = {
     },
     footer: {
       rights: "Alles auf dieser Seite gehört uns.",
+    },
+    homePage: {
+      whyChooseUs: {
+        title: "Warum VirtualSpin wählen?",
+        subtitle: "Wir verbinden Kreativität mit Technologie, um unvergleichliche digitale Erlebnisse zu liefern.",
+        items: [
+          { icon: "Rocket", title: "Spitzentechnologie", description: "Wir verwenden die neuesten Tools und Technologien, um immersive und leistungsstarke digitale Assets zu erstellen." },
+          { icon: "Eye", title: "Kreative Exzellenz", description: "Unser Kreativteam widmet sich der Verwirklichung Ihrer Vision mit atemberaubenden visuellen Darstellungen." },
+          { icon: "ShieldCheck", title: "Nachgewiesene Ergebnisse", description: "Wir konzentrieren uns auf die Bereitstellung von Lösungen, die das Engagement und das Wachstum Ihres Unternehmens fördern." },
+          { icon: "LayoutTemplate", title: "Maßgeschneiderte Lösungen", description: "Jedes Projekt ist einzigartig. Wir bieten maßgeschneiderte Lösungen, die zu Ihrer spezifischen Marke und Ihren Zielen passen." }
+        ]
+      },
+      portfolio: {
+        title: "Unsere Arbeit in Aktion",
+        subtitle: "Ein Einblick in die atemberaubenden digitalen Welten, die wir für unsere Kunden geschaffen haben."
+      },
+      cta: {
+        title: "Bereit, Ihr Projekt zu starten?",
+        subtitle: "Lassen Sie uns darüber sprechen, wie wir die digitale Präsenz Ihrer Marke verbessern können. Kontaktieren Sie uns für eine kostenlose Beratung.",
+        buttonText: "Kontaktieren Sie uns jetzt"
+      }
     },
     pages: {
         tour: {
@@ -399,31 +467,32 @@ export const translations: Record<Language, Translations> = {
                 ]
             }
         },
+        // FIX: Added missing intro, gallery, and features properties to conform to PageContent type.
         website: {
             hero: { title: "Ihr digitaler Laden", subtitle: "Schöne, schnelle und effektive Websites, die Ihr Unternehmen wachsen lassen.", imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" },
-            intro: { title: "Mehr als nur eine Website", paragraphs: ["Wir entwerfen und erstellen maßgeschneiderte Websites, die nicht nur gut aussehen, sondern auch auf Leistung ausgelegt sind. Unser Fokus liegt auf Benutzererfahrung, Geschwindigkeit und der Erreichung Ihrer Geschäftsziele.", "Von einfachen Landingpages bis hin zu komplexen E-Commerce-Plattformen schaffen wir digitale Erlebnisse, die Ihre Kunden lieben werden."] },
+            intro: { title: "Für Leistung gebaut", paragraphs: ["Eine großartige Website ist mehr als eine Online-Broschüre; sie ist ein leistungsstarkes Werkzeug für Wachstum. Wir entwerfen und erstellen Websites, die nicht nur visuell beeindruckend, sondern auch schnell, sicher und optimiert sind, um Besucher in Kunden zu verwandeln.", "Unser Prozess ist kollaborativ. Wir arbeiten eng mit Ihnen zusammen, um Ihre Marke und Ihre Ziele zu verstehen und sicherzustellen, dass das Endprodukt ein perfektes digitales Abbild Ihres Unternehmens ist."] },
             gallery: {
-                title: "Unser Webdesign-Portfolio", subtitle: "Ein Einblick in einige der Websites, die wir mit Stolz erstellt haben.",
+                title: "Unser Webdesign-Portfolio", subtitle: "Sehen Sie, wie wir Unternehmen wie Ihrem geholfen haben, online erfolgreich zu sein.",
                 images: [
-                    { src: "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=1964&auto=format&fit=crop", alt: "Farbenfrohes Webdesign-Layout auf einem Bildschirm" },
-                    { src: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=2070&auto=format&fit=crop", alt: "Designer arbeitet an einer Website-Benutzeroberfläche" },
-                    { src: "https://images.unsplash.com/photo-1555774698-0b77e0ab2329?q=80&w=1974&auto=format&fit=crop", alt: "Mobiles responsives Website-Design auf einem Telefon gezeigt" }
+                    { src: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2070&auto=format&fit=crop", alt: "Code auf einem Bildschirm" },
+                    { src: "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=1964&auto=format&fit=crop", alt: "Webdesign-Layout" },
+                    { src: "https://images.unsplash.com/photo-1581291518857-4e26b49126ee?q=80&w=2070&auto=format&fit=crop", alt: "Designer arbeitet an einem Laptop" }
                 ]
             },
             features: {
-                title: "Für das moderne Web gebaut", subtitle: "Jede von uns erstellte Website ist mit wesentlichen Funktionen ausgestattet.",
+                title: "Was enthalten ist", subtitle: "Jede von uns erstellte Website verfügt über eine Reihe leistungsstarker Kernfunktionen.",
                 items: [
-                    { icon: "LayoutTemplate", title: "Individuelles Design", description: "Ein einzigartiges Design, das Ihre Markenidentität und Werte widerspiegelt." },
-                    { icon: "Rocket", title: "Blitzschnelle Geschwindigkeit", description: "Optimiert für Leistung, um Benutzer zu binden und die SEO zu verbessern." },
-                    { icon: "Search", title: "SEO-fähig", description: "Erstellt mit den besten Praktiken für Suchmaschinen, damit Sie online gefunden werden." },
-                    { icon: "ShieldCheck", title: "Sicher & zuverlässig", description: "Robuste Sicherheitsmaßnahmen und zuverlässiges Hosting, um Ihre Website sicher zu halten." }
+                    { icon: "LayoutTemplate", title: "Individuelles Design", description: "Ein einzigartiges Design, das Ihre Markenidentität widerspiegelt und Ihr Publikum anspricht." },
+                    { icon: "Smartphone", title: "Mobil-responsiv", description: "Tadellose Leistung auf allen Geräten, von Desktops bis hin zu Smartphones." },
+                    { icon: "Rocket", title: "Hochgeschwindigkeitsleistung", description: "Optimiert für schnelle Ladezeiten, um die Benutzererfahrung und das SEO zu verbessern." },
+                    { icon: "Search", title: "SEO-Grundlage", description: "Erstellt nach den besten Praktiken für Suchmaschinen, um Ihnen zu einem höheren Ranking bei Google zu verhelfen." }
                 ]
             },
             pricing: {
                 title: "Preise für die Website-Entwicklung", subtitle: "Transparente Preise, um Ihr Projekt auf den Weg zu bringen.",
                 plans: [
                     { name: "Landing Page", price: "1.500€", period: "einmalig", features: ["Einzelseiten-Website", "Kontaktformular", "Mobil-responsiv", "Grundlegende SEO-Einrichtung"], isFeatured: false },
-                    { name: "Unternehmenswebsite", price: "2.800€", period: "einmalig", features: ["Bis zu 10 Seiten", "CMS-Integration", "Individuelles Design", "Fortgeschrittenes SEO"], isFeatured: true, oldPrice: "3.500€" },
+                    { name: "Unternehmenswebsite", price: "2.800€", period: "einmalig", features: ["Bis zu 10 Seiten", "CMS-Integration", "Individuelles Design", "Fortgeschrittenes SEO"], isFeatured: true, oldPrice: "3,500€" },
                     { name: "E-Commerce", price: "ab 5.000€", period: "einmalig", features: ["Vollständiger Online-Shop", "Produktverwaltung", "Zahlungsgateways", "Kundenkonten"], isFeatured: false }
                 ]
             }
@@ -452,9 +521,9 @@ export const translations: Record<Language, Translations> = {
                 title: "Unsere Fotografie-Pakete",
                 subtitle: "Wählen Sie die perfekte Session, um Ihre Geschichte festzuhalten. Alle Preise sind eine einmalige Zahlung.",
                 plans: [
-                    { name: "Porträtsession", price: "249€", period: "", features: ["Ideal für: Einzelpersonen, Paare, Social-Media-Profile und professionelle Porträts.", "Dauer: 45 Minuten Aufnahmezeit.", "Ort: Ein Ort Ihrer Wahl in Wien.", "10 professionell bearbeitete, hochauflösende Fotos.", "Passwortgeschützte Online-Galerie zur Auswahl und zum Download.", "Inklusive grundlegender Retusche."], isFeatured: true, oldPrice: "300€" },
-                    { name: "Lifestyle-Session", price: "449€", period: "", features: ["Perfekt, um natürliche Interaktionen und spontane Momente festzuhalten.", "Dauer: 1,5 Stunden Aufnahmezeit.", "Ort: Bis zu zwei nahegelegene Orte in Wien.", "25 professionell bearbeitete, hochauflösende Fotos.", "Passwortgeschützte Online-Galerie.", "Inklusive standardmäßiger, detaillierterer Retusche.", "Outfitwechsel möglich."], isFeatured: false, oldPrice: "650€" },
-                    { name: "Branding & Business", price: "900€", period: "", features: ["Ideal für: Unternehmer, Freiberufler, Influencer und kleine Unternehmen.", "Dauer: 4 Stunden Aufnahmezeit.", "Ort: Mehrere Orte, die zum Stil Ihrer Marke passen.", "40 professionell bearbeitete, hochauflösende Fotos.", "Inklusive kommerzieller Nutzungsrechte für Ihre Kanäle.", "Umfassende Vorbesprechung zur Festlegung der Ziele."], isFeatured: false }
+                    { name: "Porträtsession", price: "249€", period: "", features: ["Ideal für: Einzelpersonen, Paare, Social-Media-Profile und professionelle Porträts.", "Dauer: 45 Minuten Aufnahmezeit.", "10 professionell bearbeitete, hochauflösende Fotos.", "Links für Website und Social Media", "Inklusive grundlegender Retusche."], isFeatured: true, oldPrice: "300€" },
+                    { name: "Lifestyle-Session", price: "449€", period: "", features: ["Perfekt, um natürliche Interaktionen und spontane Momente festzuhalten.", "Dauer: 1,5 Stunden Aufnahmezeit.", "25 professionell bearbeitete, hochauflösende Fotos.", "Links für Website und Social Media", "Inklusive standardmäßiger, detaillierterer Retusche.", "Outfitwechsel möglich."], isFeatured: false, oldPrice: "650€" },
+                    { name: "Branding & Business", price: "1150€", period: "", features: ["Ideal für: Unternehmer, Freiberufler, Influencer und kleine Unternehmen.", "Dauer: 4 Stunden Aufnahmezeit.", "Ort: Mehrere Orte, die zum Stil Ihrer Marke passen.", "40 professionell bearbeitete, hochauflösende Fotos.", "Inklusive kommerzieller Nutzungsrechte für Ihre Kanäle.", "Umfassende Vorbesprechung zur Festlegung der Ziele."], isFeatured: false }
                 ]
             }
         }
@@ -462,6 +531,7 @@ export const translations: Record<Language, Translations> = {
   },
   ar: {
     nav: {
+      home: "الرئيسية",
       tour: "360°",
       drone: "درون",
       website: "موقع ويب",
@@ -498,6 +568,27 @@ export const translations: Record<Language, Translations> = {
     footer: {
       rights: "كل شيء في هذا الموقع ملكنا.",
     },
+    homePage: {
+      whyChooseUs: {
+        title: "لماذا تختار VirtualSpin؟",
+        subtitle: "نحن نمزج بين الإبداع والتكنولوجيا لتقديم تجارب رقمية لا مثيل لها.",
+        items: [
+          { icon: "Rocket", title: "تقنية متطورة", description: "نستخدم أحدث الأدوات والتقنيات لإنشاء أصول رقمية غامرة وعالية الأداء." },
+          { icon: "Eye", title: "تميز إبداعي", description: "فريقنا من المبدعين مكرس لإحياء رؤيتك بصور مذهلة." },
+          { icon: "ShieldCheck", title: "نتائج مثبتة", description: "نحن نركز على تقديم حلول تدفع المشاركة والنمو لعملك." },
+          { icon: "LayoutTemplate", title: "حلول مخصصة", description: "كل مشروع فريد من نوعه. نحن نقدم حلولًا مخصصة تناسب علامتك التجارية وأهدافك المحددة." }
+        ]
+      },
+      portfolio: {
+        title: "أعمالنا في الواقع",
+        subtitle: "لمحة عن العوالم الرقمية المذهلة التي أنشأناها لعملائنا."
+      },
+      cta: {
+        title: "هل أنت مستعد لبدء مشروعك؟",
+        subtitle: "دعنا نتحدث عن كيف يمكننا الارتقاء بالوجود الرقمي لعلامتك التجارية. تواصل معنا للحصول على استشارة مجانية.",
+        buttonText: "اتصل بنا الآن"
+      }
+    },
     pages: {
         tour: {
             hero: { title: "تجول في الأماكن على شاشتك", subtitle: "نبني نسخة عبر الإنترنت من مساحتك حتى تتمكن من عرضها على أي شخص.", imageUrl: "https://images.unsplash.com/photo-1604014237800-1c9102c219da?q=80&w=2070&auto=format&fit=crop" },
@@ -518,7 +609,7 @@ export const translations: Record<Language, Translations> = {
                 subtitle: "اختر الخطة التي تناسب الممتلكات الخاصة بك. جميع الأسعار هي دفعة لمرة واحدة ، بدون تكاليف خفية.",
                 plans: [
                     { name: "باقة خرائط جوجل 360 درجة", price: "249€", period: "", features: ["360° صور داخلية وخارجية", "تم الرفع على خرائط جوجل", "87٪ نقرات أكثر", "المزيد من المشاهدات", "ترتيب أفضل على جوجل وخرائط جوجل", "المزيد من العملاء"], isFeatured: true, oldPrice: "400€" },
-                    { name: "باقة الجولة الافتراضية", price: "899€", period: "", features: ["تسجيلات غير محدودة", "فيديو مع رابط للموقع ووسائل التواصل الاجتماعي", "500٪ وقت تصفح أطول على موقعك", "أعلى التصنيفات على جوجل وخرائط جوجل", "استشارة وتخطيط شخصي", "حقوق الاستخدام"], isFeatured: false, oldPrice: "1200€" },
+                    { name: "باقة الجولة الاftراضية", price: "899€", period: "", features: ["تسجيلات غير محدودة", "فيديو مع رابط للموقع ووسائل التواصل الاجتماعي", "500٪ وقت تصفح أطول على موقعك", "أعلى التصنيفات على جوجل وخرائط جوجل", "استشارة وتخطيط شخصي", "حقوق الاستخدام"], isFeatured: false, oldPrice: "1200€" },
                     { name: "الباقة المميزة", price: "السعر عند الطلب", period: "", features: ["جولة مخصصة مع رأس وتذييل وموسيقى ومخطط طابق وعرض نموذج ثلاثي الأبعاد", "علامة تجارية مخصصة وفيديو وروابط لجميع منصات التواصل الاجتماعي", "تحسين وسائل التواصل الاجتماعي وتسجيلات الدرون متضمنة", "تسجيلات غير محدودة، مواقع متعددة", "حقوق الاستخدام", "بلا حدود!", "استشارة وتخطيط شخصي"], isFeatured: false },
                 ]
             }
@@ -552,24 +643,25 @@ export const translations: Record<Language, Translations> = {
                 ]
             }
         },
+        // FIX: Added missing intro, gallery, and features properties to conform to PageContent type.
         website: {
             hero: { title: "واجهتك الرقمية", subtitle: "مواقع ويب جميلة وسريعة وفعالة تنمي أعمالك.", imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" },
-            intro: { title: "أكثر من مجرد موقع ويب", paragraphs: ["نصمم ونبني مواقع ويب مخصصة لا تبدو رائعة فحسب، بل تم تصميمها أيضًا لتحقيق الأداء. ينصب تركيزنا على تجربة المستخدم والسرعة وتحقيق أهداف عملك.", "من صفحات الهبوط البسيطة إلى منصات التجارة الإلكترونية المعقدة، نخلق تجارب رقمية سيحبها عملاؤك."] },
+            intro: { title: "مصمم للأداء", paragraphs: ["الموقع الإلكتروني الرائع هو أكثر من مجرد كتيب عبر الإنترنت؛ إنه أداة قوية للنمو. نحن نصمم ونبني مواقع ويب ليست فقط مذهلة بصريًا ولكنها أيضًا سريعة وآمنة ومحسّنة لتحويل الزوار إلى عملاء.", "عمليتنا تعاونية. نحن نعمل عن كثب معك لفهم علامتك التجارية وأهدافك، مما يضمن أن المنتج النهائي هو انعكاس رقمي مثالي لعملك."] },
             gallery: {
-                title: "معرض تصميم الويب الخاص بنا", subtitle: "لمحة عن بعض مواقع الويب التي قمنا ببنائها بفخر.",
+                title: "معرض أعمالنا في تصميم الويب", subtitle: "شاهد كيف ساعدنا الشركات مثل شركتك على النجاح عبر الإنترنت.",
                 images: [
-                    { src: "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=1964&auto=format&fit=crop", alt: "تخطيط تصميم ويب ملون على شاشة" },
-                    { src: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=2070&auto=format&fit=crop", alt: "مصمم يعمل على واجهة مستخدم لموقع ويب" },
-                    { src: "https://images.unsplash.com/photo-1555774698-0b77e0ab2329?q=80&w=1974&auto=format&fit=crop", alt: "تصميم موقع ويب متجاوب مع الجوّال معروض على هاتف" }
+                    { src: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2070&auto=format&fit=crop", alt: "كود على شاشة" },
+                    { src: "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=1964&auto=format&fit=crop", alt: "تخطيط تصميم ويب" },
+                    { src: "https://images.unsplash.com/photo-1581291518857-4e26b49126ee?q=80&w=2070&auto=format&fit=crop", alt: "مصمم يعمل على كمبيوتر محمول" }
                 ]
             },
             features: {
-                title: "مصمم للويب الحديث", subtitle: "كل موقع نقوم ببنائه يأتي مزودًا بميزات أساسية.",
+                title: "ماذا يتضمن", subtitle: "كل موقع ويب نقوم ببنائه يأتي مع مجموعة أساسية من الميزات القوية.",
                 items: [
-                    { icon: "LayoutTemplate", title: "تصميم مخصص", description: "تصميم فريد يعكس هوية علامتك التجارية وقيمها." },
-                    { icon: "Rocket", title: "سرعة فائقة", description: "محسّن للأداء للحفاظ على تفاعل المستخدمين وتحسين محركات البحث." },
-                    { icon: "Search", title: "جاهز لمحركات البحث", description: "مصمم بأفضل ممارسات محركات البحث لمساعدتك في العثور عليك عبر الإنترنت." },
-                    { icon: "ShieldCheck", title: "آمن وموثوق", description: "تدابير أمنية قوية واستضافة موثوقة للحفاظ على أمان موقعك." }
+                    { icon: "LayoutTemplate", title: "تصميم مخصص", description: "تصميم فريد يعكس هوية علامتك التجارية ويجذب جمهورك." },
+                    { icon: "Smartphone", title: "متجاوب مع الجوال", description: "أداء لا تشوبه شائبة على جميع الأجهزة، من أجهزة الكمبيوتر المكتبية إلى الهواتف الذكية." },
+                    { icon: "Rocket", title: "أداء عالي السرعة", description: "محسّن لأوقات تحميل سريعة لتحسين تجربة المستخدم وتحسين محركات البحث." },
+                    { icon: "Search", title: "أساس تحسين محركات البحث", description: "مبني بأفضل ممارسات محركات البحث لمساعدتك في الحصول على ترتيب أعلى في جوجل." }
                 ]
             },
             pricing: {
@@ -605,9 +697,9 @@ export const translations: Record<Language, Translations> = {
                 title: "باقات التصوير الفوتوغرافي لدينا",
                 subtitle: "اختر الجلسة المثالية لالتقاط قصتك. جميع الأسعار هي دفعة لمرة واحدة.",
                 plans: [
-                    { name: "جلسة تصوير شخصي", price: "249€", period: "", features: ["مثالية لـ: الأفراد، الأزواج، ملفات تعريف وسائل التواصل الاجتماعي، والصور الشخصية الاحترافية.", "المدة: 45 دقيقة من التصوير.", "الموقع: في موقع من اختيارك في فيينا.", "10 صور عالية الدقة معدلة باحتراف.", "معرض صور عبر الإنترنت محمي بكلمة مرور للاختيار والتنزيل.", "تشمل التنقيح الأساسي."], isFeatured: true, oldPrice: "300€" },
-                    { name: "جلسة لايف ستايل", price: "449€", period: "", features: ["مثالية لالتقاط التفاعلات الطبيعية واللحظات العفوية.", "المدة: 1.5 ساعة من التصوير.", "الموقع: ما يصل إلى موقعين قريبين في فيينا.", "25 صورة عالية الدقة معدلة باحتراف.", "معرض صور عبر الإنترنت محمي بكلمة مرور.", "تشمل تنقيحًا قياسيًا أكثر تفصيلاً.", "إمكانية تغيير الملابس."], isFeatured: false, oldPrice: "650€" },
-                    { name: "العلامة التجارية والأعمال", price: "900€", period: "", features: ["مثالية لـ: رواد الأعمال، المستقلين، المؤثرين، والشركات الصغيرة.", "المدة: 4 ساعات من التصوير.", "الموقع: مواقع متعددة تناسب أسلوب علامتك التجارية.", "40 صورة عالية الدقة معدلة باحتراف.", "تشمل حقوق الاستخدام التجاري لقنواتك.", "استشارة شاملة قبل الجلسة لتحديد الأهداف."], isFeatured: false }
+                    { name: "جلسة تصوير شخصي", price: "249€", period: "", features: ["مثالية لـ: الأفراد، الأزواج، ملفات تعريف وسائل التواصل الاجتماعي، والصور الشخصية الاحترافية.", "المدة: 45 دقيقة من التصوير.", "10 صور عالية الدقة معدلة باحتراف.", "روابط للموقع الإلكتروني ووسائل التواصل الاجتماعي", "تشمل التنقيح الأساسي."], isFeatured: true, oldPrice: "300€" },
+                    { name: "جلسة لايف ستايل", price: "449€", period: "", features: ["مثالية لالتقاط التفاعلات الطبيعية واللحظات العفوية.", "المدة: 1.5 ساعة من التصوير.", "25 صورة عالية الدقة معدلة باحتراف.", "روابط للموقع الإلكتروني ووسائل التواصل الاجتماعي", "تشمل تنقيحًا قياسيًا أكثر تفصيلاً.", "إمكانية تغيير الملابس."], isFeatured: false, oldPrice: "650€" },
+                    { name: "العلامة التجارية والأعمال", price: "1150€", period: "", features: ["مثالية لـ: رواد الأعمال، المستقلين، المؤثرين، والشركات الصغيرة.", "المدة: 4 ساعات من التصوير.", "الموقع: مواقع متعددة تناسب أسلوب علامتك التجارية.", "40 صورة عالية الدقة معدلة باحتراف.", "تشمل حقوق الاستخدام التجاري لقنواتك.", "استشارة شاملة قبل الجلسة لتحديد الأهداف."], isFeatured: false }
                 ]
             }
         }

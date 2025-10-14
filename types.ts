@@ -54,10 +54,15 @@ export interface PageContent {
         subtitle: string;
         plans: Plan[];
     };
+    otherServices?: {
+      title: string;
+      subtitle: string;
+    };
 }
 
 export interface Translations {
   nav: {
+    home: string;
     tour: string;
     drone: string;
     website: string;
@@ -88,6 +93,22 @@ export interface Translations {
   };
   footer: {
     rights: string;
+  };
+  homePage: {
+    whyChooseUs: {
+        title: string;
+        subtitle: string;
+        items: Feature[];
+    };
+    portfolio: {
+        title: string;
+        subtitle: string;
+    };
+    cta: {
+        title: string;
+        subtitle: string;
+        buttonText: string;
+    };
   };
   pages: {
     tour: PageContent;
