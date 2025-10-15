@@ -6,7 +6,7 @@ const WebPage: React.FC = () => {
     const { t } = useTranslations();
     const content = t('pages').website;
 
-    return <ServicePage content={content} />;
+    return <ServicePage serviceId="website" content={content} />;
 };
 
 export default WebPage;

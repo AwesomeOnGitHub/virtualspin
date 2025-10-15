@@ -6,7 +6,7 @@ const PhotographyPage: React.FC = () => {
     const { t } = useTranslations();
     const content = t('pages').photography;
 
-    return <ServicePage content={content} />;
+    return <ServicePage serviceId="photography" content={content} />;
 };
 
 export default PhotographyPage;

@@ -7,10 +7,11 @@ import AnimatedSection from './AnimatedSection';
 import { PageContent } from '../types';
 
 interface ServicePageProps {
+    serviceId: string;
     content: PageContent;
 }
 
-const ServicePage: React.FC<ServicePageProps> = ({ content }) => {
+const ServicePage: React.FC<ServicePageProps> = ({ serviceId, content }) => {
     return (
         <div>
             <PageHero {...content.hero} />
@@ -28,7 +29,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ content }) => {
 
             <ImageGallery {...content.gallery} />
             <FeatureGrid {...content.features} />
-            <PricingTable {...content.pricing} />
+            <PricingTable serviceId={serviceId} {...content.pricing} />
         </div>
     );
 };

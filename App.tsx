@@ -10,6 +10,7 @@ import WebPage from './pages/WebPage';
 import PhotographyPage from './pages/PhotographyPage';
 import HomePage from './pages/HomePage';
 import Contact from './components/Contact';
+import CheckoutPage from './pages/CheckoutPage';
 
 const App: React.FC = () => {
   const [toast, setToast] = useState<{ message: string; type: 'success' | 'error' } | null>(null);
@@ -41,6 +42,14 @@ const App: React.FC = () => {
   };
 
   const renderPage = () => {
+    if (route.startsWith('#/checkout/')) {
+      const parts = route.substring('#/checkout/'.length).split('/');
+      if (parts.length === 2) {
+          const [serviceId, planSlug] = parts;
+          return <CheckoutPage serviceId={serviceId} planSlug={planSlug} showToast={showToast} />;
+      }
+    }
+
     switch(route) {
       case '#/tour': return <TourPage />;
       case '#/drone': return <DronePage />;

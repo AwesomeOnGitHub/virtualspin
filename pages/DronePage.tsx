@@ -6,7 +6,7 @@ const DronePage: React.FC = () => {
     const { t } = useTranslations();
     const content = t('pages').drone;
 
-    return <ServicePage content={content} />;
+    return <ServicePage serviceId="drone" content={content} />;
 };
 
 export default DronePage;

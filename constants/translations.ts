@@ -40,6 +40,29 @@ export const translations: Record<Language, Translations> = {
     footer: {
       rights: "Everything on this site is ours.",
     },
+    pricing: {
+      choosePlan: "Choose Plan",
+      getQuote: "Get a Quote",
+    },
+    checkoutPage: {
+      backLink: "Back to",
+      contactTitle: "Contact Information",
+      nameLabel: "Full Name",
+      emailLabel: "Email Address",
+      notesLabel: "Additional Notes",
+      notesPlaceholder: "Any special requests or details...",
+      placeOrderButton: "Place Order",
+      orderSummaryTitle: "Order Summary",
+      productLabel: "Product:",
+      serviceLabel: "Service:",
+      totalLabel: "Total:",
+      gettingTitle: "What you're getting",
+      orderSuccess: "Your order has been placed! We'll be in touch soon.",
+      orderError: "Please fill in your name and email.",
+      notFoundTitle: "Plan Not Found",
+      notFoundText: "The plan you are looking for does not exist or the link is incorrect. Please navigate back and select a plan.",
+      notFoundButton: "Go to Home",
+    },
     homePage: {
       whyChooseUs: {
         title: "Why Choose VirtualSpin?",
@@ -137,11 +160,21 @@ export const translations: Record<Language, Translations> = {
                 ]
             },
             pricing: {
-                title: "Website Development Pricing", subtitle: "Transparent pricing to get your project off the ground.",
+                title: "Website Development Pricing",
+                subtitle: "Transparent pricing to get your project off the ground.",
                 plans: [
-                    { name: "Landing Page", price: "1,500€", period: "one-time", features: ["Single page site", "Contact form", "Mobile responsive", "Basic SEO setup"], isFeatured: false },
-                    { name: "Business Site", price: "2,800€", period: "one-time", features: ["Up to 10 pages", "CMS integration", "Custom design", "Advanced SEO"], isFeatured: true, oldPrice: "3,500€" },
-                    { name: "E-commerce", price: "from 5,000€", period: "one-time", features: ["Full online store", "Product management", "Payment gateways", "Customer accounts"], isFeatured: false }
+                    { name: "Landing Page", price: "999€", period: "one-time", features: ["Single page site", "Multi-language support", "Mobile responsive", "Basic SEO setup"], isFeatured: false, oldPrice: "1,500€" },
+                    { name: "Business Site", price: "2,800€", period: "one-time", features: ["Up to 10 pages", "CMS integration", "Custom design", "Advanced SEO"], isFeatured: false, oldPrice: "3,500€" },
+                    { name: "Multi Page Empire", price: "199€", period: "per month", features: ["Free Initial Build", "Unlimited Pages & Features", "Custom Backend Development", "Ongoing Support & Maintenance"], isFeatured: true },
+                    { 
+                        name: "Premium Website Package", 
+                        price: "Price on request", 
+                        period: "", 
+                        features: ["Includes all 'Multi Page Empire' features", "Dedicated Project Manager & Team", "Custom API & Third-party Integrations", "Advanced Analytics & Conversion Tracking", "Enterprise-Grade Security & Compliance", "24/7 Priority Support & SLA", "Personalized Onboarding & Training"], 
+                        isFeatured: false,
+                        isPremium: true,
+                        backgroundImage: "url('https://images.unsplash.com/photo-1558833349-2f27a23c52a0?q=80&w=1935&auto=format&fit=crop')"
+                    }
                 ]
             }
         },
@@ -215,6 +248,29 @@ export const translations: Record<Language, Translations> = {
     },
     footer: {
       rights: "Tout sur ce site est à nous.",
+    },
+    pricing: {
+      choosePlan: "Choisir le Forfait",
+      getQuote: "Obtenir un Devis",
+    },
+    checkoutPage: {
+      backLink: "Retour à",
+      contactTitle: "Informations de Contact",
+      nameLabel: "Nom Complet",
+      emailLabel: "Adresse E-mail",
+      notesLabel: "Notes Additionnelles",
+      notesPlaceholder: "Toute demande spéciale ou détail...",
+      placeOrderButton: "Passer la Commande",
+      orderSummaryTitle: "Résumé de la Commande",
+      productLabel: "Produit:",
+      serviceLabel: "Service:",
+      totalLabel: "Total:",
+      gettingTitle: "Ce que vous obtenez",
+      orderSuccess: "Votre commande a été passée ! Nous vous contacterons bientôt.",
+      orderError: "Veuillez indiquer votre nom et votre e-mail.",
+      notFoundTitle: "Forfait Introuvable",
+      notFoundText: "Le forfait que vous recherchez n'existe pas ou le lien est incorrect. Veuillez revenir en arrière et sélectionner un forfait.",
+      notFoundButton: "Aller à l'Accueil",
     },
     homePage: {
       whyChooseUs: {
@@ -313,11 +369,21 @@ export const translations: Record<Language, Translations> = {
                 ]
             },
             pricing: {
-                title: "Tarifs de Développement de Site Web", subtitle: "Une tarification transparente pour lancer votre projet.",
+                title: "Tarifs de Développement de Site Web",
+                subtitle: "Une tarification transparente pour lancer votre projet.",
                 plans: [
-                    { name: "Page de Destination", price: "1,500€", period: "unique", features: ["Site d'une seule page", "Formulaire de contact", "Adaptatif mobile", "Configuration SEO de base"], isFeatured: false },
-                    { name: "Site d'Entreprise", price: "2,800€", period: "unique", features: ["Jusqu'à 10 pages", "Intégration CMS", "Conception personnalisée", "SEO avancé"], isFeatured: true, oldPrice: "3,500€" },
-                    { name: "E-commerce", price: "à partir de 5,000€", period: "unique", features: ["Boutique en ligne complète", "Gestion des produits", "Passerelles de paiement", "Comptes clients"], isFeatured: false }
+                    { name: "Page de Destination", price: "999€", period: "unique", features: ["Site d'une seule page", "Support multilingue", "Adaptatif mobile", "Configuration SEO de base"], isFeatured: false, oldPrice: "1,500€" },
+                    { name: "Site d'Entreprise", price: "2,800€", period: "unique", features: ["Jusqu'à 10 pages", "Intégration CMS", "Conception personnalisée", "SEO avancé"], isFeatured: false, oldPrice: "3,500€" },
+                    { name: "Empire Multi-Pages", price: "199€", period: "par mois", features: ["Construction Initiale Gratuite", "Pages & Fonctionnalités Illimitées", "Développement Backend Personnalisé", "Support & Maintenance Continus"], isFeatured: true },
+                    { 
+                        name: "Forfait Site Web Premium", 
+                        price: "Prix sur demande", 
+                        period: "", 
+                        features: ["Inclut toutes les fonctionnalités 'Empire Multi-Pages'", "Chef de Projet & Équipe Dédiés", "Intégrations API & Tiers Personnalisées", "Analyses Avancées & Suivi des Conversions", "Sécurité & Conformité de Niveau Entreprise", "Support Prioritaire 24/7 & SLA", "Intégration & Formation Personnalisées"], 
+                        isFeatured: false,
+                        isPremium: true,
+                        backgroundImage: "url('https://images.unsplash.com/photo-1558833349-2f27a23c52a0?q=80&w=1935&auto=format&fit=crop')"
+                    }
                 ]
             }
         },
@@ -391,6 +457,29 @@ export const translations: Record<Language, Translations> = {
     },
     footer: {
       rights: "Alles auf dieser Seite gehört uns.",
+    },
+    pricing: {
+      choosePlan: "Plan wählen",
+      getQuote: "Angebot anfordern",
+    },
+    checkoutPage: {
+        backLink: "Zurück zu",
+        contactTitle: "Kontaktinformationen",
+        nameLabel: "Vollständiger Name",
+        emailLabel: "E-Mail-Adresse",
+        notesLabel: "Zusätzliche Anmerkungen",
+        notesPlaceholder: "Besondere Wünsche oder Details...",
+        placeOrderButton: "Bestellung aufgeben",
+        orderSummaryTitle: "Bestellübersicht",
+        productLabel: "Produkt:",
+        serviceLabel: "Dienstleistung:",
+        totalLabel: "Gesamt:",
+        gettingTitle: "Was Sie bekommen",
+        orderSuccess: "Ihre Bestellung wurde aufgegeben! Wir werden uns bald mit Ihnen in Verbindung setzen.",
+        orderError: "Bitte geben Sie Ihren Namen und Ihre E-Mail-Adresse an.",
+        notFoundTitle: "Plan nicht gefunden",
+        notFoundText: "Der von Ihnen gesuchte Plan existiert nicht oder der Link ist falsch. Bitte navigieren Sie zurück und wählen Sie einen Plan aus.",
+        notFoundButton: "Zur Startseite",
     },
     homePage: {
       whyChooseUs: {
@@ -489,11 +578,21 @@ export const translations: Record<Language, Translations> = {
                 ]
             },
             pricing: {
-                title: "Preise für die Website-Entwicklung", subtitle: "Transparente Preise, um Ihr Projekt auf den Weg zu bringen.",
+                title: "Preise für die Website-Entwicklung",
+                subtitle: "Transparente Preise, um Ihr Projekt auf den Weg zu bringen.",
                 plans: [
-                    { name: "Landing Page", price: "1.500€", period: "einmalig", features: ["Einzelseiten-Website", "Kontaktformular", "Mobil-responsiv", "Grundlegende SEO-Einrichtung"], isFeatured: false },
-                    { name: "Unternehmenswebsite", price: "2.800€", period: "einmalig", features: ["Bis zu 10 Seiten", "CMS-Integration", "Individuelles Design", "Fortgeschrittenes SEO"], isFeatured: true, oldPrice: "3,500€" },
-                    { name: "E-Commerce", price: "ab 5.000€", period: "einmalig", features: ["Vollständiger Online-Shop", "Produktverwaltung", "Zahlungsgateways", "Kundenkonten"], isFeatured: false }
+                    { name: "Landing Page", price: "999€", period: "einmalig", features: ["Einzelseiten-Website", "Mehrsprachige Unterstützung", "Mobil-responsiv", "Grundlegende SEO-Einrichtung"], isFeatured: false, oldPrice: "1.500€" },
+                    { name: "Unternehmenswebsite", price: "2.800€", period: "einmalig", features: ["Bis zu 10 Seiten", "CMS-Integration", "Individuelles Design", "Fortgeschrittenes SEO"], isFeatured: false, oldPrice: "3,500€" },
+                    { name: "Multi-Page Imperium", price: "199€", period: "pro Monat", features: ["Kostenlose Ersteinrichtung", "Unbegrenzte Seiten & Funktionen", "Benutzerdefinierte Backend-Entwicklung", "Laufender Support & Wartung"], isFeatured: true },
+                    { 
+                        name: "Premium Website-Paket", 
+                        price: "Preis auf Anfrage", 
+                        period: "", 
+                        features: ["Enthält alle 'Multi-Page Imperium'-Funktionen", "Engagierter Projektmanager & Team", "Benutzerdefinierte API- & Drittanbieter-Integrationen", "Erweiterte Analysen & Conversion-Tracking", "Unternehmenssicherheit & Compliance", "24/7-Prioritätssupport & SLA", "Personalisierte Einarbeitung & Schulung"], 
+                        isFeatured: false,
+                        isPremium: true,
+                        backgroundImage: "url('https://images.unsplash.com/photo-1558833349-2f27a23c52a0?q=80&w=1935&auto=format&fit=crop')"
+                    }
                 ]
             }
         },
@@ -514,7 +613,7 @@ export const translations: Record<Language, Translations> = {
                     { icon: "Building", title: "Architektur", description: "Präsentation von Gewerbe- und Wohnimmobilien mit atemberaubenden Fotos." },
                     { icon: "Briefcase", title: "Unternehmensporträts", description: "Professionelle Porträts Ihres Teams für Websites und Profile." },
                     { icon: "ShoppingBag", title: "Produktfotografie", description: "Saubere, scharfe Bilder für Ihren E-Commerce-Shop und Ihre Kataloge." },
-                    { icon: "Utensils", title: "Essen & Trinken", description: "Köstlich aussehende Fotos, die Ihre kulinarischen Kreationen unwiderstehlich machen." }
+                    { icon: "Utensils", title: "Essen & Trinken", description: "Köstlich aussehende Fotos, die Ihre kulinären Kreationen unwiderstehlich machen." }
                 ]
             },
             pricing: {
@@ -567,6 +666,29 @@ export const translations: Record<Language, Translations> = {
     },
     footer: {
       rights: "كل شيء في هذا الموقع ملكنا.",
+    },
+    pricing: {
+        choosePlan: "اختر الباقة",
+        getQuote: "اطلب عرض سعر",
+    },
+    checkoutPage: {
+        backLink: "العودة إلى",
+        contactTitle: "معلومات الاتصال",
+        nameLabel: "الاسم الكامل",
+        emailLabel: "البريد الإلكتروني",
+        notesLabel: "ملاحظات إضافية",
+        notesPlaceholder: "أي طلبات خاصة أو تفاصيل...",
+        placeOrderButton: "إتمام الطلب",
+        orderSummaryTitle: "ملخص الطلب",
+        productLabel: "المنتج:",
+        serviceLabel: "الخدمة:",
+        totalLabel: "الإجمالي:",
+        gettingTitle: "ما الذي ستحصل عليه",
+        orderSuccess: "تم تقديم طلبك بنجاح! سنتواصل معك قريبًا.",
+        orderError: "يرجى إدخال اسمك وبريدك الإلكتروني.",
+        notFoundTitle: "الباقة غير موجودة",
+        notFoundText: "الباقة التي تبحث عنها غير موجودة أو الرابط غير صحيح. يرجى العودة واختيار باقة.",
+        notFoundButton: "الذهاب إلى الرئيسية",
     },
     homePage: {
       whyChooseUs: {
@@ -665,11 +787,21 @@ export const translations: Record<Language, Translations> = {
                 ]
             },
             pricing: {
-                title: "تسعير تطوير مواقع الويب", subtitle: "تسعير شفاف لإطلاق مشروعك.",
+                title: "تسعير تطوير مواقع الويب",
+                subtitle: "تسعير شفاف لإطلاق مشروعك.",
                 plans: [
-                    { name: "صفحة هبوط", price: "1,500€", period: "مرة واحدة", features: ["موقع من صفحة واحدة", "نموذج اتصال", "متجاوب مع الجوّال", "إعداد أساسي لمحركات البحث"], isFeatured: false },
-                    { name: "موقع أعمال", price: "2,800€", period: "مرة واحدة", features: ["ما يصل إلى 10 صفحات", "تكامل نظام إدارة المحتوى", "تصميم مخصص", "تحسين متقدم لمحركات البحث"], isFeatured: true, oldPrice: "3,500€" },
-                    { name: "تجارة إلكترونية", price: "من 5,000€", period: "مرة واحدة", features: ["متجر كامل عبر الإنترنت", "إدارة المنتجات", "بوابات الدفع", "حسابات العملاء"], isFeatured: false }
+                    { name: "صفحة هبوط", price: "999€", period: "مرة واحدة", features: ["موقع من صفحة واحدة", "دعم متعدد اللغات", "متجاوب مع الجوّال", "إعداد أساسي لمحركات البحث"], isFeatured: false, oldPrice: "1,500€" },
+                    { name: "موقع أعمال", price: "2,800€", period: "مرة واحدة", features: ["ما يصل إلى 10 صفحات", "تكامل نظام إدارة المحتوى", "تصميم مخصص", "تحسين متقدم لمحركات البحث"], isFeatured: false, oldPrice: "3,500€" },
+                    { name: "إمبراطورية متعددة الصفحات", price: "199€", period: "شهريًا", features: ["بناء أولي مجاني", "صفحات وميزات غير محدودة", "تطوير خلفية مخصصة", "دعم وصيانة مستمرة"], isFeatured: true },
+                    { 
+                        name: "باقة الموقع الإلكتروني المميزة", 
+                        price: "السعر عند الطلب", 
+                        period: "", 
+                        features: ["يشمل جميع ميزات 'إمبراطورية متعددة الصفحات'", "مدير مشروع وفريق مخصص", "تكاملات API مخصصة وتكاملات مع أطراف ثالثة", "تحليلات متقدمة وتتبع التحويلات", "أمان وامتثال على مستوى الشركات", "دعم ذو أولوية 24/7 واتفاقية مستوى الخدمة", "تأهيل وتدريب شخصي"], 
+                        isFeatured: false,
+                        isPremium: true,
+                        backgroundImage: "url('https://images.unsplash.com/photo-1558833349-2f27a23c52a0?q=80&w=1935&auto=format&fit=crop')"
+                    }
                 ]
             }
         },

@@ -6,7 +6,7 @@ const TourPage: React.FC = () => {
     const { t } = useTranslations();
     const content = t('pages').tour;
 
-    return <ServicePage content={content} />;
+    return <ServicePage serviceId="tour" content={content} />;
 };
 
 export default TourPage;

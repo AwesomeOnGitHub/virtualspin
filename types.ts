@@ -16,6 +16,8 @@ export interface Plan {
   features: string[];
   isFeatured: boolean;
   oldPrice?: string;
+  isPremium?: boolean;
+  backgroundImage?: string;
 }
 
 export interface Feature {
@@ -94,6 +96,29 @@ export interface Translations {
   footer: {
     rights: string;
   };
+  pricing: {
+    choosePlan: string;
+    getQuote: string;
+  };
+  checkoutPage: {
+    backLink: string;
+    contactTitle: string;
+    nameLabel: string;
+    emailLabel: string;
+    notesLabel: string;
+    notesPlaceholder: string;
+    placeOrderButton: string;
+    orderSummaryTitle: string;
+    productLabel: string;
+    serviceLabel: string;
+    totalLabel: string;
+    gettingTitle: string;
+    orderSuccess: string;
+    orderError: string;
+    notFoundTitle: string;
+    notFoundText: string;
+    notFoundButton: string;
+  };
   homePage: {
     whyChooseUs: {
         title: string;
@@ -101,7 +126,7 @@ export interface Translations {
         items: Feature[];
     };
     portfolio: {
-        title: string;
+        title:string;
         subtitle: string;
     };
     cta: {
