@@ -4,14 +4,14 @@ import { Camera, Code, Scan, CheckCircle, ArrowRight, Drone } from 'lucide-react
 
 const icons: { [key: string]: React.ReactNode } = {
   tour: <Scan className="w-8 h-8 text-[var(--primary)]" />,
-  photo: <Camera className="w-8 h-8 text-[var(--primary)]" />,
+  photography: <Camera className="w-8 h-8 text-[var(--primary)]" />,
   web: <Code className="w-8 h-8 text-[var(--primary)]" />,
   drone: <Drone className="w-8 h-8 text-[var(--primary)]" />,
 };
 
 const serviceImages: { [key: string]: string } = {
     tour: 'https://images.unsplash.com/photo-1579548122080-c35fd6820ecb?q=80&w=2070&auto=format&fit=crop',
-    photo: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1964&auto=format&fit=crop',
+    photography: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1964&auto=format&fit=crop',
     drone: 'https://images.unsplash.com/photo-1505872441885-25a86cc1a43a?q=80&w=2070&auto=format&fit=crop',
     web: 'https://images.unsplash.com/photo-1559028006-44a36f1159d5?q=80&w=1925&auto=format&fit=crop'
 };

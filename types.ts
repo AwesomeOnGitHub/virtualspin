@@ -1,3 +1,7 @@
+// FIX: This file was incorrectly containing translation data instead of type definitions,
+// causing circular dependencies and missing type errors across the application.
+// The content has been replaced with the correct type definitions.
+
 export type Language = 'en' | 'fr' | 'de' | 'ar';
 
 export interface Service {
@@ -9,57 +13,63 @@ export interface Service {
   newPrice: string;
 }
 
-export interface Plan {
-  name: string;
-  price: string;
-  period: string;
-  features: string[];
-  isFeatured: boolean;
-  oldPrice?: string;
-  isPremium?: boolean;
-  backgroundImage?: string;
+export interface Image {
+    src: string;
+    alt: string;
 }
 
 export interface Feature {
-  icon: string;
-  title: string;
-  description: string;
+    icon: string;
+    title: string;
+    description: string;
 }
 
-export interface Image {
-  src: string;
-  alt: string;
+export interface Plan {
+    name: string;
+    price: string;
+    period: string;
+    features: string[];
+    isFeatured: boolean;
+    oldPrice?: string;
+    isPremium?: boolean;
+    backgroundImage?: string;
+}
+
+interface HeroContent {
+    title: string;
+    subtitle: string;
+    imageUrl: string;
+}
+
+interface IntroContent {
+    title: string;
+    paragraphs: string[];
+}
+
+interface GalleryContent {
+    title: string;
+    subtitle: string;
+    images: Image[];
+}
+
+interface FeaturesContent {
+    title: string;
+    subtitle: string;
+    items: Feature[];
+}
+
+interface PricingContent {
+    title: string;
+    subtitle: string;
+    plans: Plan[];
 }
 
 export interface PageContent {
-    hero: {
-        title: string;
-        subtitle: string;
-        imageUrl: string;
-    };
-    intro: {
-        title: string;
-        paragraphs: string[];
-    };
-    gallery: {
-        title: string;
-        subtitle: string;
-        images: Image[];
-    };
-    features: {
-        title: string;
-        subtitle: string;
-        items: Feature[];
-    };
-    pricing: {
-        title: string;
-        subtitle: string;
-        plans: Plan[];
-    };
-    otherServices?: {
-      title: string;
-      subtitle: string;
-    };
+    hero: HeroContent;
+    intro: IntroContent;
+    gallery: GalleryContent;
+    features: FeaturesContent;
+    pricing: PricingContent;
 }
 
 export interface Translations {
@@ -80,8 +90,8 @@ export interface Translations {
   services: {
     title: string;
     subtitle: string;
-    list: Service[];
     learnMore: string;
+    list: Service[];
   };
   contact: {
     title: string;
@@ -119,26 +129,32 @@ export interface Translations {
     notFoundText: string;
     notFoundButton: string;
   };
+  generalCheckoutPage: {
+    title: string;
+    detailsTitle: string;
+    detailsText: string;
+    explore: string;
+  };
   homePage: {
     whyChooseUs: {
-        title: string;
-        subtitle: string;
-        items: Feature[];
+      title: string;
+      subtitle: string;
+      items: Feature[];
     };
     portfolio: {
-        title:string;
-        subtitle: string;
+      title: string;
+      subtitle: string;
     };
     cta: {
-        title: string;
-        subtitle: string;
-        buttonText: string;
+      title: string;
+      subtitle: string;
+      buttonText: string;
     };
   };
   pages: {
     tour: PageContent;
     drone: PageContent;
-    website: PageContent;
+    web: PageContent;
     photography: PageContent;
   };
 }

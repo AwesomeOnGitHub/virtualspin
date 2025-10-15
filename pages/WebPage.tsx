@@ -4,9 +4,9 @@ import ServicePage from '../components/ServicePage';
 
 const WebPage: React.FC = () => {
     const { t } = useTranslations();
-    const content = t('pages').website;
+    const content = t('pages').web;
 
-    return <ServicePage serviceId="website" content={content} />;
+    return <ServicePage serviceId="web" content={content} />;
 };
 
 export default WebPage;

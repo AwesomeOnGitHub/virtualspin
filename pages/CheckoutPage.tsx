@@ -57,7 +57,7 @@ const CheckoutPage: React.FC<CheckoutPageProps> = ({ serviceId, planSlug, showTo
     );
   }
   
-  const backlinkRoute = serviceId === 'website' ? '#/web' : `#/${serviceId}`;
+  const backlinkRoute = `#/${serviceId}`;
 
   return (
     <div className="min-h-screen bg-black text-white pt-32 pb-16">
@@ -143,16 +143,7 @@ const CheckoutPage: React.FC<CheckoutPageProps> = ({ serviceId, planSlug, showTo
 
                 {/* Right Column: Details & Video */}
                 <section className="lg:col-span-4 order-3 lg:order-3" aria-labelledby="details-heading">
-                    <h2 id="details-heading" className="text-3xl font-bold mb-6">{checkoutText.gettingTitle}</h2>
-                    <ul className="space-y-3 mb-8 text-gray-300">
-                        {plan.features.map((feature, index) => (
-                            <li key={index} className="flex items-start">
-                                <span className="text-green-500 font-bold me-3 mt-1" aria-hidden="true">&#10003;</span>
-                                <span>{feature}</span>
-                            </li>
-                        ))}
-                    </ul>
-                     <div className="aspect-video rounded-lg overflow-hidden shadow-lg shadow-black/30">
+                    <div className="aspect-video rounded-lg overflow-hidden shadow-lg shadow-black/30 mb-8">
                         <iframe 
                             src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&loop=1&playlist=dQw4w9WgXcQ&controls=0" 
                             title="Embedded YouTube video player" 
@@ -162,6 +153,15 @@ const CheckoutPage: React.FC<CheckoutPageProps> = ({ serviceId, planSlug, showTo
                             className="w-full h-full"
                         ></iframe>
                     </div>
+                    <h2 id="details-heading" className="text-3xl font-bold mb-6">{checkoutText.gettingTitle}</h2>
+                    <ul className="space-y-3 text-gray-300">
+                        {plan.features.map((feature, index) => (
+                            <li key={index} className="flex items-start">
+                                <span className="text-green-500 font-bold me-3 mt-1" aria-hidden="true">&#10003;</span>
+                                <span>{feature}</span>
+                            </li>
+                        ))}
+                    </ul>
                 </section>
             </div>
         </div>

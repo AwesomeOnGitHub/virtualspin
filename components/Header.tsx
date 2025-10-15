@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslations } from '../hooks/useTranslations';
 import { Language } from '../types';
-import { Globe, Menu, X } from 'lucide-react';
+import { Globe, Menu, X, ShoppingBag } from 'lucide-react';
 
 interface HeaderProps {
   onContactClick: () => void;
@@ -106,9 +106,14 @@ const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
                 </div>
               )}
             </div>
-            <button onClick={onContactClick} className="border-2 border-[var(--primary)] hover:bg-[var(--primary)] text-white font-bold py-2 px-6 rounded-full transition-all duration-300 transform hover:scale-105">
-              {navText.getStarted}
-            </button>
+            <div className="flex items-center gap-2">
+                <button onClick={onContactClick} className="border-2 border-[var(--primary)] hover:bg-[var(--primary)] text-white font-bold py-2 px-6 rounded-full transition-all duration-300 transform hover:scale-105">
+                {navText.getStarted}
+                </button>
+                <a href="#/checkout" onClick={() => handleNavLinkClick('#/checkout')} aria-label="View services checkout" className="text-white hover:text-[var(--primary)] transition-colors p-2 rounded-full hover:bg-white/10">
+                    <ShoppingBag className="w-6 h-6" />
+                </a>
+            </div>
           </nav>
           <div className="md:hidden">
             <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="z-50 relative text-white">
@@ -139,9 +144,14 @@ const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
               </button>
               ))}
           </div>
-          <button onClick={() => { onContactClick(); closeAllMenus(); }} className="border-2 border-[var(--primary)] hover:bg-[var(--primary)] text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 mt-4">
-            {navText.getStarted}
-          </button>
+          <div className="flex items-center gap-4">
+            <button onClick={() => { onContactClick(); closeAllMenus(); }} className="border-2 border-[var(--primary)] hover:bg-[var(--primary)] text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 mt-4">
+                {navText.getStarted}
+            </button>
+            <a href="#/checkout" onClick={() => handleNavLinkClick('#/checkout')} aria-label="View services checkout" className="text-white hover:text-[var(--primary)] transition-colors p-2 rounded-full hover:bg-white/10 mt-4">
+                <ShoppingBag className="w-8 h-8" />
+            </a>
+          </div>
         </nav>
       </div>
     </>

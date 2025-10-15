@@ -11,6 +11,7 @@ import PhotographyPage from './pages/PhotographyPage';
 import HomePage from './pages/HomePage';
 import Contact from './components/Contact';
 import CheckoutPage from './pages/CheckoutPage';
+import GeneralCheckoutPage from './pages/GeneralCheckoutPage';
 
 const App: React.FC = () => {
   const [toast, setToast] = useState<{ message: string; type: 'success' | 'error' } | null>(null);
@@ -42,6 +43,9 @@ const App: React.FC = () => {
   };
 
   const renderPage = () => {
+    if (route === '#/checkout') {
+        return <GeneralCheckoutPage />;
+    }
     if (route.startsWith('#/checkout/')) {
       const parts = route.substring('#/checkout/'.length).split('/');
       if (parts.length === 2) {
@@ -57,7 +61,7 @@ const App: React.FC = () => {
       case '#/photography': return <PhotographyPage />;
       case '#/':
       default:
-        return <HomePage />;
+        return <HomePage onContactClick={handleContactClick} />;
     }
   };
 

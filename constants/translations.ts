@@ -63,6 +63,12 @@ export const translations: Record<Language, Translations> = {
       notFoundText: "The plan you are looking for does not exist or the link is incorrect. Please navigate back and select a plan.",
       notFoundButton: "Go to Home",
     },
+    generalCheckoutPage: {
+        title: "Explore Our Services",
+        detailsTitle: "Your Vision, Our Expertise",
+        detailsText: "At VirtualSpin, we combine cutting-edge technology with creative passion to bring your ideas to life. Each service is a partnership, a journey we take with you to create something truly remarkable. Whether it's an immersive 360° tour that transports your audience or a high-performance website that drives growth, our team is dedicated to delivering excellence and results. Let's build something amazing together.",
+        explore: "Explore",
+    },
     homePage: {
       whyChooseUs: {
         title: "Why Choose VirtualSpin?",
@@ -138,8 +144,7 @@ export const translations: Record<Language, Translations> = {
                 ]
             }
         },
-        // FIX: Added missing intro, gallery, and features properties to conform to PageContent type.
-        website: {
+        web: {
             hero: { title: "Your Digital Storefront", subtitle: "Beautiful, fast, and effective websites that grow your business.", imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" },
             intro: { title: "Built For Performance", paragraphs: ["A great website is more than an online brochure; it's a powerful tool for growth. We design and build websites that are not only visually stunning but also fast, secure, and optimized to convert visitors into customers.", "Our process is collaborative. We work closely with you to understand your brand and goals, ensuring the final product is a perfect digital reflection of your business."] },
             gallery: {
@@ -272,6 +277,12 @@ export const translations: Record<Language, Translations> = {
       notFoundText: "Le forfait que vous recherchez n'existe pas ou le lien est incorrect. Veuillez revenir en arrière et sélectionner un forfait.",
       notFoundButton: "Aller à l'Accueil",
     },
+    generalCheckoutPage: {
+        title: "Découvrez Nos Services",
+        detailsTitle: "Votre Vision, Notre Expertise",
+        detailsText: "Chez VirtualSpin, nous allions technologie de pointe et passion créative pour donner vie à vos idées. Chaque service est un partenariat, un voyage que nous entreprenons avec vous pour créer quelque chose de vraiment remarquable. Qu'il s'agisse d'une visite immersive à 360° qui transporte votre public ou d'un site web performant qui stimule la croissance, notre équipe se consacre à l'excellence et aux résultats. Construisons quelque chose d'incroyable ensemble.",
+        explore: "Découvrir",
+    },
     homePage: {
       whyChooseUs: {
         title: "Pourquoi Choisir VirtualSpin ?",
@@ -347,8 +358,7 @@ export const translations: Record<Language, Translations> = {
                 ]
             }
         },
-        // FIX: Added missing intro, gallery, and features properties to conform to PageContent type.
-        website: {
+        web: {
             hero: { title: "Votre Vitrine Numérique", subtitle: "Des sites web beaux, rapides et efficaces qui développent votre entreprise.", imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" },
             intro: { title: "Conçu pour la Performance", paragraphs: ["Un excellent site web est plus qu'une simple brochure en ligne ; c'est un puissant outil de croissance. Nous concevons et construisons des sites web qui ne sont pas seulement magnifiques visuellement, mais aussi rapides, sécurisés et optimisés pour convertir les visiteurs en clients.", "Notre processus est collaboratif. Nous travaillons en étroite collaboration avec vous pour comprendre votre marque et vos objectifs, en veillant à ce que le produit final soit un reflet numérique parfait de votre entreprise."] },
             gallery: {
@@ -481,6 +491,12 @@ export const translations: Record<Language, Translations> = {
         notFoundText: "Der von Ihnen gesuchte Plan existiert nicht oder der Link ist falsch. Bitte navigieren Sie zurück und wählen Sie einen Plan aus.",
         notFoundButton: "Zur Startseite",
     },
+    generalCheckoutPage: {
+        title: "Entdecken Sie unsere Dienstleistungen",
+        detailsTitle: "Ihre Vision, unsere Expertise",
+        detailsText: "Bei VirtualSpin kombinieren wir modernste Technologie mit kreativer Leidenschaft, um Ihre Ideen zum Leben zu erwecken. Jede Dienstleistung ist eine Partnerschaft, eine Reise, die wir mit Ihnen unternehmen, um etwas wirklich Bemerkenswertes zu schaffen. Ob es sich um eine immersive 360°-Tour handelt, die Ihr Publikum transportiert, oder eine hochleistungsfähige Website, die Wachstum fördert, unser Team widmet sich der Bereitstellung von Exzellenz und Ergebnissen. Lassen Sie uns gemeinsam etwas Erstaunliches bauen.",
+        explore: "Entdecken",
+    },
     homePage: {
       whyChooseUs: {
         title: "Warum VirtualSpin wählen?",
@@ -556,8 +572,7 @@ export const translations: Record<Language, Translations> = {
                 ]
             }
         },
-        // FIX: Added missing intro, gallery, and features properties to conform to PageContent type.
-        website: {
+        web: {
             hero: { title: "Ihr digitaler Laden", subtitle: "Schöne, schnelle und effektive Websites, die Ihr Unternehmen wachsen lassen.", imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" },
             intro: { title: "Für Leistung gebaut", paragraphs: ["Eine großartige Website ist mehr als eine Online-Broschüre; sie ist ein leistungsstarkes Werkzeug für Wachstum. Wir entwerfen und erstellen Websites, die nicht nur visuell beeindruckend, sondern auch schnell, sicher und optimiert sind, um Besucher in Kunden zu verwandeln.", "Unser Prozess ist kollaborativ. Wir arbeiten eng mit Ihnen zusammen, um Ihre Marke und Ihre Ziele zu verstehen und sicherzustellen, dass das Endprodukt ein perfektes digitales Abbild Ihres Unternehmens ist."] },
             gallery: {
@@ -690,6 +705,12 @@ export const translations: Record<Language, Translations> = {
         notFoundText: "الباقة التي تبحث عنها غير موجودة أو الرابط غير صحيح. يرجى العودة واختيار باقة.",
         notFoundButton: "الذهاب إلى الرئيسية",
     },
+    generalCheckoutPage: {
+        title: "استكشف خدماتنا",
+        detailsTitle: "رؤيتك، خبرتنا",
+        detailsText: "في VirtualSpin، نجمع بين التكنولوجيا المتطورة والشغف الإبداعي لتحويل أفكارك إلى حقيقة. كل خدمة هي شراكة، رحلة نخوضها معك لإنشاء شيء رائع حقًا. سواء كانت جولة غامرة بزاوية 360 درجة تنقل جمهورك أو موقع ويب عالي الأداء يدفع النمو، فإن فريقنا مكرس لتقديم التميز والنتائج. دعنا نبني شيئًا مذهلاً معًا.",
+        explore: "استكشف",
+    },
     homePage: {
       whyChooseUs: {
         title: "لماذا تختار VirtualSpin؟",
@@ -765,8 +786,7 @@ export const translations: Record<Language, Translations> = {
                 ]
             }
         },
-        // FIX: Added missing intro, gallery, and features properties to conform to PageContent type.
-        website: {
+        web: {
             hero: { title: "واجهتك الرقمية", subtitle: "مواقع ويب جميلة وسريعة وفعالة تنمي أعمالك.", imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" },
             intro: { title: "مصمم للأداء", paragraphs: ["الموقع الإلكتروني الرائع هو أكثر من مجرد كتيب عبر الإنترنت؛ إنه أداة قوية للنمو. نحن نصمم ونبني مواقع ويب ليست فقط مذهلة بصريًا ولكنها أيضًا سريعة وآمنة ومحسّنة لتحويل الزوار إلى عملاء.", "عمليتنا تعاونية. نحن نعمل عن كثب معك لفهم علامتك التجارية وأهدافك، مما يضمن أن المنتج النهائي هو انعكاس رقمي مثالي لعملك."] },
             gallery: {
