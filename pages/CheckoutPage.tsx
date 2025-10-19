@@ -67,8 +67,8 @@ const CheckoutPage: React.FC<CheckoutPageProps> = ({ serviceId, planSlug, showTo
             </a>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
                 
-                {/* Middle Column: Contact Form */}
-                <section className="lg:col-span-5 order-1 lg:order-2" aria-labelledby="contact-heading">
+                {/* Contact Form */}
+                <section className="lg:col-span-5 order-3 lg:order-2" aria-labelledby="contact-heading">
                      <h2 id="contact-heading" className="text-3xl font-bold mb-6">{checkoutText.contactTitle}</h2>
                      <form onSubmit={handleSubmit} noValidate className="space-y-6">
                         <div>
@@ -118,9 +118,9 @@ const CheckoutPage: React.FC<CheckoutPageProps> = ({ serviceId, planSlug, showTo
                     </form>
                 </section>
 
-                {/* Left Column: Product Summary */}
-                <section className="lg:col-span-3 order-2 lg:order-1" aria-labelledby="summary-heading">
-                    <div className="bg-[var(--card)] p-6 rounded-2xl border border-gray-800 sticky top-32">
+                {/* Product Summary */}
+                <section className="lg:col-span-3 order-1 lg:order-1" aria-labelledby="summary-heading">
+                    <div className="bg-[var(--card)] p-6 rounded-2xl border border-gray-800 lg:sticky top-32">
                         <h2 id="summary-heading" className="text-xl font-bold mb-4">{checkoutText.orderSummaryTitle}</h2>
                         <div className="space-y-3">
                            <div className="flex justify-between items-start">
@@ -141,8 +141,8 @@ const CheckoutPage: React.FC<CheckoutPageProps> = ({ serviceId, planSlug, showTo
                     </div>
                 </section>
 
-                {/* Right Column: Details & Video */}
-                <section className="lg:col-span-4 order-3 lg:order-3" aria-labelledby="details-heading">
+                {/* Details & Video */}
+                <section className="lg:col-span-4 order-2 lg:order-3" aria-labelledby="details-heading">
                     <div className="aspect-video rounded-lg overflow-hidden shadow-lg shadow-black/30 mb-8">
                         <iframe 
                             src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&loop=1&playlist=dQw4w9WgXcQ&controls=0" 

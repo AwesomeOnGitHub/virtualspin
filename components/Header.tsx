@@ -30,6 +30,7 @@ const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
   }, [isMenuOpen]);
 
   const navText = t('nav');
+  const textShadow = '[text-shadow:0_1px_3px_rgba(0,0,0,0.5)]';
 
   const languages: { code: Language; name: string; flag: string }[] = [
     { code: 'en', name: 'English', flag: '🇺🇸' },
@@ -76,22 +77,22 @@ const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
     <>
       <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled || isMenuOpen ? 'bg-black/80 backdrop-blur-lg' : 'bg-transparent'}`}>
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <a href="#/" onClick={() => handleNavLinkClick('#/')} className="text-2xl font-bold text-white z-50">
+          <a href="#/" onClick={() => handleNavLinkClick('#/')} className={`text-2xl font-bold text-white z-50 ${textShadow}`}>
             Virtual<span className="text-[var(--primary)]">Spin</span>
           </a>
           <nav className="hidden md:flex items-center space-x-6 rtl:space-x-reverse">
             {navItems.map(item => {
               if (item.type === 'link') {
                 return (
-                  <a key={item.id} href={item.href} onClick={() => handleNavLinkClick(item.href)} className="text-gray-300 hover:text-[var(--primary)] transition-colors">{item.label}</a>
+                  <a key={item.id} href={item.href} onClick={() => handleNavLinkClick(item.href)} className={`text-gray-300 hover:text-[var(--primary)] transition-colors ${textShadow}`}>{item.label}</a>
                 );
               }
               return (
-                <button key={item.id} onClick={item.action} className="text-gray-300 hover:text-[var(--primary)] transition-colors">{item.label}</button>
+                <button key={item.id} onClick={item.action} className={`text-gray-300 hover:text-[var(--primary)] transition-colors ${textShadow}`}>{item.label}</button>
               );
             })}
             <div className="relative">
-              <button onClick={() => setIsLangMenuOpen(!isLangMenuOpen)} className="flex items-center text-gray-300 hover:text-[var(--primary)] transition-colors">
+              <button onClick={() => setIsLangMenuOpen(!isLangMenuOpen)} className={`flex items-center text-gray-300 hover:text-[var(--primary)] transition-colors ${textShadow}`}>
                 <Globe className="w-5 h-5 me-2" />
                 {language.toUpperCase()}
               </button>
@@ -107,11 +108,11 @@ const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
               )}
             </div>
             <div className="flex items-center gap-2">
-                <button onClick={onContactClick} className="border-2 border-[var(--primary)] hover:bg-[var(--primary)] text-white font-bold py-2 px-6 rounded-full transition-all duration-300 transform hover:scale-105">
+                <button onClick={onContactClick} className={`border-2 border-[var(--primary)] hover:bg-[var(--primary)] text-white font-bold py-2 px-6 rounded-full transition-all duration-300 transform hover:scale-105 ${textShadow}`}>
                 {navText.getStarted}
                 </button>
                 <a href="#/checkout" onClick={() => handleNavLinkClick('#/checkout')} aria-label="View services checkout" className="text-white hover:text-[var(--primary)] transition-colors p-2 rounded-full hover:bg-white/10">
-                    <ShoppingBag className="w-6 h-6" />
+                    <ShoppingBag className="w-6 h-6 drop-shadow-[0_1px_2px_rgba(0,0,0,0.7)]" />
                 </a>
             </div>
           </nav>

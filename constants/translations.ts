@@ -138,14 +138,14 @@ export const translations: Record<Language, Translations> = {
             pricing: {
                 title: "Aerial Service Packages", subtitle: "Flexible pricing for projects of all scales. All prices are a one-time payment, no hidden costs.",
                 plans: [
-                    { name: "Drone Photo Package", price: "399€", period: "", features: ["Ultra High Resolution Images from the Sky", "Maximum 5 Images", "1 360° Photo", "1 Hour on Site", "Usage Rights for Website and Socials", "Optional Upload to Google Maps"], isFeatured: false, oldPrice: "500€" },
-                    { name: "Drone Video Package", price: "1399€", period: "", features: ["1 Minute Edited Video", "Link for Website and Social Media", "Maximum 20 Images", "4 360° Images with Interactive Hotspot Virtual Tour", "Usage Rights", "Optional Upload to Google Maps", "Personal Consultation and Planning"], isFeatured: true, oldPrice: "1800€" },
+                    { name: "Drone Photo Package", price: "399€", period: "", features: ["4k Resolution Images", "5 Edited Images", "One 360° Photo", "Basic Retouch", "Photos from humanly Unreachable Points", "Usage Rights for Website and Socials", "Automatic Upload to Google Maps"], isFeatured: false, oldPrice: "500€" },
+                    { name: "Drone Video Package", price: "1399€", period: "", features: ["1 Minute Edited Video", "Links for Website and all Social Media", "20 4k Resolution Images", "Four 360° Images with Interactive Hotspot Virtual Tour", "Usage Rights", "Automatic Upload to Google Maps", "Personal Consultation and Planning", "Edited, Retouched and Raw Footage Included"], isFeatured: true, oldPrice: "1800€" },
                     { name: "Premium Drone Package", price: "Price on request", period: "", features: ["Unlimited Recordings", "Multilocation", "360° Images, Video Footage, Ultra High Resolution Photos", "Edited and Raw Footage Included", "Custom Branding, Links for all Social Media Platforms", "Premium Virtual Tour using the Drone Imagery", "Social Media Optimizing Package", "No Limits!", "Personal Consultation and Planning"], isFeatured: false }
                 ]
             }
         },
         web: {
-            hero: { title: "Your Digital Storefront", subtitle: "Beautiful, fast, and effective websites that grow your business.", imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" },
+            hero: { title: "Your Digital Storefront", subtitle: "Beautiful, fast, and effective websites that grow your business.", imageUrl: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop" },
             intro: { title: "Built For Performance", paragraphs: ["A great website is more than an online brochure; it's a powerful tool for growth. We design and build websites that are not only visually stunning but also fast, secure, and optimized to convert visitors into customers.", "Our process is collaborative. We work closely with you to understand your brand and goals, ensuring the final product is a perfect digital reflection of your business."] },
             gallery: {
                 title: "Our Web Design Portfolio", subtitle: "See how we've helped businesses like yours succeed online.",
@@ -168,9 +168,9 @@ export const translations: Record<Language, Translations> = {
                 title: "Website Development Pricing",
                 subtitle: "Transparent pricing to get your project off the ground.",
                 plans: [
-                    { name: "Landing Page", price: "999€", period: "one-time", features: ["Single page site", "Multi-language support", "Mobile responsive", "Basic SEO setup"], isFeatured: false, oldPrice: "1,500€" },
-                    { name: "Business Site", price: "2,800€", period: "one-time", features: ["Up to 10 pages", "CMS integration", "Custom design", "Advanced SEO"], isFeatured: false, oldPrice: "3,500€" },
-                    { name: "Multi Page Empire", price: "199€", period: "per month", features: ["Free Initial Build", "Unlimited Pages & Features", "Custom Backend Development", "Ongoing Support & Maintenance"], isFeatured: true },
+                    { name: "Landing Page", price: "999€", period: "one-time", features: ["The lobby of your digital presence", "Single page application", "Optimised for Google Search Engine (SEO)", "Compatible with any device", "Personalized CTAs convert 42% more than generic ones", "Modern foundation for online expansion", "Connect your website with all of your socials with links", "Promote on all sites at once", "Personalised QR code with logo and color of your choice which links to your site and or socials"], isFeatured: false, oldPrice: "1,500€" },
+                    { name: "Business Package", price: "2,800€", period: "one-time", features: ["Everything from the small package", "Multi-Page Website", "Embedding videos can increase conversions by 86%", "Optional translation to all languages", "Advanced SEO", "CMS integration", "Contact form", "Branding Advice from our team for Social Media and Website"], isFeatured: false, oldPrice: "3,500€" },
+                    { name: "Multi Page Empire", price: "199€", period: "per month", features: ["Collaborative webdevelopment", "Business site build for free", "Free advice and QR code at consultation", "Domain name talk", "Web presence consultation", "Code shared", "SEO", "Video", "Contact form", "Translation", "Accessibility check"], isFeatured: true },
                     { 
                         name: "Premium Website Package", 
                         price: "Price on request", 
@@ -207,9 +207,9 @@ export const translations: Record<Language, Translations> = {
                 title: "Our Photography Packages",
                 subtitle: "Choose the perfect session to capture your story. All prices are a one-time payment.",
                 plans: [
-                    { name: "Portrait Session", price: "249€", period: "", features: ["Ideal for: Individuals, couples, social media profiles, professional headshots.", "Duration: 45 minutes of shooting.", "10 professionally edited photos in high resolution.", "Links for Website and Social Media", "Includes basic retouching (color correction, brightness, contrast, light blemish removal)."], isFeatured: true, oldPrice: "300€" },
-                    { name: "Lifestyle Session", price: "449€", period: "", features: ["More time for a relaxed atmosphere, perfect for capturing natural interactions and candid moments.", "Duration: 1.5 hours of shooting.", "25 professionally edited photos in high resolution.", "Links for Website and Social Media", "Includes standard retouching (all services from the basic package plus more detailed adjustments).", "Outfit change is possible."], isFeatured: false, oldPrice: "650€" },
-                    { name: "Branding & Business", price: "1150€", period: "", features: ["Ideal for: Entrepreneurs, freelancers, influencers, artists, small businesses.", "Duration: 4 hours of shooting.", "Location: At multiple locations that fit your brand (office, café, outdoor).", "40 professionally edited photos in high resolution.", "Includes commercial usage rights for your own channels.", "A password-protected online gallery for selection and download.", "Comprehensive consultation beforehand to define the style and goals of the images."], isFeatured: false }
+                    { name: "Essential Session", price: "299€", period: "", features: ["Product shots, portraits", "1.5 hours of shooting", "10 professional shots", "Basic retouch", "Travelcost included"], isFeatured: false, oldPrice: "400€" },
+                    { name: "Standard Session", price: "469€", period: "", features: ["Product shots, portraits", "3 hours of shooting", "20 professionaly edited shots", "Basic retouch, raw footage included", "Travelcost included"], isFeatured: true, oldPrice: "800€" },
+                    { name: "Business Package", price: "1550€", period: "", features: ["Full-day photography session", "50 professionally edited photos", "Advanced retouching and detailed edits", "All raw footage provided", "Travelcost included", "Embedding Links for Website and Social Media"], isFeatured: false }
                 ]
             }
         }
@@ -352,14 +352,14 @@ export const translations: Record<Language, Translations> = {
             pricing: {
                 title: "Forfaits de Service Aérien", subtitle: "Tarification flexible pour les projets de toutes tailles. Tous les prix sont un paiement unique, sans frais cachés.",
                 plans: [
-                    { name: "Forfait Photo par Drone", price: "399€", period: "", features: ["Images Ultra Haute Résolution du Ciel", "Maximum 5 Images", "1 Photo 360°", "1 Heure sur place", "Droits d'utilisation pour Site Web et Réseaux Sociaux", "Téléchargement Optionnel sur Google Maps"], isFeatured: false, oldPrice: "500€" },
-                    { name: "Forfait Vidéo par Drone", price: "1399€", period: "", features: ["Vidéo éditée de 1 minute", "Lien pour Site Web et Réseaux Sociaux", "Maximum 20 Images", "4 Images 360° avec Visite Virtuelle à Points Interactifs", "Droits d'utilisation", "Téléchargement Optionnel sur Google Maps", "Consultation et Planification Personnelles"], isFeatured: true, oldPrice: "1800€" },
+                    { name: "Forfait Photo par Drone", price: "399€", period: "", features: ["Images en Résolution 4k", "5 Images Éditées", "Une Photo 360°", "Retouche de Base", "Photos depuis des Points Humainement Inaccessibles", "Droits d'Utilisation pour Site Web et Réseaux Sociaux", "Téléchargement Automatique sur Google Maps"], isFeatured: false, oldPrice: "500€" },
+                    { name: "Forfait Vidéo par Drone", price: "1399€", period: "", features: ["Vidéo éditée de 1 minute", "Liens pour site web et tous les réseaux sociaux", "20 images en résolution 4k", "Quatre Images 360° avec Visite Virtuelle à Points Interactifs", "Droits d'utilisation", "Téléchargement automatique sur Google Maps", "Consultation et Planification Personnelles", "Séquences éditées, retouchées et brutes incluses"], isFeatured: true, oldPrice: "1800€" },
                     { name: "Forfait Drone Premium", price: "Prix sur demande", period: "", features: ["Enregistrements Illimités", "Multi-sites", "Images 360°, Séquences Vidéo, Photos Ultra Haute Résolution", "Séquences éditées et brutes incluses", "Marque Personnalisée, Liens pour toutes les Plateformes de Médias Sociaux", "Visite Virtuelle Premium utilisant l'imagerie du Drone", "Forfait d'Optimisation des Médias Sociaux", "Sans Limites !", "Consultation et Planification Personnelles"], isFeatured: false }
                 ]
             }
         },
         web: {
-            hero: { title: "Votre Vitrine Numérique", subtitle: "Des sites web beaux, rapides et efficaces qui développent votre entreprise.", imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" },
+            hero: { title: "Votre Vitrine Numérique", subtitle: "Des sites web beaux, rapides et efficaces qui développent votre entreprise.", imageUrl: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop" },
             intro: { title: "Conçu pour la Performance", paragraphs: ["Un excellent site web est plus qu'une simple brochure en ligne ; c'est un puissant outil de croissance. Nous concevons et construisons des sites web qui ne sont pas seulement magnifiques visuellement, mais aussi rapides, sécurisés et optimisés pour convertir les visiteurs en clients.", "Notre processus est collaboratif. Nous travaillons en étroite collaboration avec vous pour comprendre votre marque et vos objectifs, en veillant à ce que le produit final soit un reflet numérique parfait de votre entreprise."] },
             gallery: {
                 title: "Notre Portfolio de Conception Web", subtitle: "Voyez comment nous avons aidé des entreprises comme la vôtre à réussir en ligne.",
@@ -382,9 +382,9 @@ export const translations: Record<Language, Translations> = {
                 title: "Tarifs de Développement de Site Web",
                 subtitle: "Une tarification transparente pour lancer votre projet.",
                 plans: [
-                    { name: "Page de Destination", price: "999€", period: "unique", features: ["Site d'une seule page", "Support multilingue", "Adaptatif mobile", "Configuration SEO de base"], isFeatured: false, oldPrice: "1,500€" },
-                    { name: "Site d'Entreprise", price: "2,800€", period: "unique", features: ["Jusqu'à 10 pages", "Intégration CMS", "Conception personnalisée", "SEO avancé"], isFeatured: false, oldPrice: "3,500€" },
-                    { name: "Empire Multi-Pages", price: "199€", period: "par mois", features: ["Construction Initiale Gratuite", "Pages & Fonctionnalités Illimitées", "Développement Backend Personnalisé", "Support & Maintenance Continus"], isFeatured: true },
+                    { name: "Page de Destination", price: "999€", period: "unique", features: ["Le hall d'entrée de votre présence numérique", "Application à page unique", "Optimisé pour le moteur de recherche Google (SEO)", "Compatible avec n'importe quel appareil", "CTA personnalisés (convertissent 42% de plus que les génériques)", "Fondation moderne pour l'expansion en ligne", "Connectez votre site web à tous vos réseaux sociaux avec des liens", "Promotion simultanée sur tous les sites", "Code QR personnalisé avec logo et couleur de votre choix qui renvoie vers votre site et/ou vos réseaux sociaux"], isFeatured: false, oldPrice: "1,500€" },
+                    { name: "Forfait Entreprise", price: "2,800€", period: "unique", features: ["Tout du petit forfait", "Site Web Multi-Pages", "L'intégration de vidéos peut augmenter les conversions de 86%", "Traduction optionnelle dans toutes les langues", "SEO avancé", "Intégration CMS", "Formulaire de contact", "Conseils de branding de notre équipe pour les médias sociaux et le site web"], isFeatured: false, oldPrice: "3,500€" },
+                    { name: "Empire Multi-Pages", price: "199€", period: "par mois", features: ["Développement web collaboratif", "Création de site professionnel gratuite", "Conseils gratuits et code QR lors de la consultation", "Discussion sur le nom de domaine", "Consultation sur la présence web", "Code partagé", "SEO", "Vidéo", "Formulaire de contact", "Traduction", "Vérification de l'accessibilité"], isFeatured: true },
                     { 
                         name: "Forfait Site Web Premium", 
                         price: "Prix sur demande", 
@@ -421,9 +421,9 @@ export const translations: Record<Language, Translations> = {
                 title: "Nos Forfaits Photographie",
                 subtitle: "Choisissez la session parfaite pour capturer votre histoire. Tous les prix sont un paiement unique.",
                 plans: [
-                    { name: "Session Portrait", price: "249€", period: "", features: ["Idéal pour : Individus, couples, profils de médias sociaux et portraits professionnels.", "Durée : 45 minutes de prise de vue.", "10 photos haute résolution éditées professionnellement.", "Liens pour site web et réseaux sociaux", "Inclut la retouche de base."], isFeatured: true, oldPrice: "300€" },
-                    { name: "Session Style de Vie", price: "449€", period: "", features: ["Parfait pour capturer des interactions naturelles et des moments spontanés.", "Durée : 1,5 heure de prise de vue.", "25 photos haute résolution éditées professionnellement.", "Liens pour site web et réseaux sociaux", "Inclut une retouche standard plus détaillée.", "Changement de tenue possible."], isFeatured: false, oldPrice: "650€" },
-                    { name: "Marque & Entreprise", price: "1150€", period: "", features: ["Idéal pour : Entrepreneurs, indépendants, influenceurs et petites entreprises.", "Durée : 4 heures de prise de vue.", "Lieu : Plusieurs lieux qui correspondent au style de votre marque.", "40 photos haute résolution éditées professionnellement.", "Inclut les droits d'utilisation commerciale pour vos canaux.", "Consultation complète préalable pour définir les objectifs."], isFeatured: false }
+                    { name: "Session Essentielle", price: "299€", period: "", features: ["Photos de produits, portraits", "1,5 heure de prise de vue", "10 photos professionnelles", "Retouche de base", "Frais de déplacement inclus"], isFeatured: false, oldPrice: "400€" },
+                    { name: "Session Standard", price: "469€", period: "", features: ["Photos de produits, portraits", "3 heures de prise de vue", "20 photos éditées professionnellement", "Retouche de base, séquences brutes incluses", "Frais de déplacement inclus"], isFeatured: true, oldPrice: "800€" },
+                    { name: "Forfait Entreprise", price: "1550€", period: "", features: ["Session photo d'une journée complète", "50 photos éditées professionnellement", "Retouche avancée et modifications détaillées", "Toutes les séquences brutes fournies", "Frais de déplacement inclus", "Liens d'intégration pour site web et réseaux sociaux"], isFeatured: false }
                 ]
             }
         }
@@ -566,14 +566,14 @@ export const translations: Record<Language, Translations> = {
             pricing: {
                 title: "Luftaufnahmen-Servicepakete", subtitle: "Flexible Preise für Projekte jeder Größenordnung. Alle Preise sind eine einmalige Zahlung, keine versteckten Kosten.",
                 plans: [
-                    { name: "Drohnenfoto-Paket", price: "399€", period: "", features: ["Ultrahochauflösende Bilder vom Himmel", "Maximal 5 Bilder", "1 360°-Foto", "1 Stunde vor Ort", "Nutzungsrechte für Website und soziale Netzwerke", "Optionaler Upload auf Google Maps"], isFeatured: false, oldPrice: "500€" },
-                    { name: "Drohnenvideo-Paket", price: "1399€", period: "", features: ["1 Minute bearbeitetes Video", "Link für Website und soziale Medien", "Maximal 20 Bilder", "4 360°-Bilder mit interaktiver Hotspot-Virtueller-Tour", "Nutzungsrechte", "Optionaler Upload auf Google Maps", "Persönliche Beratung und Planung"], isFeatured: true, oldPrice: "1800€" },
+                    { name: "Drohnenfoto-Paket", price: "399€", period: "", features: ["Bilder in 4k-Auflösung", "5 Bearbeitete Bilder", "Ein 360°-Foto", "Grundlegende Retusche", "Fotos von für Menschen unerreichbaren Punkten", "Nutzungsrechte für Website und Soziale Medien", "Automatischer Upload auf Google Maps"], isFeatured: false, oldPrice: "500€" },
+                    { name: "Drohnenvideo-Paket", price: "1399€", period: "", features: ["1 Minute bearbeitetes Video", "Links für Website und alle sozialen Medien", "20 Bilder in 4k-Auflösung", "Vier 360°-Bilder mit interaktiver Hotspot-Virtueller-Tour", "Nutzungsrechte", "Automatischer Upload auf Google Maps", "Persönliche Beratung und Planung", "Bearbeitetes, retuschiertes und Rohmaterial inklusive"], isFeatured: true, oldPrice: "1800€" },
                     { name: "Premium-Drohnen-Paket", price: "Preis auf Anfrage", period: "", features: ["Unbegrenzte Aufnahmen", "Mehrere Standorte", "360°-Bilder, Videomaterial, ultrahochauflösende Fotos", "Bearbeitetes und Rohmaterial inklusive", "Individuelles Branding, Links für alle Social-Media-Plattformen", "Premium Virtuelle Tour mit Drohnenbildern", "Social-Media-Optimierungspaket", "Keine Grenzen!", "Persönliche Beratung und Planung"], isFeatured: false }
                 ]
             }
         },
         web: {
-            hero: { title: "Ihr digitaler Laden", subtitle: "Schöne, schnelle und effektive Websites, die Ihr Unternehmen wachsen lassen.", imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" },
+            hero: { title: "Ihr digitaler Laden", subtitle: "Schöne, schnelle und effektive Websites, die Ihr Unternehmen wachsen lassen.", imageUrl: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop" },
             intro: { title: "Für Leistung gebaut", paragraphs: ["Eine großartige Website ist mehr als eine Online-Broschüre; sie ist ein leistungsstarkes Werkzeug für Wachstum. Wir entwerfen und erstellen Websites, die nicht nur visuell beeindruckend, sondern auch schnell, sicher und optimiert sind, um Besucher in Kunden zu verwandeln.", "Unser Prozess ist kollaborativ. Wir arbeiten eng mit Ihnen zusammen, um Ihre Marke und Ihre Ziele zu verstehen und sicherzustellen, dass das Endprodukt ein perfektes digitales Abbild Ihres Unternehmens ist."] },
             gallery: {
                 title: "Unser Webdesign-Portfolio", subtitle: "Sehen Sie, wie wir Unternehmen wie Ihrem geholfen haben, online erfolgreich zu sein.",
@@ -596,9 +596,9 @@ export const translations: Record<Language, Translations> = {
                 title: "Preise für die Website-Entwicklung",
                 subtitle: "Transparente Preise, um Ihr Projekt auf den Weg zu bringen.",
                 plans: [
-                    { name: "Landing Page", price: "999€", period: "einmalig", features: ["Einzelseiten-Website", "Mehrsprachige Unterstützung", "Mobil-responsiv", "Grundlegende SEO-Einrichtung"], isFeatured: false, oldPrice: "1.500€" },
-                    { name: "Unternehmenswebsite", price: "2.800€", period: "einmalig", features: ["Bis zu 10 Seiten", "CMS-Integration", "Individuelles Design", "Fortgeschrittenes SEO"], isFeatured: false, oldPrice: "3,500€" },
-                    { name: "Multi-Page Imperium", price: "199€", period: "pro Monat", features: ["Kostenlose Ersteinrichtung", "Unbegrenzte Seiten & Funktionen", "Benutzerdefinierte Backend-Entwicklung", "Laufender Support & Wartung"], isFeatured: true },
+                    { name: "Landing Page", price: "999€", period: "einmalig", features: ["Die Eingangshalle Ihrer digitalen Präsenz", "Single-Page-Anwendung", "Optimiert für die Google-Suchmaschine (SEO)", "Kompatibel mit jedem Gerät", "Personalisierte CTAs (konvertieren 42% mehr als generische)", "Moderne Grundlage für die Online-Expansion", "Verbinden Sie Ihre Website mit all Ihren sozialen Netzwerken über Links", "Auf allen Websites gleichzeitig werben", "Personalisierter QR-Code mit Logo und Farbe Ihrer Wahl, der auf Ihre Website und/oder Ihre sozialen Netzwerke verweist"], isFeatured: false, oldPrice: "1.500€" },
+                    { name: "Business-Paket", price: "2.800€", period: "einmalig", features: ["Alles aus dem kleinen Paket", "Mehrseitige Website", "Das Einbetten von Videos kann die Konversionen um 86% steigern", "Optionale Übersetzung in alle Sprachen", "Fortgeschrittenes SEO", "CMS-Integration", "Kontaktformular", "Branding-Beratung von unserem Team für Soziale Medien und Website"], isFeatured: false, oldPrice: "3,500€" },
+                    { name: "Multi-Page Imperium", price: "199€", period: "pro Monat", features: ["Kollaborative Webentwicklung", "Kostenlose Erstellung der Geschäftswebsite", "Kostenlose Beratung und QR-Code bei der Beratung", "Domainnamen-Besprechung", "Beratung zur Webpräsenz", "Code geteilt", "SEO", "Video", "Kontaktformular", "Übersetzung", "Barrierefreiheitsprüfung"], isFeatured: true },
                     { 
                         name: "Premium Website-Paket", 
                         price: "Preis auf Anfrage", 
@@ -635,9 +635,9 @@ export const translations: Record<Language, Translations> = {
                 title: "Unsere Fotografie-Pakete",
                 subtitle: "Wählen Sie die perfekte Session, um Ihre Geschichte festzuhalten. Alle Preise sind eine einmalige Zahlung.",
                 plans: [
-                    { name: "Porträtsession", price: "249€", period: "", features: ["Ideal für: Einzelpersonen, Paare, Social-Media-Profile und professionelle Porträts.", "Dauer: 45 Minuten Aufnahmezeit.", "10 professionell bearbeitete, hochauflösende Fotos.", "Links für Website und Social Media", "Inklusive grundlegender Retusche."], isFeatured: true, oldPrice: "300€" },
-                    { name: "Lifestyle-Session", price: "449€", period: "", features: ["Perfekt, um natürliche Interaktionen und spontane Momente festzuhalten.", "Dauer: 1,5 Stunden Aufnahmezeit.", "25 professionell bearbeitete, hochauflösende Fotos.", "Links für Website und Social Media", "Inklusive standardmäßiger, detaillierterer Retusche.", "Outfitwechsel möglich."], isFeatured: false, oldPrice: "650€" },
-                    { name: "Branding & Business", price: "1150€", period: "", features: ["Ideal für: Unternehmer, Freiberufler, Influencer und kleine Unternehmen.", "Dauer: 4 Stunden Aufnahmezeit.", "Ort: Mehrere Orte, die zum Stil Ihrer Marke passen.", "40 professionell bearbeitete, hochauflösende Fotos.", "Inklusive kommerzieller Nutzungsrechte für Ihre Kanäle.", "Umfassende Vorbesprechung zur Festlegung der Ziele."], isFeatured: false }
+                    { name: "Essenzielle Session", price: "299€", period: "", features: ["Produktfotos, Porträts", "1,5 Stunden Aufnahmezeit", "10 professionelle Aufnahmen", "Grundlegende Retusche", "Reisekosten inbegriffen"], isFeatured: false, oldPrice: "400€" },
+                    { name: "Standard-Session", price: "469€", period: "", features: ["Produktfotos, Porträts", "3 Stunden Aufnahmezeit", "20 professionell bearbeitete Aufnahmen", "Grundlegende Retusche, Rohmaterial inbegriffen", "Reisekosten inbegriffen"], isFeatured: true, oldPrice: "800€" },
+                    { name: "Business-Paket", price: "1550€", period: "", features: ["Ganztägige Fotosession", "50 professionell bearbeitete Fotos", "Fortgeschrittene Retusche und detaillierte Bearbeitungen", "Alle Rohdaten zur Verfügung gestellt", "Reisekosten inbegriffen", "Einbettungslinks für Website und soziale Medien"], isFeatured: false }
                 ]
             }
         }
@@ -743,7 +743,7 @@ export const translations: Record<Language, Translations> = {
                 items: [
                     { icon: "Eye", title: "مرئيات عالية الوضوح", description: "صور واضحة تمامًا تجعلك تشعر وكأنك هناك حقًا." },
                     { icon: "MousePointerClick", title: "نقاط تفاعلية", description: "انقر على الكائنات للحصول على مزيد من المعلومات أو مشاهدة مقاطع الفيديو أو الصور." },
-                    { icon: "Smartphone", title: "جاهز للجوال والواقع الافتراضي", description: "يمكن الوصول إليها على أي جهاز، من أجهزة سطح المكتب إلى الهواتف الذكية وسماعات الواقع الافتراضي." },
+                    { icon: "Smartphone", title: "جاهز للجوال والواقع الافتراضي", description: "يمكن الوصول إليها على أي جهاز، من أجهزة سطح المكتب إلى الهواتف الذكية وسماعات الواقع الاftراضي." },
                     { icon: "Share2", title: "سهل المشاركة", description: "قم بتضمين جولتك على موقع الويب الخاص بك أو شاركها على وسائل التواصل الاجتماعي برابط بسيط." },
                 ]
             },
@@ -780,14 +780,14 @@ export const translations: Record<Language, Translations> = {
             pricing: {
                 title: "باقات خدمة الطائرات بدون طيار", subtitle: "تسعير مرن للمشاريع من جميع الأحجام. جميع الأسعار هي دفعة لمرة واحدة ، بدون تكاليف خفية.",
                 plans: [
-                    { name: "باقة صور الدرون", price: "399€", period: "", features: ["صور فائقة الدقة من السماء", "حد أقصى 5 صور", "صورة واحدة 360 درجة", "ساعة واحدة في الموقع", "حقوق الاستخدام للموقع ووسائل التواصل الاجتماعي", "رفع اختياري على خرائط جوجل"], isFeatured: false, oldPrice: "500€" },
-                    { name: "باقة فيديو الدرون", price: "1399€", period: "", features: ["فيديو معدل لمدة دقيقة واحدة", "رابط للموقع ووسائل التواصل الاجتماعي", "20 صورة كحد أقصى", "4 صور 360 درجة مع جولة افتراضية بنقاط تفاعلية", "حقوق الاستخدام", "رفع اختياري على خرائط جوجل", "استشارة وتخطيط شخصي"], isFeatured: true, oldPrice: "1800€" },
+                    { name: "باقة صور الدرون", price: "399€", period: "", features: ["صور بدقة 4K", "5 صور معدلة", "صورة واحدة بنطاق 360 درجة", "تنقيح أساسي", "صور من نقاط لا يمكن الوصول إليها بشريًا", "حقوق الاستخدام للموقع الإلكتروني والشبكات الاجتماعية", "رفع تلقائي على خرائط جوجل"], isFeatured: false, oldPrice: "500€" },
+                    { name: "باقة فيديو الدرون", price: "1399€", period: "", features: ["فيديو معدل لمدة دقيقة واحدة", "روابط للموقع وجميع وسائل التواصل الاجتماعي", "20 صورة بدقة 4K", "أربع صور 360 درجة مع جولة افتراضية بنقاط تفاعلية", "حقوق الاستخدام", "رفع تلقائي على خرائط جوجل", "استشارة وتخطيط شخصي", "لقطات معدلة ومنقحة وخامة متضمنة"], isFeatured: true, oldPrice: "1800€" },
                     { name: "باقة درون المميزة", price: "السعر عند الطلب", period: "", features: ["تسجيلات غير محدودة", "مواقع متعددة", "صور 360 درجة، لقطات فيديو، صور فائقة الدقة", "لقطات معدلة وخامة متضمنة", "علامة تجارية مخصصة، روابط لجميع منصات التواصل الاجتماعي", "جولة افتراضية مميزة باستخدام صور الدرون", "باقة تحسين وسائل التواصل الاجتماعي", "بلا حدود!", "استشارة وتخطيط شخصي"], isFeatured: false }
                 ]
             }
         },
         web: {
-            hero: { title: "واجهتك الرقمية", subtitle: "مواقع ويب جميلة وسريعة وفعالة تنمي أعمالك.", imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" },
+            hero: { title: "واجهتك الرقمية", subtitle: "مواقع ويب جميلة وسريعة وفعالة تنمي أعمالك.", imageUrl: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop" },
             intro: { title: "مصمم للأداء", paragraphs: ["الموقع الإلكتروني الرائع هو أكثر من مجرد كتيب عبر الإنترنت؛ إنه أداة قوية للنمو. نحن نصمم ونبني مواقع ويب ليست فقط مذهلة بصريًا ولكنها أيضًا سريعة وآمنة ومحسّنة لتحويل الزوار إلى عملاء.", "عمليتنا تعاونية. نحن نعمل عن كثب معك لفهم علامتك التجارية وأهدافك، مما يضمن أن المنتج النهائي هو انعكاس رقمي مثالي لعملك."] },
             gallery: {
                 title: "معرض أعمالنا في تصميم الويب", subtitle: "شاهد كيف ساعدنا الشركات مثل شركتك على النجاح عبر الإنترنت.",
@@ -810,9 +810,9 @@ export const translations: Record<Language, Translations> = {
                 title: "تسعير تطوير مواقع الويب",
                 subtitle: "تسعير شفاف لإطلاق مشروعك.",
                 plans: [
-                    { name: "صفحة هبوط", price: "999€", period: "مرة واحدة", features: ["موقع من صفحة واحدة", "دعم متعدد اللغات", "متجاوب مع الجوّال", "إعداد أساسي لمحركات البحث"], isFeatured: false, oldPrice: "1,500€" },
-                    { name: "موقع أعمال", price: "2,800€", period: "مرة واحدة", features: ["ما يصل إلى 10 صفحات", "تكامل نظام إدارة المحتوى", "تصميم مخصص", "تحسين متقدم لمحركات البحث"], isFeatured: false, oldPrice: "3,500€" },
-                    { name: "إمبراطورية متعددة الصفحات", price: "199€", period: "شهريًا", features: ["بناء أولي مجاني", "صفحات وميزات غير محدودة", "تطوير خلفية مخصصة", "دعم وصيانة مستمرة"], isFeatured: true },
+                    { name: "صفحة هبوط", price: "999€", period: "مرة واحدة", features: ["ردهة حضورك الرقمي", "تطبيق صفحة واحدة", "محسّن لمحرك بحث جوجل (SEO)", "متوافق مع أي جهاز", "دعوات مخصصة لاتخاذ إجراء (تحويل أعلى بنسبة 42٪ من العامة)", "أساس حديث للتوسع عبر الإنترنت", "ربط موقعك بجميع شبكات التواصل الاجتماعي الخاصة بك عبر روابط", "الترويج على جميع المواقع في وقت واحد", "رمز QR مخصص مع شعار ولون من اختيارك يرتبط بموقعك و/أو شبكات التواصل الاجتماعي الخاصة بك"], isFeatured: false, oldPrice: "1,500€" },
+                    { name: "باقة الأعمال", price: "2,800€", period: "مرة واحدة", features: ["كل شيء من الباقة الصغيرة", "موقع ويب متعدد الصفحات", "تضمين مقاطع الفيديو يمكن أن يزيد التحويلات بنسبة 86٪", "ترجمة اختيارية إلى جميع اللغات", "تحسين متقدم لمحركات البحث", "تكامل نظام إدارة المحتوى", "نموذج الاتصال", "نصائح العلامة التجارية من فريقنا لوسائل التواصل الاجتماعي والموقع الإلكتروني"], isFeatured: false, oldPrice: "3,500€" },
+                    { name: "إمبراطورية متعددة الصفحات", price: "199€", period: "شهريًا", features: ["تطوير ويب تعاوني", "إنشاء موقع أعمال مجاني", "استشارة مجانية ورمز QR عند الاستشارة", "مناقشة اسم النطاق", "استشارة حول التواجد على الويب", "مشاركة الكود", "تحسين محركات البحث (SEO)", "فيديو", "نموذج اتصال", "ترجمة", "فحص إمكانية الوصول"], isFeatured: true },
                     { 
                         name: "باقة الموقع الإلكتروني المميزة", 
                         price: "السعر عند الطلب", 
@@ -849,9 +849,9 @@ export const translations: Record<Language, Translations> = {
                 title: "باقات التصوير الفوتوغرافي لدينا",
                 subtitle: "اختر الجلسة المثالية لالتقاط قصتك. جميع الأسعار هي دفعة لمرة واحدة.",
                 plans: [
-                    { name: "جلسة تصوير شخصي", price: "249€", period: "", features: ["مثالية لـ: الأفراد، الأزواج، ملفات تعريف وسائل التواصل الاجتماعي، والصور الشخصية الاحترافية.", "المدة: 45 دقيقة من التصوير.", "10 صور عالية الدقة معدلة باحتراف.", "روابط للموقع الإلكتروني ووسائل التواصل الاجتماعي", "تشمل التنقيح الأساسي."], isFeatured: true, oldPrice: "300€" },
-                    { name: "جلسة لايف ستايل", price: "449€", period: "", features: ["مثالية لالتقاط التفاعلات الطبيعية واللحظات العفوية.", "المدة: 1.5 ساعة من التصوير.", "25 صورة عالية الدقة معدلة باحتراف.", "روابط للموقع الإلكتروني ووسائل التواصل الاجتماعي", "تشمل تنقيحًا قياسيًا أكثر تفصيلاً.", "إمكانية تغيير الملابس."], isFeatured: false, oldPrice: "650€" },
-                    { name: "العلامة التجارية والأعمال", price: "1150€", period: "", features: ["مثالية لـ: رواد الأعمال، المستقلين، المؤثرين، والشركات الصغيرة.", "المدة: 4 ساعات من التصوير.", "الموقع: مواقع متعددة تناسب أسلوب علامتك التجارية.", "40 صورة عالية الدقة معدلة باحتراف.", "تشمل حقوق الاستخدام التجاري لقنواتك.", "استشارة شاملة قبل الجلسة لتحديد الأهداف."], isFeatured: false }
+                    { name: "الجلسة الأساسية", price: "299€", period: "", features: ["لقطات منتجات، صور شخصية", "1.5 ساعة من التصوير", "10 لقطات احترافية", "تنقيح أساسي", "شامل تكاليف الانتقال"], isFeatured: false, oldPrice: "400€" },
+                    { name: "الجلسة القياسية", price: "469€", period: "", features: ["لقطات منتجات، صور شخصية", "3 ساعات من التصوير", "20 لقطة معدلة باحتراف", "تنقيح أساسي، شامل اللقطات الخام", "شامل تكاليف الانتقال"], isFeatured: true, oldPrice: "800€" },
+                    { name: "باقة الأعمال", price: "1550€", period: "", features: ["جلسة تصوير ليوم كامل", "50 صورة معدلة باحتراف", "تنقيح متقدم وتعديلات مفصلة", "توفير جميع اللقطات الخام", "شامل تكاليف الانتقال", "روابط تضمين للموقع الإلكتروني ووسائل التواصل الاجتماعي"], isFeatured: false }
                 ]
             }
         }
