@@ -11,16 +11,7 @@ const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
   const { language, setLanguage, t, direction } = useTranslations();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-  
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -75,7 +66,7 @@ const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
 
   return (
     <>
-      <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled || isMenuOpen ? 'bg-black/80 backdrop-blur-lg' : 'bg-transparent'}`}>
+      <header className="fixed top-0 w-full z-50 transition-all duration-300 bg-black/80 backdrop-blur-lg">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <a href="#/" onClick={() => handleNavLinkClick('#/')} className={`text-2xl font-bold text-white z-50 ${textShadow}`}>
             Virtual<span className="text-[var(--primary)]">Spin</span>
