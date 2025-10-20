@@ -189,9 +189,10 @@ export const translations: Record<Language, Translations> = {
             gallery: {
                 title: "Featured Photography", subtitle: "A selection of our work across various industries.",
                 images: [
-                    { src: "https://images.unsplash.com/photo-1556761175-b413da4b248d?q=80&w=1974&auto=format&fit=crop", alt: "Professional team collaborating in an office" },
-                    { src: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1999&auto=format&fit=crop", alt: "Stylish product shot of a watch" },
-                    { src: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2069&auto=format&fit=crop", alt: "Modern and clean office interior" }
+                    { src: "img/interior.jpg", alt: "Interior image" },
+                    { src: "img/exterior.jpg", alt: "Exterior image" },
+                    { src: "img/garden.jpg", alt: "Garden image" },
+                    { src: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1999&auto=format&fit=crop", alt: "Stylish product shot of a watch" }
                 ]
             },
             features: {

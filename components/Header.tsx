@@ -40,7 +40,7 @@ const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
     setIsMenuOpen(false);
     setIsLangMenuOpen(false);
   };
-  
+
   const handleNavLinkClick = (href: string) => {
     // This logic handles the case where the user clicks the link for the page they are already on.
     // The `hashchange` event won't fire in this case, so we manually scroll to the top.
@@ -49,26 +49,27 @@ const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
     if (href === currentPath) {
       window.scrollTo(0, 0);
     }
-    
+
     // The browser will handle navigation for different hrefs via the `hashchange` 
     // event listener in App.tsx. We just need to ensure the mobile menu closes.
     closeAllMenus();
   };
 
   const navItems = [
-      { id: 'tour', type: 'link', href: '#/tour', label: navText.tour },
-      { id: 'drone', type: 'link', href: '#/drone', label: navText.drone },
-      { id: 'photography', type: 'link', href: '#/photography', label: navText.photography },
-      { id: 'web', type: 'link', href: '#/web', label: navText.website },
-      { id: 'contact', type: 'button', action: onContactClick, label: navText.contact },
-      { id: 'home', type: 'link', href: '#/', label: navText.home },
+    { id: 'tour', type: 'link', href: '#/tour', label: navText.tour },
+    { id: 'drone', type: 'link', href: '#/drone', label: navText.drone },
+    { id: 'photography', type: 'link', href: '#/photography', label: navText.photography },
+    { id: 'web', type: 'link', href: '#/web', label: navText.website },
+    { id: 'contact', type: 'button', action: onContactClick, label: navText.contact },
+    { id: 'home', type: 'link', href: '#/', label: navText.home },
   ];
 
   return (
     <>
       <header className="fixed top-0 w-full z-50 transition-all duration-300 bg-black/80 backdrop-blur-lg">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <a href="#/" onClick={() => handleNavLinkClick('#/')} className={`text-2xl font-bold text-white z-50 ${textShadow}`}>
+          <a href="#/" onClick={() => handleNavLinkClick('#/')} className={`flex items-center z-50 text-2xl font-bold text-white ${textShadow}`}>
+            <img src="img/logo.png" className="h-10 w-10 mr-2" />
             Virtual<span className="text-[var(--primary)]">Spin</span>
           </a>
           <nav className="hidden md:flex items-center space-x-6 rtl:space-x-reverse">
@@ -99,12 +100,12 @@ const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
               )}
             </div>
             <div className="flex items-center gap-2">
-                <button onClick={onContactClick} className={`border-2 border-[var(--primary)] hover:bg-[var(--primary)] text-white font-bold py-2 px-6 rounded-full transition-all duration-300 transform hover:scale-105 ${textShadow}`}>
+              <button onClick={onContactClick} className={`border-2 border-[var(--primary)] hover:bg-[var(--primary)] text-white font-bold py-2 px-6 rounded-full transition-all duration-300 transform hover:scale-105 ${textShadow}`}>
                 {navText.getStarted}
-                </button>
-                <a href="#/checkout" onClick={() => handleNavLinkClick('#/checkout')} aria-label="View services checkout" className="text-white hover:text-[var(--primary)] transition-colors p-2 rounded-full hover:bg-white/10">
-                    <ShoppingBag className="w-6 h-6 drop-shadow-[0_1px_2px_rgba(0,0,0,0.7)]" />
-                </a>
+              </button>
+              <a href="#/checkout" onClick={() => handleNavLinkClick('#/checkout')} aria-label="View services checkout" className="text-white hover:text-[var(--primary)] transition-colors p-2 rounded-full hover:bg-white/10">
+                <ShoppingBag className="w-6 h-6 drop-shadow-[0_1px_2px_rgba(0,0,0,0.7)]" />
+              </a>
             </div>
           </nav>
           <div className="md:hidden">
@@ -114,7 +115,7 @@ const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
           </div>
         </div>
       </header>
-      
+
       {/* Mobile Menu Overlay */}
       <div className={`fixed inset-0 bg-black z-40 transition-transform duration-500 ease-in-out md:hidden ${isMenuOpen ? 'translate-x-0' : direction === 'rtl' ? '-translate-x-full' : 'translate-x-full'}`}>
         <nav className="flex flex-col items-center justify-center h-full space-y-6 text-xl font-medium">
@@ -128,20 +129,20 @@ const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
               <button key={item.id} onClick={() => { item.action(); closeAllMenus(); }} className="text-gray-300 hover:text-[var(--primary)] transition-colors">{item.label}</button>
             );
           })}
-           <div className="text-center max-h-48 overflow-y-auto border-y border-gray-700 py-2 my-2">
-              {languages.map(lang => (
+          <div className="text-center max-h-48 overflow-y-auto border-y border-gray-700 py-2 my-2">
+            {languages.map(lang => (
               <button key={lang.code} onClick={() => handleLanguageChange(lang.code)} className="w-full px-3 py-2 text-base rounded-md hover:bg-[var(--primary)] flex items-center justify-center">
-                  <span className="me-3">{lang.flag}</span>
-                  <span>{lang.name}</span>
+                <span className="me-3">{lang.flag}</span>
+                <span>{lang.name}</span>
               </button>
-              ))}
+            ))}
           </div>
           <div className="flex items-center gap-4">
             <button onClick={() => { onContactClick(); closeAllMenus(); }} className="border-2 border-[var(--primary)] hover:bg-[var(--primary)] text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 mt-4">
-                {navText.getStarted}
+              {navText.getStarted}
             </button>
             <a href="#/checkout" onClick={() => handleNavLinkClick('#/checkout')} aria-label="View services checkout" className="text-white hover:text-[var(--primary)] transition-colors p-2 rounded-full hover:bg-white/10 mt-4">
-                <ShoppingBag className="w-8 h-8" />
+              <ShoppingBag className="w-8 h-8" />
             </a>
           </div>
         </nav>
