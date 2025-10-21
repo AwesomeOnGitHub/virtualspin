@@ -184,15 +184,14 @@ export const translations: Record<Language, Translations> = {
             }
         },
         photography: {
-            hero: { title: "Capture Your Best Moments", subtitle: "Professional photography that tells your brand's story.", imageUrl: "https://images.unsplash.com/photo-1512295767273-b684ac7658fa?q=80&w=1935&auto=format&fit=crop" },
+            hero: { title: "Capture Your Best Moments", subtitle: "Professional photography that tells your brand's story.", imageUrl: "img/interior_center.jpg" },
             intro: { title: "Images That Speak", paragraphs: ["High-quality photography is crucial for making a strong first impression. We specialize in creating stunning visuals that capture the essence of your brand, products, and people.", "Whether it's for your website, social media, or marketing materials, our images will make you stand out."] },
             gallery: {
                 title: "Featured Photography", subtitle: "A selection of our work across various industries.",
                 images: [
-                    { src: "img/interior.jpg", alt: "Interior image" },
+                    { src: "img/human.jpg", alt: "Samira in Sintra" },
                     { src: "img/exterior.jpg", alt: "Exterior image" },
-                    { src: "img/garden.jpg", alt: "Garden image" },
-                    { src: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1999&auto=format&fit=crop", alt: "Stylish product shot of a watch" }
+                    { src: "img/garden.jpg", alt: "Garden image" }
                 ]
             },
             features: {
