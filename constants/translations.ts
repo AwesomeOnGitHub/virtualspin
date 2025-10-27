@@ -116,14 +116,14 @@ export const translations: Record<Language, Translations> = {
             }
         },
         drone: {
-            hero: { title: "See the World from Above", subtitle: "Stunning aerial cinematography and photography for your projects.", imageUrl: "https://images.unsplash.com/photo-1527977966376-52f50a954562?q=80&w=2070&auto=format&fit=crop" },
+            hero: { title: "See the World from Anywhere", subtitle: " Choose the point of view of your projects.", imageUrl: "img/drone/bella_vista.jpg" },
             intro: { title: "A Higher Perspective", paragraphs: ["Our state-of-the-art drones capture breathtaking views from the sky. We provide high-resolution video and photos for real estate, events, and inspections.", "From cinematic FPV shots to detailed mapping, we bring a unique and powerful perspective to your story."] },
             gallery: {
                 title: "Our Aerial Work", subtitle: "Explore a collection of our drone photography and videography projects.",
                 images: [
-                    { src: "https://images.unsplash.com/photo-1508312923976-76a165b939e4?q=80&w=2070&auto=format&fit=crop", alt: "Drone shot of a coastline" },
-                    { src: "https://images.unsplash.com/photo-1519672103449-44b7d0e47829?q=80&w=1955&auto=format&fit=crop", alt: "Drone over a city at sunset" },
-                    { src: "https://images.unsplash.com/photo-1614765129699-ac749470817e?q=80&w=1974&auto=format&fit=crop", alt: "Drone view of a winding road in a forest" }
+                    { src: "img/drone/flores.jpg", alt: "Archipelago" },
+                    { src: "img/drone/guatape.jpg", alt: "Archipelago" },
+                    { src: "img/drone/nile_hotel.jpg", alt: "Nile" }
                 ]
             },
             features: {
@@ -184,14 +184,14 @@ export const translations: Record<Language, Translations> = {
             }
         },
         photography: {
-            hero: { title: "Capture Your Best Moments", subtitle: "Professional photography that tells your brand's story.", imageUrl: "img/interior_center.jpg" },
+            hero: { title: "Capture Your Best Moments", subtitle: "Professional photography that tells your brand's story.", imageUrl: "img/photo/ceiling.jpg" },
             intro: { title: "Images That Speak", paragraphs: ["High-quality photography is crucial for making a strong first impression. We specialize in creating stunning visuals that capture the essence of your brand, products, and people.", "Whether it's for your website, social media, or marketing materials, our images will make you stand out."] },
             gallery: {
                 title: "Featured Photography", subtitle: "A selection of our work across various industries.",
                 images: [
-                    { src: "img/human.jpg", alt: "Samira in Sintra" },
-                    { src: "img/exterior.jpg", alt: "Exterior image" },
-                    { src: "img/garden.jpg", alt: "Garden image" }
+                    { src: "img/photo/samira.jpg", alt: "Samira in Sintra" },
+                    { src: "img/photo/cows.jpg", alt: "Festival image" },
+                    { src: "img/photo/interior_side.jpg", alt: "Interior side image" }
                 ]
             },
             features: {
