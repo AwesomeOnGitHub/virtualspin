@@ -145,7 +145,7 @@ export const translations: Record<Language, Translations> = {
             }
         },
         web: {
-            hero: { title: "Your Digital Storefront", subtitle: "Beautiful, fast, and effective websites that grow your business.", imageUrl: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop" },
+            hero: { title: "Your Digital Storefront", subtitle: "Fast, and effective websites that grow your business.", imageUrl: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop" },
             intro: { title: "Built For Performance", paragraphs: ["A great website is more than an online brochure; it's a powerful tool for growth. We design and build websites that are not only visually stunning but also fast, secure, and optimized to convert visitors into customers.", "Our process is collaborative. We work closely with you to understand your brand and goals, ensuring the final product is a perfect digital reflection of your business."] },
             gallery: {
                 title: "Our Web Design Portfolio", subtitle: "See how we've helped businesses like yours succeed online.",

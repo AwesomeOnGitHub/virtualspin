@@ -1,5 +1,5 @@
 {
-  "name": "VirtualSpin Replica",
-  "description": "An interactive replica of the VirtualSpin promotional website for 360° virtual tours, photography, and web design services, built with React and Tailwind CSS. It features multilingual support, a simulated 360° viewer, and a functional contact form.",
+  "name": "VirtualSpin",
+  "description": "An interactive promotional website for 360° virtual tours, photography, and web design services, built with React and Tailwind CSS. It features multilingual support, a simulated 360° viewer, and a functional contact form.",
   "requestFramePermissions": []
 }
