@@ -106,24 +106,52 @@ export const translations: Record<Language, Translations> = {
                 ]
             },
             pricing: {
-                title: "Simple Pricing for Any Space",
-                subtitle: "Choose the plan that best fits your property. All prices are a one-time payment, no hidden costs.",
-                plans: [
-                    { name: "360° Google Maps Package", price: "249€", period: "", features: ["360° Images Inside and Outside", "Uploaded to Google Maps", "87% More Clicks", "More Views", "Better Ranking on Google and Google Maps", "More customers"], isFeatured: true, oldPrice: "400€" },
-                    { name: "Virtual Tour Package", price: "899€", period: "", features: ["Unlimited Recordings", "Video with link for website and social media", "500% More Browsing Time on Your Website", "Top Rankings on Google and Google Maps", "Personal Consultation and Planning", "Usage Rights"], isFeatured: false, oldPrice: "1200€" },
-                    { name: "Premium Package", price: "Price on request", period: "", features: ["Custom Tour With Header, Music, Floorplan, 3D Model View, 3D Art", "Custom Branding, Video, Links for all Social Media Platforms", "Social Media Optimizing and Drone Recordings Included", "Unlimited Recordings, Multilocation", "Usage Rights", "No Limits!", "Personal Consultation and Planning"], isFeatured: false },
+                title: "Our 360° Tour Capabilities",
+                subtitle: "We offer a wide range of options to build the perfect interactive experience. Contact us for a personalized quote based on your needs.",
+                featureGroups: [
+                    {
+                        title: "Google Maps Integration",
+                        features: [
+                            "360° Images Inside and Outside",
+                            "Official upload to Google Maps",
+                            "Increase clicks and views on your profile",
+                            "Improve your ranking on Google and Google Maps",
+                            "Attract more customers directly from search"
+                        ]
+                    },
+                    {
+                        title: "Custom Virtual Tours",
+                        features: [
+                            "Unlimited high-resolution recordings",
+                            "Embeddable video link for websites and social media",
+                            "Interactive hotspots with information, images, or videos",
+                            "Custom branding with your logo and colors",
+                            "Detailed analytics on visitor engagement"
+                        ]
+                    },
+                    {
+                        title: "Premium Features & Add-ons",
+                        features: [
+                            "Fully customized tour interface with header and music",
+                            "Interactive floorplans and 3D 'dollhouse' model views",
+                            "Integration of 3D art and virtual staging",
+                            "Social media optimization and sharing tools",
+                            "Aerial drone recordings for stunning exterior views",
+                            "Support for multiple locations in a single tour"
+                        ]
+                    }
                 ]
             }
         },
         drone: {
-            hero: { title: "See the World from Anywhere", subtitle: " Choose the point of view of your projects.", imageUrl: "img/drone/bella_vista.jpg" },
+            hero: { title: "See the World from Above", subtitle: "Stunning aerial cinematography and photography for your projects.", imageUrl: "https://images.unsplash.com/photo-1527977966376-52f50a954562?q=80&w=2070&auto=format&fit=crop" },
             intro: { title: "A Higher Perspective", paragraphs: ["Our state-of-the-art drones capture breathtaking views from the sky. We provide high-resolution video and photos for real estate, events, and inspections.", "From cinematic FPV shots to detailed mapping, we bring a unique and powerful perspective to your story."] },
             gallery: {
                 title: "Our Aerial Work", subtitle: "Explore a collection of our drone photography and videography projects.",
                 images: [
-                    { src: "img/drone/flores.jpg", alt: "Archipelago" },
-                    { src: "img/drone/guatape.jpg", alt: "Archipelago" },
-                    { src: "img/drone/nile_hotel.jpg", alt: "Nile" }
+                    { src: "https://images.unsplash.com/photo-1508312923976-76a165b939e4?q=80&w=2070&auto=format&fit=crop", alt: "Drone shot of a coastline" },
+                    { src: "https://images.unsplash.com/photo-1519672103449-44b7d0e47829?q=80&w=1955&auto=format&fit=crop", alt: "Drone over a city at sunset" },
+                    { src: "https://images.unsplash.com/photo-1614765129699-ac749470817e?q=80&w=1974&auto=format&fit=crop", alt: "Drone view of a winding road in a forest" }
                 ]
             },
             features: {
@@ -136,16 +164,46 @@ export const translations: Record<Language, Translations> = {
                 ]
             },
             pricing: {
-                title: "Aerial Service Packages", subtitle: "Flexible pricing for projects of all scales. All prices are a one-time payment, no hidden costs.",
-                plans: [
-                    { name: "Drone Photo Package", price: "399€", period: "", features: ["4k Resolution Images", "5 Edited Images", "One 360° Photo", "Basic Retouch", "Photos from humanly Unreachable Points", "Usage Rights for Website and Socials", "Automatic Upload to Google Maps"], isFeatured: false, oldPrice: "500€" },
-                    { name: "Drone Video Package", price: "1399€", period: "", features: ["1 Minute Edited Video", "Links for Website and all Social Media", "20 4k Resolution Images", "Four 360° Images with Interactive Hotspot Virtual Tour", "Usage Rights", "Automatic Upload to Google Maps", "Personal Consultation and Planning", "Edited, Retouched and Raw Footage Included"], isFeatured: true, oldPrice: "1800€" },
-                    { name: "Premium Drone Package", price: "Price on request", period: "", features: ["Unlimited Recordings", "Multilocation", "360° Images, Video Footage, Ultra High Resolution Photos", "Edited and Raw Footage Included", "Custom Branding, Links for all Social Media Platforms", "Premium Virtual Tour using the Drone Imagery", "Social Media Optimizing Package", "No Limits!", "Personal Consultation and Planning"], isFeatured: false }
+                title: "Aerial Photography & Videography Services",
+                subtitle: "Capture breathtaking perspectives with our advanced drone technology. We tailor each project to your specific vision. Contact us for a quote.",
+                featureGroups: [
+                    {
+                        title: "Aerial Photography",
+                        features: [
+                            "Ultra high-resolution (4K+) images",
+                            "Professionally edited and retouched photos",
+                            "Interactive 360° aerial panoramas",
+                            "Shots from unique and unreachable perspectives",
+                            "Full usage rights for web and social media",
+                            "Optional automatic upload to Google Maps"
+                        ]
+                    },
+                    {
+                        title: "Cinematic Aerial Video",
+                        features: [
+                            "Professionally edited video shorts (e.g., 1 minute)",
+                            "Social media ready video links",
+                            "Inclusion of both edited, retouched, and raw footage",
+                            "Creation of a virtual tour using interactive 360° images",
+                            "Personal consultation and project planning"
+                        ]
+                    },
+                    {
+                        title: "Advanced & Commercial Drone Operations",
+                        features: [
+                            "Unlimited recordings for large-scale projects",
+                            "Multi-location shoots",
+                            "Custom branding and video effects",
+                            "Social media optimization packages",
+                            "Creation of premium virtual tours from drone imagery",
+                            "Comprehensive footage delivery including all raw files"
+                        ]
+                    }
                 ]
             }
         },
         web: {
-            hero: { title: "Your Digital Storefront", subtitle: "Fast, and effective websites that grow your business.", imageUrl: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop" },
+            hero: { title: "Your Digital Storefront", subtitle: "Beautiful, fast, and effective websites that grow your business.", imageUrl: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop" },
             intro: { title: "Built For Performance", paragraphs: ["A great website is more than an online brochure; it's a powerful tool for growth. We design and build websites that are not only visually stunning but also fast, secure, and optimized to convert visitors into customers.", "Our process is collaborative. We work closely with you to understand your brand and goals, ensuring the final product is a perfect digital reflection of your business."] },
             gallery: {
                 title: "Our Web Design Portfolio", subtitle: "See how we've helped businesses like yours succeed online.",
@@ -165,33 +223,54 @@ export const translations: Record<Language, Translations> = {
                 ]
             },
             pricing: {
-                title: "Website Development Pricing",
-                subtitle: "Transparent pricing to get your project off the ground.",
-                plans: [
-                    { name: "Landing Page", price: "999€", period: "one-time", features: ["The lobby of your digital presence", "Single page application", "Optimised for Google Search Engine (SEO)", "Compatible with any device", "Personalized CTAs convert 42% more than generic ones", "Modern foundation for online expansion", "Connect your website with all of your socials with links", "Promote on all sites at once", "Personalised QR code with logo and color of your choice which links to your site and or socials"], isFeatured: false, oldPrice: "1,500€" },
-                    { name: "Business Package", price: "2,800€", period: "one-time", features: ["Everything from the small package", "Multi-Page Website", "Embedding videos can increase conversions by 86%", "Optional translation to all languages", "Advanced SEO", "CMS integration", "Contact form", "Branding Advice from our team for Social Media and Website"], isFeatured: false, oldPrice: "3,500€" },
-                    { name: "Multi Page Empire", price: "199€", period: "per month", features: ["Collaborative webdevelopment", "Business site build for free", "Free advice and QR code at consultation", "Domain name talk", "Web presence consultation", "Code shared", "SEO", "Video", "Contact form", "Translation", "Accessibility check"], isFeatured: true },
-                    { 
-                        name: "Premium Website Package", 
-                        price: "Price on request", 
-                        period: "", 
-                        features: ["Includes all 'Multi Page Empire' features", "Dedicated Project Manager & Team", "Custom API & Third-party Integrations", "Advanced Analytics & Conversion Tracking", "Enterprise-Grade Security & Compliance", "24/7 Priority Support & SLA", "Personalized Onboarding & Training"], 
-                        isFeatured: false,
-                        isPremium: true,
-                        backgroundImage: "url('https://images.unsplash.com/photo-1558833349-2f27a23c52a0?q=80&w=1935&auto=format&fit=crop')"
+                title: "Custom Website Development",
+                subtitle: "We build beautiful, high-performance websites tailored to your business goals. Let's discuss your project and create a custom quote.",
+                featureGroups: [
+                    {
+                        title: "Foundation & Design",
+                        features: [
+                            "Custom, mobile-responsive design",
+                            "Single-page or multi-page applications",
+                            "Fundamental SEO optimization",
+                            "Personalized Call-to-Action (CTA) strategy",
+                            "Social media integration and promotion tools",
+                            "Custom QR code generation for marketing"
+                        ]
+                    },
+                    {
+                        title: "Business & E-commerce Features",
+                        features: [
+                            "Advanced SEO and performance tuning",
+                            "Content Management System (CMS) integration",
+                            "Contact forms and lead generation tools",
+                            "Multi-language support and translation",
+                            "Video embedding and rich media support",
+                            "Branding and web presence consultation"
+                        ]
+                    },
+                    {
+                        title: "Enterprise & Advanced Solutions",
+                        features: [
+                            "Custom API and third-party service integrations",
+                            "Advanced analytics and conversion tracking setup",
+                            "Enterprise-grade security and compliance features",
+                            "Dedicated project management and support",
+                            "Personalized team onboarding and training",
+                            "Ongoing collaborative development and maintenance plans"
+                        ]
                     }
                 ]
             }
         },
         photography: {
-            hero: { title: "Capture Your Best Moments", subtitle: "Professional photography that tells your brand's story.", imageUrl: "img/photo/ceiling.jpg" },
+            hero: { title: "Capture Your Best Moments", subtitle: "Professional photography that tells your brand's story.", imageUrl: "https://images.unsplash.com/photo-1512295767273-b684ac7658fa?q=80&w=1935&auto=format&fit=crop" },
             intro: { title: "Images That Speak", paragraphs: ["High-quality photography is crucial for making a strong first impression. We specialize in creating stunning visuals that capture the essence of your brand, products, and people.", "Whether it's for your website, social media, or marketing materials, our images will make you stand out."] },
             gallery: {
                 title: "Featured Photography", subtitle: "A selection of our work across various industries.",
                 images: [
-                    { src: "img/photo/samira.jpg", alt: "Samira in Sintra" },
-                    { src: "img/photo/cows.jpg", alt: "Festival image" },
-                    { src: "img/photo/interior_side.jpg", alt: "Interior side image" }
+                    { src: "https://images.unsplash.com/photo-1556761175-b413da4b248d?q=80&w=1974&auto=format&fit=crop", alt: "Professional team collaborating in an office" },
+                    { src: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1999&auto=format&fit=crop", alt: "Stylish product shot of a watch" },
+                    { src: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2069&auto=format&fit=crop", alt: "Modern and clean office interior" }
                 ]
             },
             features: {
@@ -204,12 +283,28 @@ export const translations: Record<Language, Translations> = {
                 ]
             },
             pricing: {
-                title: "Our Photography Packages",
-                subtitle: "Choose the perfect session to capture your story. All prices are a one-time payment.",
-                plans: [
-                    { name: "Essential Session", price: "299€", period: "", features: ["Product shots, portraits", "1.5 hours of shooting", "10 professional shots", "Basic retouch", "Travelcost included"], isFeatured: false, oldPrice: "400€" },
-                    { name: "Standard Session", price: "469€", period: "", features: ["Product shots, portraits", "3 hours of shooting", "20 professionaly edited shots", "Basic retouch, raw footage included", "Travelcost included"], isFeatured: true, oldPrice: "800€" },
-                    { name: "Business Package", price: "1550€", period: "", features: ["Full-day photography session", "50 professionally edited photos", "Advanced retouching and detailed edits", "All raw footage provided", "Travelcost included", "Embedding Links for Website and Social Media"], isFeatured: false }
+                title: "Professional Photography Services",
+                subtitle: "From corporate headshots to stunning product visuals, we capture your brand's essence. Contact us for a session tailored to your needs.",
+                featureGroups: [
+                    {
+                        title: "Session Options",
+                        features: [
+                            "Flexible session durations, from short shoots to full-day events",
+                            "On-location shooting with travel costs included",
+                            "Suitable for product photography, portraits, and corporate events",
+                            "Both individual shots and comprehensive visual packages"
+                        ]
+                    },
+                    {
+                        title: "Editing & Delivery",
+                        features: [
+                            "Professional editing and basic retouching on all selected photos",
+                            "Advanced and detailed retouching for premium shots",
+                            "Delivery of a set number of high-resolution edited images",
+                            "Option to receive all raw, unedited footage from the session",
+                            "Optimized images with embedding links for website and social media"
+                        ]
+                    }
                 ]
             }
         }
@@ -320,12 +415,40 @@ export const translations: Record<Language, Translations> = {
                 ]
             },
             pricing: {
-                title: "Tarifs Simples pour Tout Espace",
-                subtitle: "Choisissez le plan qui convient le mieux à votre propriété. Tous les prix sont un paiement unique, sans frais cachés.",
-                plans: [
-                    { name: "Forfait Google Maps 360°", price: "249€", period: "", features: ["360° Images Intérieur et Extérieur", "Téléchargé sur Google Maps", "87 % de clics en plus", "Plus de vues", "Meilleur classement sur Google et Google Maps", "Plus de clients"], isFeatured: true, oldPrice: "400€" },
-                    { name: "Forfait Visite Virtuelle", price: "899€", period: "", features: ["Enregistrements illimités", "Vidéo avec lien pour site web et réseaux sociaux", "500 % de temps de navigation en plus sur votre site", "Meilleurs classements sur Google et Google Maps", "Consultation et planification personnelles", "Droits d'utilisation"], isFeatured: false, oldPrice: "1200€" },
-                    { name: "Forfait Premium", price: "Prix sur demande", period: "", features: ["Visite personnalisée avec en-tête, musique, plan, vue 3D", "Marque personnalisée, vidéo, liens pour toutes les plateformes de médias sociaux", "Optimisation des médias sociaux et enregistrements par drone inclus", "Enregistrements illimités, multi-sites", "Droits d'utilisation", "Sans limites !", "Consultation et planification personnelles"], isFeatured: false },
+                title: "Nos Capacités de Visite 360°",
+                subtitle: "Nous offrons une large gamme d'options pour construire l'expérience interactive parfaite. Contactez-nous pour un devis personnalisé.",
+                featureGroups: [
+                    {
+                        title: "Intégration Google Maps",
+                        features: [
+                            "Images 360° intérieures et extérieures",
+                            "Téléchargement officiel sur Google Maps",
+                            "Augmentez les clics et les vues sur votre profil",
+                            "Améliorez votre classement sur Google et Google Maps",
+                            "Attirez plus de clients directement depuis la recherche"
+                        ]
+                    },
+                    {
+                        title: "Visites Virtuelles Personnalisées",
+                        features: [
+                            "Enregistrements illimités en haute résolution",
+                            "Lien vidéo intégrable pour sites web et réseaux sociaux",
+                            "Points interactifs avec informations, images ou vidéos",
+                            "Marque personnalisée avec votre logo et vos couleurs",
+                            "Analyses détaillées sur l'engagement des visiteurs"
+                        ]
+                    },
+                    {
+                        title: "Fonctionnalités Premium & Add-ons",
+                        features: [
+                            "Interface de visite entièrement personnalisée avec en-tête et musique",
+                            "Plans d'étage interactifs et vues de modèle 3D 'maison de poupée'",
+                            "Intégration d'art 3D et de mise en scène virtuelle",
+                            "Outils d'optimisation et de partage sur les réseaux sociaux",
+                            "Enregistrements par drone pour des vues extérieures époustouflantes",
+                            "Prise en charge de plusieurs emplacements dans une seule visite"
+                        ]
+                    }
                 ]
             }
         },
@@ -350,11 +473,41 @@ export const translations: Record<Language, Translations> = {
                 ]
             },
             pricing: {
-                title: "Forfaits de Service Aérien", subtitle: "Tarification flexible pour les projets de toutes tailles. Tous les prix sont un paiement unique, sans frais cachés.",
-                plans: [
-                    { name: "Forfait Photo par Drone", price: "399€", period: "", features: ["Images en Résolution 4k", "5 Images Éditées", "Une Photo 360°", "Retouche de Base", "Photos depuis des Points Humainement Inaccessibles", "Droits d'Utilisation pour Site Web et Réseaux Sociaux", "Téléchargement Automatique sur Google Maps"], isFeatured: false, oldPrice: "500€" },
-                    { name: "Forfait Vidéo par Drone", price: "1399€", period: "", features: ["Vidéo éditée de 1 minute", "Liens pour site web et tous les réseaux sociaux", "20 images en résolution 4k", "Quatre Images 360° avec Visite Virtuelle à Points Interactifs", "Droits d'utilisation", "Téléchargement automatique sur Google Maps", "Consultation et Planification Personnelles", "Séquences éditées, retouchées et brutes incluses"], isFeatured: true, oldPrice: "1800€" },
-                    { name: "Forfait Drone Premium", price: "Prix sur demande", period: "", features: ["Enregistrements Illimités", "Multi-sites", "Images 360°, Séquences Vidéo, Photos Ultra Haute Résolution", "Séquences éditées et brutes incluses", "Marque Personnalisée, Liens pour toutes les Plateformes de Médias Sociaux", "Visite Virtuelle Premium utilisant l'imagerie du Drone", "Forfait d'Optimisation des Médias Sociaux", "Sans Limites !", "Consultation et Planification Personnelles"], isFeatured: false }
+                title: "Services de Photographie & Vidéographie Aérienne",
+                subtitle: "Capturez des perspectives à couper le souffle avec notre technologie de drone avancée. Nous adaptons chaque projet à votre vision spécifique. Contactez-nous pour un devis.",
+                featureGroups: [
+                    {
+                        title: "Photographie Aérienne",
+                        features: [
+                            "Images ultra haute résolution (4K+)",
+                            "Photos éditées et retouchées par des professionnels",
+                            "Panoramas aériens interactifs à 360°",
+                            "Prises de vue depuis des perspectives uniques et inaccessibles",
+                            "Droits d'utilisation complets pour le web et les réseaux sociaux",
+                            "Téléchargement automatique optionnel sur Google Maps"
+                        ]
+                    },
+                    {
+                        title: "Vidéo Aérienne Cinématographique",
+                        features: [
+                            "Courts métrages vidéo édités professionnellement (par ex. 1 minute)",
+                            "Liens vidéo prêts pour les réseaux sociaux",
+                            "Inclusion des séquences éditées, retouchées et brutes",
+                            "Création d'une visite virtuelle à l'aide d'images interactives à 360°",
+                            "Consultation personnelle et planification de projet"
+                        ]
+                    },
+                    {
+                        title: "Opérations de Drones Avancées & Commerciales",
+                        features: [
+                            "Enregistrements illimités pour les projets de grande envergure",
+                            "Prises de vue sur plusieurs sites",
+                            "Marque personnalisée et effets vidéo",
+                            "Forfaits d'optimisation des réseaux sociaux",
+                            "Création de visites virtuelles premium à partir d'images de drone",
+                            "Livraison complète des séquences, y compris tous les fichiers bruts"
+                        ]
+                    }
                 ]
             }
         },
@@ -379,20 +532,41 @@ export const translations: Record<Language, Translations> = {
                 ]
             },
             pricing: {
-                title: "Tarifs de Développement de Site Web",
-                subtitle: "Une tarification transparente pour lancer votre projet.",
-                plans: [
-                    { name: "Page de Destination", price: "999€", period: "unique", features: ["Le hall d'entrée de votre présence numérique", "Application à page unique", "Optimisé pour le moteur de recherche Google (SEO)", "Compatible avec n'importe quel appareil", "CTA personnalisés (convertissent 42% de plus que les génériques)", "Fondation moderne pour l'expansion en ligne", "Connectez votre site web à tous vos réseaux sociaux avec des liens", "Promotion simultanée sur tous les sites", "Code QR personnalisé avec logo et couleur de votre choix qui renvoie vers votre site et/ou vos réseaux sociaux"], isFeatured: false, oldPrice: "1,500€" },
-                    { name: "Forfait Entreprise", price: "2,800€", period: "unique", features: ["Tout du petit forfait", "Site Web Multi-Pages", "L'intégration de vidéos peut augmenter les conversions de 86%", "Traduction optionnelle dans toutes les langues", "SEO avancé", "Intégration CMS", "Formulaire de contact", "Conseils de branding de notre équipe pour les médias sociaux et le site web"], isFeatured: false, oldPrice: "3,500€" },
-                    { name: "Empire Multi-Pages", price: "199€", period: "par mois", features: ["Développement web collaboratif", "Création de site professionnel gratuite", "Conseils gratuits et code QR lors de la consultation", "Discussion sur le nom de domaine", "Consultation sur la présence web", "Code partagé", "SEO", "Vidéo", "Formulaire de contact", "Traduction", "Vérification de l'accessibilité"], isFeatured: true },
-                    { 
-                        name: "Forfait Site Web Premium", 
-                        price: "Prix sur demande", 
-                        period: "", 
-                        features: ["Inclut toutes les fonctionnalités 'Empire Multi-Pages'", "Chef de Projet & Équipe Dédiés", "Intégrations API & Tiers Personnalisées", "Analyses Avancées & Suivi des Conversions", "Sécurité & Conformité de Niveau Entreprise", "Support Prioritaire 24/7 & SLA", "Intégration & Formation Personnalisées"], 
-                        isFeatured: false,
-                        isPremium: true,
-                        backgroundImage: "url('https://images.unsplash.com/photo-1558833349-2f27a23c52a0?q=80&w=1935&auto=format&fit=crop')"
+                title: "Développement de Sites Web Personnalisés",
+                subtitle: "Nous construisons de beaux sites web performants, adaptés aux objectifs de votre entreprise. Discutons de votre projet et créons un devis personnalisé.",
+                featureGroups: [
+                    {
+                        title: "Fondation & Design",
+                        features: [
+                            "Conception personnalisée et adaptée aux mobiles",
+                            "Applications à page unique ou multi-pages",
+                            "Optimisation SEO fondamentale",
+                            "Stratégie d'appel à l'action (CTA) personnalisée",
+                            "Intégration et outils de promotion des réseaux sociaux",
+                            "Génération de code QR personnalisé pour le marketing"
+                        ]
+                    },
+                    {
+                        title: "Fonctionnalités Commerciales & E-commerce",
+                        features: [
+                            "SEO avancé et optimisation des performances",
+                            "Intégration de système de gestion de contenu (CMS)",
+                            "Formulaires de contact et outils de génération de leads",
+                            "Prise en charge multilingue et traduction",
+                            "Intégration de vidéos et de médias riches",
+                            "Conseils en image de marque et présence sur le web"
+                        ]
+                    },
+                    {
+                        title: "Solutions d'Entreprise & Avancées",
+                        features: [
+                            "Intégrations d'API personnalisées et de services tiers",
+                            "Configuration avancée des analyses et du suivi des conversions",
+                            "Fonctionnalités de sécurité et de conformité de niveau entreprise",
+                            "Gestion de projet et support dédiés",
+                            "Intégration et formation personnalisées de l'équipe",
+                            "Plans de développement et de maintenance collaboratifs continus"
+                        ]
                     }
                 ]
             }
@@ -418,12 +592,28 @@ export const translations: Record<Language, Translations> = {
                 ]
             },
             pricing: {
-                title: "Nos Forfaits Photographie",
-                subtitle: "Choisissez la session parfaite pour capturer votre histoire. Tous les prix sont un paiement unique.",
-                plans: [
-                    { name: "Session Essentielle", price: "299€", period: "", features: ["Photos de produits, portraits", "1,5 heure de prise de vue", "10 photos professionnelles", "Retouche de base", "Frais de déplacement inclus"], isFeatured: false, oldPrice: "400€" },
-                    { name: "Session Standard", price: "469€", period: "", features: ["Photos de produits, portraits", "3 heures de prise de vue", "20 photos éditées professionnellement", "Retouche de base, séquences brutes incluses", "Frais de déplacement inclus"], isFeatured: true, oldPrice: "800€" },
-                    { name: "Forfait Entreprise", price: "1550€", period: "", features: ["Session photo d'une journée complète", "50 photos éditées professionnellement", "Retouche avancée et modifications détaillées", "Toutes les séquences brutes fournies", "Frais de déplacement inclus", "Liens d'intégration pour site web et réseaux sociaux"], isFeatured: false }
+                title: "Services de Photographie Professionnelle",
+                subtitle: "Des portraits d'entreprise aux visuels de produits époustouflants, nous capturons l'essence de votre marque. Contactez-nous pour une séance adaptée à vos besoins.",
+                featureGroups: [
+                    {
+                        title: "Options de Séance",
+                        features: [
+                            "Durées de séance flexibles, des prises de vue courtes aux événements d'une journée",
+                            "Prise de vue sur place avec frais de déplacement inclus",
+                            "Adapté à la photographie de produits, aux portraits et aux événements d'entreprise",
+                            "Prises de vue individuelles et forfaits visuels complets"
+                        ]
+                    },
+                    {
+                        title: "Édition & Livraison",
+                        features: [
+                            "Édition professionnelle et retouche de base sur toutes les photos sélectionnées",
+                            "Retouche avancée et détaillée pour les clichés premium",
+                            "Livraison d'un nombre défini d'images éditées en haute résolution",
+                            "Option de recevoir toutes les séquences brutes et non éditées de la séance",
+                            "Images optimisées avec des liens d'intégration pour site web et réseaux sociaux"
+                        ]
+                    }
                 ]
             }
         }
@@ -534,12 +724,40 @@ export const translations: Record<Language, Translations> = {
                 ]
             },
             pricing: {
-                title: "Einfache Preise für jeden Raum",
-                subtitle: "Wählen Sie den Plan, der am besten zu Ihrer Immobilie passt. Alle Preise sind eine einmalige Zahlung, keine versteckten Kosten.",
-                plans: [
-                    { name: "360° Google Maps Paket", price: "249€", period: "", features: ["360° Bilder Innen und Außen", "Auf Google Maps hochgeladen", "87 % mehr Klicks", "Mehr Aufrufe", "Besseres Ranking bei Google und Google Maps", "Mehr Kunden"], isFeatured: true, oldPrice: "400€" },
-                    { name: "Virtuelle Tour Paket", price: "899€", period: "", features: ["Unbegrenzte Aufnahmen", "Video mit Link für Website und soziale Medien", "500 % mehr Verweildauer auf Ihrer Website", "Top-Rankings bei Google und Google Maps", "Persönliche Beratung und Planung", "Nutzungsrechte"], isFeatured: false, oldPrice: "1200€" },
-                    { name: "Premium-Paket", price: "Preis auf Anfrage", period: "", features: ["Benutzerdefinierte Tour mit Header, Musik, Grundriss, 3D-Modellansicht", "Benutzerdefiniertes Branding, Video, Links für alle Social-Media-Plattformen", "Social-Media-Optimierung und Drohnenaufnahmen inklusive", "Unbegrenzte Aufnahmen, mehrere Standorte", "Nutzungsrechte", "Keine Grenzen!", "Persönliche Beratung und Planung"], isFeatured: false },
+                title: "Unsere 360°-Tour-Fähigkeiten",
+                subtitle: "Wir bieten eine breite Palette von Optionen, um das perfekte interaktive Erlebnis zu schaffen. Kontaktieren Sie uns für ein individuelles Angebot.",
+                featureGroups: [
+                    {
+                        title: "Google Maps-Integration",
+                        features: [
+                            "360°-Bilder innen und außen",
+                            "Offizieller Upload auf Google Maps",
+                            "Erhöhen Sie Klicks und Aufrufe auf Ihrem Profil",
+                            "Verbessern Sie Ihr Ranking bei Google und Google Maps",
+                            "Gewinnen Sie mehr Kunden direkt über die Suche"
+                        ]
+                    },
+                    {
+                        title: "Benutzerdefinierte virtuelle Touren",
+                        features: [
+                            "Unbegrenzte hochauflösende Aufnahmen",
+                            "Einbettbarer Videolink für Websites und soziale Medien",
+                            "Interaktive Hotspots mit Informationen, Bildern oder Videos",
+                            "Individuelles Branding mit Ihrem Logo und Ihren Farben",
+                            "Detaillierte Analysen zum Besucherengagement"
+                        ]
+                    },
+                    {
+                        title: "Premium-Funktionen & Add-ons",
+                        features: [
+                            "Vollständig angepasste Tour-Oberfläche mit Kopfzeile und Musik",
+                            "Interaktive Grundrisse und 3D-'Puppenhaus'-Modellansichten",
+                            "Integration von 3D-Kunst und virtuellem Staging",
+                            "Social-Media-Optimierung und Sharing-Tools",
+                            "Luftaufnahmen mit Drohnen für atemberaubende Außenansichten",
+                            "Unterstützung für mehrere Standorte in einer einzigen Tour"
+                        ]
+                    }
                 ]
             }
         },
@@ -564,11 +782,41 @@ export const translations: Record<Language, Translations> = {
                 ]
             },
             pricing: {
-                title: "Luftaufnahmen-Servicepakete", subtitle: "Flexible Preise für Projekte jeder Größenordnung. Alle Preise sind eine einmalige Zahlung, keine versteckten Kosten.",
-                plans: [
-                    { name: "Drohnenfoto-Paket", price: "399€", period: "", features: ["Bilder in 4k-Auflösung", "5 Bearbeitete Bilder", "Ein 360°-Foto", "Grundlegende Retusche", "Fotos von für Menschen unerreichbaren Punkten", "Nutzungsrechte für Website und Soziale Medien", "Automatischer Upload auf Google Maps"], isFeatured: false, oldPrice: "500€" },
-                    { name: "Drohnenvideo-Paket", price: "1399€", period: "", features: ["1 Minute bearbeitetes Video", "Links für Website und alle sozialen Medien", "20 Bilder in 4k-Auflösung", "Vier 360°-Bilder mit interaktiver Hotspot-Virtueller-Tour", "Nutzungsrechte", "Automatischer Upload auf Google Maps", "Persönliche Beratung und Planung", "Bearbeitetes, retuschiertes und Rohmaterial inklusive"], isFeatured: true, oldPrice: "1800€" },
-                    { name: "Premium-Drohnen-Paket", price: "Preis auf Anfrage", period: "", features: ["Unbegrenzte Aufnahmen", "Mehrere Standorte", "360°-Bilder, Videomaterial, ultrahochauflösende Fotos", "Bearbeitetes und Rohmaterial inklusive", "Individuelles Branding, Links für alle Social-Media-Plattformen", "Premium Virtuelle Tour mit Drohnenbildern", "Social-Media-Optimierungspaket", "Keine Grenzen!", "Persönliche Beratung und Planung"], isFeatured: false }
+                title: "Luftbildfotografie & -videografie",
+                subtitle: "Erfassen Sie atemberaubende Perspektiven mit unserer fortschrittlichen Drohnentechnologie. Wir passen jedes Projekt an Ihre spezifische Vision an. Kontaktieren Sie uns für ein Angebot.",
+                featureGroups: [
+                    {
+                        title: "Luftbildfotografie",
+                        features: [
+                            "Ultrahochauflösende (4K+) Bilder",
+                            "Professionell bearbeitete und retuschierte Fotos",
+                            "Interaktive 360°-Luftpanoramen",
+                            "Aufnahmen aus einzigartigen und unerreichbaren Perspektiven",
+                            "Volle Nutzungsrechte für Web und soziale Medien",
+                            "Optionaler automatischer Upload zu Google Maps"
+                        ]
+                    },
+                    {
+                        title: "Kinoreife Luftbildvideos",
+                        features: [
+                            "Professionell geschnittene Videokurzfilme (z. B. 1 Minute)",
+                            "Für soziale Medien geeignete Videolinks",
+                            "Einschließlich bearbeiteter, retuschierter und roher Aufnahmen",
+                            "Erstellung einer virtuellen Tour mit interaktiven 360°-Bildern",
+                            "Persönliche Beratung und Projektplanung"
+                        ]
+                    },
+                    {
+                        title: "Fortgeschrittene & kommerzielle Drohneneinsätze",
+                        features: [
+                            "Unbegrenzte Aufnahmen für Großprojekte",
+                            "Aufnahmen an mehreren Standorten",
+                            "Individuelles Branding und Videoeffekte",
+                            "Social-Media-Optimierungspakete",
+                            "Erstellung von Premium-Virtuellen-Touren aus Drohnenbildern",
+                            "Umfassende Lieferung von Filmmaterial einschließlich aller Rohdateien"
+                        ]
+                    }
                 ]
             }
         },
@@ -593,20 +841,41 @@ export const translations: Record<Language, Translations> = {
                 ]
             },
             pricing: {
-                title: "Preise für die Website-Entwicklung",
-                subtitle: "Transparente Preise, um Ihr Projekt auf den Weg zu bringen.",
-                plans: [
-                    { name: "Landing Page", price: "999€", period: "einmalig", features: ["Die Eingangshalle Ihrer digitalen Präsenz", "Single-Page-Anwendung", "Optimiert für die Google-Suchmaschine (SEO)", "Kompatibel mit jedem Gerät", "Personalisierte CTAs (konvertieren 42% mehr als generische)", "Moderne Grundlage für die Online-Expansion", "Verbinden Sie Ihre Website mit all Ihren sozialen Netzwerken über Links", "Auf allen Websites gleichzeitig werben", "Personalisierter QR-Code mit Logo und Farbe Ihrer Wahl, der auf Ihre Website und/oder Ihre sozialen Netzwerke verweist"], isFeatured: false, oldPrice: "1.500€" },
-                    { name: "Business-Paket", price: "2.800€", period: "einmalig", features: ["Alles aus dem kleinen Paket", "Mehrseitige Website", "Das Einbetten von Videos kann die Konversionen um 86% steigern", "Optionale Übersetzung in alle Sprachen", "Fortgeschrittenes SEO", "CMS-Integration", "Kontaktformular", "Branding-Beratung von unserem Team für Soziale Medien und Website"], isFeatured: false, oldPrice: "3,500€" },
-                    { name: "Multi-Page Imperium", price: "199€", period: "pro Monat", features: ["Kollaborative Webentwicklung", "Kostenlose Erstellung der Geschäftswebsite", "Kostenlose Beratung und QR-Code bei der Beratung", "Domainnamen-Besprechung", "Beratung zur Webpräsenz", "Code geteilt", "SEO", "Video", "Kontaktformular", "Übersetzung", "Barrierefreiheitsprüfung"], isFeatured: true },
-                    { 
-                        name: "Premium Website-Paket", 
-                        price: "Preis auf Anfrage", 
-                        period: "", 
-                        features: ["Enthält alle 'Multi-Page Imperium'-Funktionen", "Engagierter Projektmanager & Team", "Benutzerdefinierte API- & Drittanbieter-Integrationen", "Erweiterte Analysen & Conversion-Tracking", "Unternehmenssicherheit & Compliance", "24/7-Prioritätssupport & SLA", "Personalisierte Einarbeitung & Schulung"], 
-                        isFeatured: false,
-                        isPremium: true,
-                        backgroundImage: "url('https://images.unsplash.com/photo-1558833349-2f27a23c52a0?q=80&w=1935&auto=format&fit=crop')"
+                title: "Individuelle Website-Entwicklung",
+                subtitle: "Wir erstellen schöne, leistungsstarke Websites, die auf Ihre Geschäftsziele zugeschnitten sind. Lassen Sie uns Ihr Projekt besprechen und ein individuelles Angebot erstellen.",
+                featureGroups: [
+                    {
+                        title: "Grundlage & Design",
+                        features: [
+                            "Individuelles, mobil-responsives Design",
+                            "Single-Page- oder Multi-Page-Anwendungen",
+                            "Grundlegende SEO-Optimierung",
+                            "Personalisierte Call-to-Action (CTA)-Strategie",
+                            "Social-Media-Integration und Werbetools",
+                            "Benutzerdefinierte QR-Code-Generierung für Marketing"
+                        ]
+                    },
+                    {
+                        title: "Business- & E-Commerce-Funktionen",
+                        features: [
+                            "Fortgeschrittenes SEO und Leistungsoptimierung",
+                            "Integration von Content-Management-Systemen (CMS)",
+                            "Kontaktformulare und Tools zur Lead-Generierung",
+                            "Mehrsprachige Unterstützung und Übersetzung",
+                            "Video-Einbettung und Rich-Media-Unterstützung",
+                            "Branding- und Webpräsenzberatung"
+                        ]
+                    },
+                    {
+                        title: "Unternehmens- & erweiterte Lösungen",
+                        features: [
+                            "Benutzerdefinierte API- und Drittanbieter-Integrationen",
+                            "Erweiterte Analyse- und Conversion-Tracking-Einrichtung",
+                            "Sicherheits- und Compliance-Funktionen auf Unternehmensebene",
+                            "Engagiertes Projektmanagement und Support",
+                            "Personalisiertes Team-Onboarding und Schulungen",
+                            "Laufende kollaborative Entwicklungs- und Wartungspläne"
+                        ]
                     }
                 ]
             }
@@ -632,12 +901,28 @@ export const translations: Record<Language, Translations> = {
                 ]
             },
             pricing: {
-                title: "Unsere Fotografie-Pakete",
-                subtitle: "Wählen Sie die perfekte Session, um Ihre Geschichte festzuhalten. Alle Preise sind eine einmalige Zahlung.",
-                plans: [
-                    { name: "Essenzielle Session", price: "299€", period: "", features: ["Produktfotos, Porträts", "1,5 Stunden Aufnahmezeit", "10 professionelle Aufnahmen", "Grundlegende Retusche", "Reisekosten inbegriffen"], isFeatured: false, oldPrice: "400€" },
-                    { name: "Standard-Session", price: "469€", period: "", features: ["Produktfotos, Porträts", "3 Stunden Aufnahmezeit", "20 professionell bearbeitete Aufnahmen", "Grundlegende Retusche, Rohmaterial inbegriffen", "Reisekosten inbegriffen"], isFeatured: true, oldPrice: "800€" },
-                    { name: "Business-Paket", price: "1550€", period: "", features: ["Ganztägige Fotosession", "50 professionell bearbeitete Fotos", "Fortgeschrittene Retusche und detaillierte Bearbeitungen", "Alle Rohdaten zur Verfügung gestellt", "Reisekosten inbegriffen", "Einbettungslinks für Website und soziale Medien"], isFeatured: false }
+                title: "Professionelle Fotodienstleistungen",
+                subtitle: "Von Unternehmensporträts bis hin zu atemberaubenden Produktbildern – wir fangen die Essenz Ihrer Marke ein. Kontaktieren Sie uns für eine auf Ihre Bedürfnisse zugeschnittene Session.",
+                featureGroups: [
+                    {
+                        title: "Session-Optionen",
+                        features: [
+                            "Flexible Sitzungsdauern, von kurzen Shootings bis zu ganztägigen Veranstaltungen",
+                            "Aufnahmen vor Ort inklusive Reisekosten",
+                            "Geeignet für Produktfotografie, Porträts und Firmenveranstaltungen",
+                            "Sowohl Einzelaufnahmen als auch umfassende visuelle Pakete"
+                        ]
+                    },
+                    {
+                        title: "Bearbeitung & Lieferung",
+                        features: [
+                            "Professionelle Bearbeitung und grundlegende Retusche aller ausgewählten Fotos",
+                            "Fortgeschrittene und detaillierte Retusche für Premium-Aufnahmen",
+                            "Lieferung einer festgelegten Anzahl hochauflösender bearbeiteter Bilder",
+                            "Option zum Erhalt aller rohen, unbearbeiteten Aufnahmen der Session",
+                            "Optimierte Bilder mit Einbettungslinks für Website und soziale Medien"
+                        ]
+                    }
                 ]
             }
         }
@@ -743,17 +1028,45 @@ export const translations: Record<Language, Translations> = {
                 items: [
                     { icon: "Eye", title: "مرئيات عالية الوضوح", description: "صور واضحة تمامًا تجعلك تشعر وكأنك هناك حقًا." },
                     { icon: "MousePointerClick", title: "نقاط تفاعلية", description: "انقر على الكائنات للحصول على مزيد من المعلومات أو مشاهدة مقاطع الفيديو أو الصور." },
-                    { icon: "Smartphone", title: "جاهز للجوال والواقع الافتراضي", description: "يمكن الوصول إليها على أي جهاز، من أجهزة سطح المكتب إلى الهواتف الذكية وسماعات الواقع الاftراضي." },
+                    { icon: "Smartphone", title: "جاهز للجوال والواقع الافتراضي", description: "يمكن الوصول إليها على أي جهاز، من أجهزة سطح المكتب إلى الهواتف الذكية وسماعات الواقع الافتراضي." },
                     { icon: "Share2", title: "سهل المشاركة", description: "قم بتضمين جولتك على موقع الويب الخاص بك أو شاركها على وسائل التواصل الاجتماعي برابط بسيط." },
                 ]
             },
             pricing: {
-                title: "تسعير بسيط لأي مساحة",
-                subtitle: "اختر الخطة التي تناسب الممتلكات الخاصة بك. جميع الأسعار هي دفعة لمرة واحدة ، بدون تكاليف خفية.",
-                plans: [
-                    { name: "باقة خرائط جوجل 360 درجة", price: "249€", period: "", features: ["360° صور داخلية وخارجية", "تم الرفع على خرائط جوجل", "87٪ نقرات أكثر", "المزيد من المشاهدات", "ترتيب أفضل على جوجل وخرائط جوجل", "المزيد من العملاء"], isFeatured: true, oldPrice: "400€" },
-                    { name: "باقة الجولة الاftراضية", price: "899€", period: "", features: ["تسجيلات غير محدودة", "فيديو مع رابط للموقع ووسائل التواصل الاجتماعي", "500٪ وقت تصفح أطول على موقعك", "أعلى التصنيفات على جوجل وخرائط جوجل", "استشارة وتخطيط شخصي", "حقوق الاستخدام"], isFeatured: false, oldPrice: "1200€" },
-                    { name: "الباقة المميزة", price: "السعر عند الطلب", period: "", features: ["جولة مخصصة مع رأس وتذييل وموسيقى ومخطط طابق وعرض نموذج ثلاثي الأبعاد", "علامة تجارية مخصصة وفيديو وروابط لجميع منصات التواصل الاجتماعي", "تحسين وسائل التواصل الاجتماعي وتسجيلات الدرون متضمنة", "تسجيلات غير محدودة، مواقع متعددة", "حقوق الاستخدام", "بلا حدود!", "استشارة وتخطيط شخصي"], isFeatured: false },
+                title: "قدراتنا في جولات 360 درجة",
+                subtitle: "نحن نقدم مجموعة واسعة من الخيارات لبناء التجربة التفاعلية المثالية. اتصل بنا للحصول على عرض أسعار شخصي بناءً على احتياجاتك.",
+                featureGroups: [
+                    {
+                        title: "تكامل خرائط جوجل",
+                        features: [
+                            "صور 360 درجة داخلية وخارجية",
+                            "تحميل رسمي على خرائط جوجل",
+                            "زيادة النقرات والمشاهدات على ملفك الشخصي",
+                            "تحسين ترتيبك على جوجل وخرائط جوجل",
+                            "جذب المزيد من العملاء مباشرة من البحث"
+                        ]
+                    },
+                    {
+                        title: "جولات افتراضية مخصصة",
+                        features: [
+                            "تسجيلات غير محدودة عالية الدقة",
+                            "رابط فيديو قابل للتضمين للمواقع الإلكترونية ووسائل التواصل الاجتماعي",
+                            "نقاط تفاعلية ساخنة مع معلومات أو صور أو مقاطع فيديو",
+                            "علامة تجارية مخصصة بشعارك وألوانك",
+                            "تحليلات مفصلة حول تفاعل الزوار"
+                        ]
+                    },
+                    {
+                        title: "الميزات والإضافات المميزة",
+                        features: [
+                            "واجهة جولة مخصصة بالكامل مع رأس وموسيقى",
+                            "مخططات طوابق تفاعلية وعروض نموذجية ثلاثية الأبعاد 'بيت الدمى'",
+                            "تكامل الفن ثلاثي الأبعاد والتدريج الافتراضي",
+                            "أدوات تحسين ومشاركة وسائل التواصل الاجتماعي",
+                            "تسجيلات جوية بطائرات بدون طيار لمشاهد خارجية مذهلة",
+                            "دعم لمواقع متعددة في جولة واحدة"
+                        ]
+                    }
                 ]
             }
         },
@@ -778,11 +1091,41 @@ export const translations: Record<Language, Translations> = {
                 ]
             },
             pricing: {
-                title: "باقات خدمة الطائرات بدون طيار", subtitle: "تسعير مرن للمشاريع من جميع الأحجام. جميع الأسعار هي دفعة لمرة واحدة ، بدون تكاليف خفية.",
-                plans: [
-                    { name: "باقة صور الدرون", price: "399€", period: "", features: ["صور بدقة 4K", "5 صور معدلة", "صورة واحدة بنطاق 360 درجة", "تنقيح أساسي", "صور من نقاط لا يمكن الوصول إليها بشريًا", "حقوق الاستخدام للموقع الإلكتروني والشبكات الاجتماعية", "رفع تلقائي على خرائط جوجل"], isFeatured: false, oldPrice: "500€" },
-                    { name: "باقة فيديو الدرون", price: "1399€", period: "", features: ["فيديو معدل لمدة دقيقة واحدة", "روابط للموقع وجميع وسائل التواصل الاجتماعي", "20 صورة بدقة 4K", "أربع صور 360 درجة مع جولة افتراضية بنقاط تفاعلية", "حقوق الاستخدام", "رفع تلقائي على خرائط جوجل", "استشارة وتخطيط شخصي", "لقطات معدلة ومنقحة وخامة متضمنة"], isFeatured: true, oldPrice: "1800€" },
-                    { name: "باقة درون المميزة", price: "السعر عند الطلب", period: "", features: ["تسجيلات غير محدودة", "مواقع متعددة", "صور 360 درجة، لقطات فيديو، صور فائقة الدقة", "لقطات معدلة وخامة متضمنة", "علامة تجارية مخصصة، روابط لجميع منصات التواصل الاجتماعي", "جولة افتراضية مميزة باستخدام صور الدرون", "باقة تحسين وسائل التواصل الاجتماعي", "بلا حدود!", "استشارة وتخطيط شخصي"], isFeatured: false }
+                title: "خدمات التصوير الفوتوغرافي والفيديو الجوي",
+                subtitle: "التقط مناظر خلابة باستخدام تقنية الطائرات بدون طيار المتقدمة لدينا. نصمم كل مشروع حسب رؤيتك المحددة. اتصل بنا للحصول على عرض أسعار.",
+                featureGroups: [
+                    {
+                        title: "التصوير الجوي",
+                        features: [
+                            "صور فائقة الدقة (4K+)",
+                            "صور معدلة ومحسنة بشكل احترافي",
+                            "صور بانورامية جوية تفاعلية بزاوية 360 درجة",
+                            "لقطات من منظور فريد لا يمكن الوصول إليه",
+                            "حقوق استخدام كاملة للويب ووسائل التواصل الاجتماعي",
+                            "تحميل تلقائي اختياري إلى خرائط جوجل"
+                        ]
+                    },
+                    {
+                        title: "فيديو جوي سينمائي",
+                        features: [
+                            "مقاطع فيديو قصيرة معدلة باحتراف (على سبيل المثال، دقيقة واحدة)",
+                            "روابط فيديو جاهزة لوسائل التواصل الاجتماعي",
+                            "تضمين لقطات معدلة ومحسنة وخامة",
+                            "إنشاء جولة افتراضية باستخدام صور تفاعلية بزاوية 360 درجة",
+                            "استشارة شخصية وتخطيط للمشروع"
+                        ]
+                    },
+                    {
+                        title: "عمليات الطائرات بدون طيار المتقدمة والتجارية",
+                        features: [
+                            "تسجيلات غير محدودة للمشاريع واسعة النطاق",
+                            "التصوير في مواقع متعددة",
+                            "علامة تجارية مخصصة وتأثيرات فيديو",
+                            "باقات تحسين وسائل التواصل الاجتماعي",
+                            "إنشاء جولات افتراضية متميزة من صور الطائرات بدون طيار",
+                            "تسليم شامل للقطات بما في ذلك جميع الملفات الخام"
+                        ]
+                    }
                 ]
             }
         },
@@ -807,20 +1150,41 @@ export const translations: Record<Language, Translations> = {
                 ]
             },
             pricing: {
-                title: "تسعير تطوير مواقع الويب",
-                subtitle: "تسعير شفاف لإطلاق مشروعك.",
-                plans: [
-                    { name: "صفحة هبوط", price: "999€", period: "مرة واحدة", features: ["ردهة حضورك الرقمي", "تطبيق صفحة واحدة", "محسّن لمحرك بحث جوجل (SEO)", "متوافق مع أي جهاز", "دعوات مخصصة لاتخاذ إجراء (تحويل أعلى بنسبة 42٪ من العامة)", "أساس حديث للتوسع عبر الإنترنت", "ربط موقعك بجميع شبكات التواصل الاجتماعي الخاصة بك عبر روابط", "الترويج على جميع المواقع في وقت واحد", "رمز QR مخصص مع شعار ولون من اختيارك يرتبط بموقعك و/أو شبكات التواصل الاجتماعي الخاصة بك"], isFeatured: false, oldPrice: "1,500€" },
-                    { name: "باقة الأعمال", price: "2,800€", period: "مرة واحدة", features: ["كل شيء من الباقة الصغيرة", "موقع ويب متعدد الصفحات", "تضمين مقاطع الفيديو يمكن أن يزيد التحويلات بنسبة 86٪", "ترجمة اختيارية إلى جميع اللغات", "تحسين متقدم لمحركات البحث", "تكامل نظام إدارة المحتوى", "نموذج الاتصال", "نصائح العلامة التجارية من فريقنا لوسائل التواصل الاجتماعي والموقع الإلكتروني"], isFeatured: false, oldPrice: "3,500€" },
-                    { name: "إمبراطورية متعددة الصفحات", price: "199€", period: "شهريًا", features: ["تطوير ويب تعاوني", "إنشاء موقع أعمال مجاني", "استشارة مجانية ورمز QR عند الاستشارة", "مناقشة اسم النطاق", "استشارة حول التواجد على الويب", "مشاركة الكود", "تحسين محركات البحث (SEO)", "فيديو", "نموذج اتصال", "ترجمة", "فحص إمكانية الوصول"], isFeatured: true },
-                    { 
-                        name: "باقة الموقع الإلكتروني المميزة", 
-                        price: "السعر عند الطلب", 
-                        period: "", 
-                        features: ["يشمل جميع ميزات 'إمبراطورية متعددة الصفحات'", "مدير مشروع وفريق مخصص", "تكاملات API مخصصة وتكاملات مع أطراف ثالثة", "تحليلات متقدمة وتتبع التحويلات", "أمان وامتثال على مستوى الشركات", "دعم ذو أولوية 24/7 واتفاقية مستوى الخدمة", "تأهيل وتدريب شخصي"], 
-                        isFeatured: false,
-                        isPremium: true,
-                        backgroundImage: "url('https://images.unsplash.com/photo-1558833349-2f27a23c52a0?q=80&w=1935&auto=format&fit=crop')"
+                title: "تطوير مواقع الويب المخصصة",
+                subtitle: "نقوم ببناء مواقع ويب جميلة وعالية الأداء مصممة خصيصًا لأهداف عملك. دعنا نناقش مشروعك وننشئ عرض أسعار مخصصًا.",
+                featureGroups: [
+                    {
+                        title: "الأساس والتصميم",
+                        features: [
+                            "تصميم مخصص ومتجاوب مع الجوال",
+                            "تطبيقات صفحة واحدة أو متعددة الصفحات",
+                            "تحسين أساسي لمحركات البحث (SEO)",
+                            "استراتيجية دعوة لاتخاذ إجراء (CTA) مخصصة",
+                            "تكامل وسائل التواصل الاجتماعي وأدوات الترويج",
+                            "إنشاء رمز QR مخصص للتسويق"
+                        ]
+                    },
+                    {
+                        title: "ميزات الأعمال والتجارة الإلكترونية",
+                        features: [
+                            "تحسين متقدم لمحركات البحث وضبط الأداء",
+                            "تكامل نظام إدارة المحتوى (CMS)",
+                            "نماذج الاتصال وأدوات توليد العملاء المحتملين",
+                            "دعم متعدد اللغات والترجمة",
+                            "تضمين الفيديو ودعم الوسائط الغنية",
+                            "استشارات العلامة التجارية والتواجد على الويب"
+                        ]
+                    },
+                    {
+                        title: "حلول المؤسسات والحلول المتقدمة",
+                        features: [
+                            "واجهات برمجة تطبيقات مخصصة وتكاملات مع أطراف ثالثة",
+                            "إعداد تحليلات متقدمة وتتبع التحويلات",
+                            "ميزات الأمان والامتثال على مستوى المؤسسات",
+                            "إدارة مشاريع ودعم مخصص",
+                            "تأهيل وتدريب شخصي للفريق",
+                            "خطط تطوير وصيانة تعاونية مستمرة"
+                        ]
                     }
                 ]
             }
@@ -846,12 +1210,28 @@ export const translations: Record<Language, Translations> = {
                 ]
             },
             pricing: {
-                title: "باقات التصوير الفوتوغرافي لدينا",
-                subtitle: "اختر الجلسة المثالية لالتقاط قصتك. جميع الأسعار هي دفعة لمرة واحدة.",
-                plans: [
-                    { name: "الجلسة الأساسية", price: "299€", period: "", features: ["لقطات منتجات، صور شخصية", "1.5 ساعة من التصوير", "10 لقطات احترافية", "تنقيح أساسي", "شامل تكاليف الانتقال"], isFeatured: false, oldPrice: "400€" },
-                    { name: "الجلسة القياسية", price: "469€", period: "", features: ["لقطات منتجات، صور شخصية", "3 ساعات من التصوير", "20 لقطة معدلة باحتراف", "تنقيح أساسي، شامل اللقطات الخام", "شامل تكاليف الانتقال"], isFeatured: true, oldPrice: "800€" },
-                    { name: "باقة الأعمال", price: "1550€", period: "", features: ["جلسة تصوير ليوم كامل", "50 صورة معدلة باحتراف", "تنقيح متقدم وتعديلات مفصلة", "توفير جميع اللقطات الخام", "شامل تكاليف الانتقال", "روابط تضمين للموقع الإلكتروني ووسائل التواصل الاجتماعي"], isFeatured: false }
+                title: "خدمات التصوير الفوتوغرافي الاحترافية",
+                subtitle: "من الصور الشخصية للشركات إلى صور المنتجات المذهلة، نلتقط جوهر علامتك التجارية. اتصل بنا للحصول على جلسة مصممة خصيصًا لاحتياجاتك.",
+                featureGroups: [
+                    {
+                        title: "خيارات الجلسة",
+                        features: [
+                            "مدد جلسات مرنة، من اللقطات القصيرة إلى الفعاليات التي تستمر ليوم كامل",
+                            "التصوير في الموقع مع تضمين تكاليف السفر",
+                            "مناسب لتصوير المنتجات، والصور الشخصية، وفعاليات الشركات",
+                            "لقطات فردية وباقات بصرية شاملة"
+                        ]
+                    },
+                    {
+                        title: "التعديل والتسليم",
+                        features: [
+                            "تعديل احترافي وتنقيح أساسي لجميع الصور المختارة",
+                            "تنقيح متقدم ومفصل للقطات المتميزة",
+                            "تسليم عدد محدد من الصور المعدلة عالية الدقة",
+                            "خيار استلام جميع اللقطات الخام غير المعدلة من الجلسة",
+                            "صور محسّنة مع روابط تضمين للموقع الإلكتروني ووسائل التواصل الاجتماعي"
+                        ]
+                    }
                 ]
             }
         }

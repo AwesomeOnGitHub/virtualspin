@@ -39,7 +39,14 @@ const App: React.FC = () => {
   }, []);
   
   const handleContactClick = () => {
-    contactRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (window.location.hash !== '#/' && window.location.hash !== '') {
+        window.location.hash = '#/';
+        setTimeout(() => {
+             contactRef.current?.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+    } else {
+        contactRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   const renderPage = () => {
@@ -73,7 +80,7 @@ const App: React.FC = () => {
           {renderPage()}
         </PageWrapper>
       </main>
-      <div ref={contactRef}>
+      <div ref={contactRef} id="contact">
         <Contact showToast={showToast} />
       </div>
       <Footer />

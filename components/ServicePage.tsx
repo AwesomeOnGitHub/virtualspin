@@ -29,7 +29,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ serviceId, content }) => {
 
             <ImageGallery {...content.gallery} />
             <FeatureGrid {...content.features} />
-            <PricingTable serviceId={serviceId} {...content.pricing} />
+            <PricingTable {...content.pricing} />
         </div>
     );
 };

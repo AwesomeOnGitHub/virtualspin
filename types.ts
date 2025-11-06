@@ -58,10 +58,14 @@ interface FeaturesContent {
     items: Feature[];
 }
 
-interface PricingContent {
+export interface PricingContent {
     title: string;
     subtitle: string;
-    plans: Plan[];
+    plans?: Plan[];
+    featureGroups?: {
+        title: string;
+        features: string[];
+    }[];
 }
 
 export interface PageContent {
