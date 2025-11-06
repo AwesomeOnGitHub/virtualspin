@@ -10,7 +10,6 @@ import WebPage from './pages/WebPage';
 import PhotographyPage from './pages/PhotographyPage';
 import HomePage from './pages/HomePage';
 import Contact from './components/Contact';
-import CheckoutPage from './pages/CheckoutPage';
 import GeneralCheckoutPage from './pages/GeneralCheckoutPage';
 
 const App: React.FC = () => {
@@ -52,13 +51,6 @@ const App: React.FC = () => {
   const renderPage = () => {
     if (route === '#/checkout') {
         return <GeneralCheckoutPage />;
-    }
-    if (route.startsWith('#/checkout/')) {
-      const parts = route.substring('#/checkout/'.length).split('/');
-      if (parts.length === 2) {
-          const [serviceId, planSlug] = parts;
-          return <CheckoutPage serviceId={serviceId} planSlug={planSlug} showToast={showToast} />;
-      }
     }
 
     switch(route) {

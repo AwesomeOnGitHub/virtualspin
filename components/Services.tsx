@@ -11,7 +11,7 @@ const icons: { [key: string]: React.ReactNode } = {
 
 const serviceImages: { [key: string]: string } = {
     tour: 'https://images.unsplash.com/photo-1579548122080-c35fd6820ecb?q=80&w=2070&auto=format&fit=crop',
-    photography: 'img/business.jpg',
+    photography: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1964&auto=format&fit=crop',
     drone: 'https://images.unsplash.com/photo-1505872441885-25a86cc1a43a?q=80&w=2070&auto=format&fit=crop',
     web: 'https://images.unsplash.com/photo-1559028006-44a36f1159d5?q=80&w=1925&auto=format&fit=crop'
 };
@@ -57,7 +57,7 @@ const Services: React.FC<ServicesProps> = ({ title, subtitle }) => {
                     </li>
                   ))}
                 </ul>
-                <div className="flex flex-col sm:flex-row justify-between items-center border-t border-gray-800 pt-6 gap-4">
+                <div className="flex flex-col sm:flex-row justify-start items-center border-t border-gray-800 pt-6 gap-4">
                     <div className="flex items-center gap-4 w-full sm:w-auto">
                         <a 
                             href={`#/${service.id}`}
@@ -66,10 +66,6 @@ const Services: React.FC<ServicesProps> = ({ title, subtitle }) => {
                             {servicesText.learnMore}
                             <ArrowRight className={`w-4 h-4 transition-transform group-hover:translate-x-1 ${direction === 'rtl' ? 'rotate-180 -translate-x-1 group-hover:-translate-x-2 ms-2' : 'ms-2'}`} />
                         </a>
-                    </div>
-                    <div className="flex items-baseline space-x-2 rtl:space-x-reverse">
-                        <span className="text-gray-500 line-through text-lg">{service.oldPrice}</span>
-                        <span className="text-4xl font-bold text-[var(--primary)]">{service.newPrice}</span>
                     </div>
                 </div>
               </div>

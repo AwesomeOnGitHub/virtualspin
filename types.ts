@@ -9,8 +9,9 @@ export interface Service {
   title: string;
   description: string;
   features: string[];
-  oldPrice: string;
-  newPrice: string;
+  // FIX: Add optional price properties to resolve type errors in ServiceCard.tsx
+  oldPrice?: string;
+  newPrice?: string;
 }
 
 export interface Image {
@@ -26,11 +27,11 @@ export interface Feature {
 
 export interface Plan {
     name: string;
-    price: string;
-    period: string;
+    // FIX: Add optional price and period properties to resolve type errors in CheckoutPage.tsx
+    price?: string;
+    period?: string;
     features: string[];
     isFeatured: boolean;
-    oldPrice?: string;
     isPremium?: boolean;
     backgroundImage?: string;
 }
