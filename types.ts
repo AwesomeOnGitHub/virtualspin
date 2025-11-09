@@ -17,6 +17,7 @@ export interface Service {
 export interface Image {
     src: string;
     alt: string;
+    iframeSrc?: string;
 }
 
 export interface Feature {
@@ -27,19 +28,20 @@ export interface Feature {
 
 export interface Plan {
     name: string;
-    // FIX: Add optional price and period properties to resolve type errors in CheckoutPage.tsx
-    price?: string;
-    period?: string;
     features: string[];
     isFeatured: boolean;
     isPremium?: boolean;
     backgroundImage?: string;
+    // FIX: Add optional price and period to resolve type errors in CheckoutPage.tsx
+    price?: string;
+    period?: string;
 }
 
 interface HeroContent {
     title: string;
     subtitle: string;
-    imageUrl: string;
+    imageUrl?: string;
+    iframeSrc?: string;
 }
 
 interface IntroContent {
@@ -108,14 +110,27 @@ export interface Translations {
     formSuccess: string;
     formError: string;
   };
-  footer: {
-    rights: string;
-  };
+  footer: {};
   pricing: {
     choosePlan: string;
     getQuote: string;
   };
+  homePage: {
+    portfolio: {};
+  };
+  pages: {
+    tour: PageContent;
+    drone: PageContent;
+    web: PageContent;
+    photography: PageContent;
+  };
+  // FIX: Add checkoutPage translations to resolve type errors.
   checkoutPage: {
+    orderSuccess: string;
+    orderError: string;
+    notFoundTitle: string;
+    notFoundText: string;
+    notFoundButton: string;
     backLink: string;
     contactTitle: string;
     nameLabel: string;
@@ -128,38 +143,12 @@ export interface Translations {
     serviceLabel: string;
     totalLabel: string;
     gettingTitle: string;
-    orderSuccess: string;
-    orderError: string;
-    notFoundTitle: string;
-    notFoundText: string;
-    notFoundButton: string;
   };
+  // FIX: Add generalCheckoutPage translations to resolve type errors.
   generalCheckoutPage: {
     title: string;
+    explore: string;
     detailsTitle: string;
     detailsText: string;
-    explore: string;
-  };
-  homePage: {
-    whyChooseUs: {
-      title: string;
-      subtitle: string;
-      items: Feature[];
-    };
-    portfolio: {
-      title: string;
-      subtitle: string;
-    };
-    cta: {
-      title: string;
-      subtitle: string;
-      buttonText: string;
-    };
-  };
-  pages: {
-    tour: PageContent;
-    drone: PageContent;
-    web: PageContent;
-    photography: PageContent;
   };
 }

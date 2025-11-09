@@ -12,7 +12,7 @@ const Hero: React.FC<HeroProps> = ({ onGetStartedClick }) => {
   const navText = t('nav');
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden text-center bg-cover bg-center" style={{backgroundImage: "url('img/main.jpg')"}}>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden text-center bg-cover bg-center" style={{backgroundImage: "url('/img/drone/bella_vista.jpg')"}}>
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent"></div>
       <div className="relative container mx-auto px-6 py-20 z-10">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-4 tracking-tighter">

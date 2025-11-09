@@ -10,7 +10,6 @@ import WebPage from './pages/WebPage';
 import PhotographyPage from './pages/PhotographyPage';
 import HomePage from './pages/HomePage';
 import Contact from './components/Contact';
-import GeneralCheckoutPage from './pages/GeneralCheckoutPage';
 
 const App: React.FC = () => {
   const [toast, setToast] = useState<{ message: string; type: 'success' | 'error' } | null>(null);
@@ -49,10 +48,6 @@ const App: React.FC = () => {
   };
 
   const renderPage = () => {
-    if (route === '#/checkout') {
-        return <GeneralCheckoutPage />;
-    }
-
     switch(route) {
       case '#/tour': return <TourPage />;
       case '#/drone': return <DronePage />;
@@ -60,7 +55,7 @@ const App: React.FC = () => {
       case '#/photography': return <PhotographyPage />;
       case '#/':
       default:
-        return <HomePage onContactClick={handleContactClick} />;
+        return <HomePage />;
     }
   };
 

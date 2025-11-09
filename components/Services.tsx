@@ -10,10 +10,10 @@ const icons: { [key: string]: React.ReactNode } = {
 };
 
 const serviceImages: { [key: string]: string } = {
-    tour: 'https://images.unsplash.com/photo-1579548122080-c35fd6820ecb?q=80&w=2070&auto=format&fit=crop',
-    photography: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1964&auto=format&fit=crop',
-    drone: 'https://images.unsplash.com/photo-1505872441885-25a86cc1a43a?q=80&w=2070&auto=format&fit=crop',
-    web: 'https://images.unsplash.com/photo-1559028006-44a36f1159d5?q=80&w=1925&auto=format&fit=crop'
+    tour: '/img/photo/interior_side.jpg',
+    photography: '/img/photo/templom.jpg',
+    drone: '/img/drone/bella_vista.jpg',
+    web: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070&auto=format&fit=crop'
 };
 
 interface ServicesProps {
@@ -29,7 +29,7 @@ const Services: React.FC<ServicesProps> = ({ title, subtitle }) => {
     <section id="services" className="py-24 sm:py-32 bg-black">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tighter">
             {title || servicesText.title}
           </h2>
           <p className="text-lg text-gray-400 mb-20">
@@ -39,10 +39,23 @@ const Services: React.FC<ServicesProps> = ({ title, subtitle }) => {
         <div className="space-y-24">
           {servicesText.list.map((service, index) => (
             <div key={service.id} className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                <a href={`#/${service.id}`} className={`block relative aspect-video lg:aspect-[4/3] rounded-lg overflow-hidden group ${index % 2 === 1 ? 'lg:order-last' : ''}`}>
-                    <img src={serviceImages[service.id]} alt={service.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"/>
-                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
-                </a>
+                <div className={`relative aspect-video lg:aspect-[4/3] rounded-lg overflow-hidden ${index % 2 === 1 ? 'lg:order-last' : ''}`}>
+                    {service.id === 'tour' ? (
+                        <iframe
+                            src="https://storage.net-fs.com/hosting/2727323/396/index.htm"
+                            title={service.title}
+                            className="w-full h-full"
+                            allowFullScreen
+                            loading="lazy"
+                            style={{ border: 0 }}
+                        ></iframe>
+                    ) : (
+                        <a href={`#/${service.id}`} className="block w-full h-full group">
+                            <img src={serviceImages[service.id]} alt={service.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"/>
+                            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+                        </a>
+                    )}
+                </div>
               <div className="text-left rtl:text-right">
                 <div className="flex items-center gap-4 mb-4">
                     {icons[service.id]}
