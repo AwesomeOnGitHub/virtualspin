@@ -113,7 +113,6 @@ export interface Translations {
   footer: {};
   pricing: {
     choosePlan: string;
-    getQuote: string;
   };
   homePage: {
     portfolio: {};

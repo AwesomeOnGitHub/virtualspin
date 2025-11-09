@@ -40,7 +40,6 @@ export const translations: Record<Language, Translations> = {
     footer: {},
     pricing: {
       choosePlan: "Choose Plan",
-      getQuote: "Get a Quote",
     },
     homePage: {
       portfolio: {}
@@ -348,7 +347,6 @@ export const translations: Record<Language, Translations> = {
     footer: {},
     pricing: {
       choosePlan: "Choisir le Forfait",
-      getQuote: "Obtenir un Devis",
     },
     homePage: {
       portfolio: {}
@@ -656,7 +654,6 @@ export const translations: Record<Language, Translations> = {
     footer: {},
     pricing: {
       choosePlan: "Plan wählen",
-      getQuote: "Angebot anfordern",
     },
     homePage: {
       portfolio: {}
@@ -964,7 +961,6 @@ export const translations: Record<Language, Translations> = {
     footer: {},
     pricing: {
       choosePlan: "اختر الخطة",
-      getQuote: "احصل على عرض سعر",
     },
     homePage: {
       portfolio: {}

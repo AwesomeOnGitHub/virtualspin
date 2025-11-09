@@ -1,7 +1,6 @@
 import React from 'react';
 import { Check } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
-import { useTranslations } from '../hooks/useTranslations';
 
 interface PricingTableProps {
   title: string;
@@ -14,9 +13,6 @@ interface PricingTableProps {
 
 
 const PricingTable: React.FC<PricingTableProps> = ({ title, subtitle, featureGroups }) => {
-  const { t } = useTranslations();
-  const pricingText = t('pricing');
-
   if (!featureGroups) {
     return null;
   }
@@ -50,12 +46,6 @@ const PricingTable: React.FC<PricingTableProps> = ({ title, subtitle, featureGro
             </AnimatedSection>
           ))}
         </div>
-
-        <AnimatedSection className="text-center mt-20">
-            <a href="#contact" className="inline-block bg-[var(--primary)] hover:bg-orange-700 text-white font-bold py-4 px-10 rounded-lg transition-all transform hover:scale-105 text-lg">
-                {pricingText.getQuote}
-            </a>
-        </AnimatedSection>
       </div>
     </section>
   );
