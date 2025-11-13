@@ -46,18 +46,18 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ title, subtitle, images }) 
             {subtitle}
           </p>
         </AnimatedSection>
-        <div className="grid grid-cols-12 grid-rows-2 gap-4 h-[70vh] min-h-[500px]">
-            <AnimatedSection className="col-span-12 md:col-span-6 row-span-2">
+        <div className="grid grid-cols-1 md:grid-cols-12 md:grid-rows-2 gap-4 md:h-[70vh] md:min-h-[500px]">
+            <AnimatedSection className="aspect-[3/4] md:aspect-auto md:col-span-6 md:row-span-2">
                 <div className="h-full w-full rounded-lg overflow-hidden group">
                     {renderItem(images[0])}
                 </div>
             </AnimatedSection>
-            <AnimatedSection className="col-span-12 md:col-span-6 row-span-1">
+            <AnimatedSection className="aspect-video md:aspect-auto md:col-span-6 md:row-span-1">
                  <div className="h-full w-full rounded-lg overflow-hidden group">
                     {renderItem(images[1])}
                  </div>
             </AnimatedSection>
-            <AnimatedSection className="col-span-12 md:col-span-6 row-span-1">
+            <AnimatedSection className="aspect-video md:aspect-auto md:col-span-6 md:row-span-1">
                  <div className="h-full w-full rounded-lg overflow-hidden group">
                     {renderItem(images[2])}
                  </div>

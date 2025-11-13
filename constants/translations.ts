@@ -232,7 +232,7 @@ export const translations: Record<Language, Translations> = {
           title: "Featured Photography", subtitle: "A selection of our work across various industries.",
           images: [
             { src: "/img/photo/coffee.jpg", alt: "Artfully arranged coffee beans in a cup" },
-            { src: "/img/photo/templom2.jpg", alt: "Architectural detail of a temple ceiling" },
+            { src: "/img/photo/spin.jpg", alt: "Architectural detail of a temple ceiling" },
             { src: "/img/photo/ceiling.jpg", alt: "Modern and clean office interior" }
           ]
         },
@@ -540,7 +540,7 @@ export const translations: Record<Language, Translations> = {
           title: "Photographie en Vedette", subtitle: "Une sélection de notre travail dans divers secteurs.",
           images: [
             { src: "/img/photo/coffee.jpg", alt: "Grains de café artistiquement disposés dans une tasse" },
-            { src: "/img/photo/templom2.jpg", alt: "Détail architectural du plafond d'un temple" },
+            { src: "/img/photo/spin.jpg", alt: "Détail architectural du plafond d'un temple" },
             { src: "/img/photo/ceiling.jpg", alt: "Intérieur de bureau moderne et épuré" }
           ]
         },
@@ -848,7 +848,7 @@ export const translations: Record<Language, Translations> = {
           title: "Ausgewählte Fotografie", subtitle: "Eine Auswahl unserer Arbeiten aus verschiedenen Branchen.",
           images: [
             { src: "/img/photo/coffee.jpg", alt: "Kunstvoll arrangierte Kaffeebohnen in einer Tasse" },
-            { src: "/img/photo/templom2.jpg", alt: "Architektonisches Detail einer Tempeldecke" },
+            { src: "/img/photo/spin.jpg", alt: "Architektonisches Detail einer Tempeldecke" },
             { src: "/img/photo/ceiling.jpg", alt: "Modernes und sauberes Bürointerieur" }
           ]
         },
@@ -1156,7 +1156,7 @@ export const translations: Record<Language, Translations> = {
           title: "تصوير مميز", subtitle: "مجموعة مختارة من أعمالنا في مختلف الصناعات.",
           images: [
             { src: "/img/photo/coffee.jpg", alt: "حبوب بن مرتبة بفن في كوب" },
-            { src: "/img/photo/templom2.jpg", alt: "تفاصيل معمارية لسقف معبد" },
+            { src: "/img/photo/spin.jpg", alt: "تفاصيل معمارية لسقف معبد" },
             { src: "/img/photo/ceiling.jpg", alt: "داخل مكتب حديث ونظيف" }
           ]
         },
